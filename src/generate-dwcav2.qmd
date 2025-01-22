@@ -1,0 +1,199 @@
+---
+title: "Transform dataset into DwCA v2"
+date: today
+format: 
+  html: 
+    df-print: paged
+editor: visual
+---
+
+```{r load libraries read table}
+#| warning: false
+#| message: false
+#| echo: false
+library(here)
+library(readxl)
+library(tidyverse)
+
+# Tables from Humboldt Extension mapping exercise
+events <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv", delim = "\t", show_col_types = FALSE) 
+humboldt <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+emof <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vTzxqpYCe1tVdichPPMCVgP9fyY6duJrtgyO8zGwm7xMKL5WLb3l6MPq0Ke5TIlwU97ovdZ__ptkkMw/pub?gid=2088877587&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+
+# Sheet 1 of Fish_data_BROKE_west[14711]
+raw_data <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1033332446&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+
+# stomach content data
+raw_stomach <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "StomachcontentforAADdatacentre.xls"), sheet = "Data")
+
+```
+
+## DwCA v2
+
+The mapping is based on schema from <https://rs.gbif.org/sandbox/experimental/data-packages/dwca_v2/0.1/>
+
+## Create Event table
+
+Event can not have multiple eventClass. Hence, a Survey Event would have the same spatiotemporal context information as the Material Gathering Event, but they would separate Events, one for eventID=surveyID and one for eventID=materialGatheringID. In order to achieve this, all Events are duplicated into eventID_S for Survey Event and eventID_MG for MaterialGathering Event.
+
+```{r event}
+#| warning: false
+
+survey_events <- events %>%
+  filter(eventID != "BROKE_WEST") %>% # Exclude expedition 
+  mutate(
+    eventID = paste0(eventID, "_S"),  # Append "_S" for Survey
+    eventType = "Survey", 
+    eventClass = "Survey"
+  )
+
+mat_gat_events <- events %>%
+  filter(eventID != "BROKE_WEST") %>% # Exclude expedition 
+  mutate(
+    eventID = paste0(eventID, "_MG"), # Append "_MG" for MaterialGathering
+    eventType = "MaterialGathering",
+    eventClass = "MaterialGathering"
+  )
+
+# Combine with the original BROKE_WEST row
+combined_events <- bind_rows(
+  events %>% filter(eventID == "BROKE_WEST"), # Include only the root event
+  survey_events,
+  mat_gat_events
+)
+
+# example of resulting Event duplicated into Survey and MaterialGathering Event
+combined_events %>% 
+  filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>%
+  select(eventID, eventType, eventClass)
+```
+
+## Create MaterialGathering table
+
+MaterialGathering table is only consists of materialGatheringID.
+
+```{r material gathering}
+mat_gat <- mat_gat_events %>% 
+  select(eventID) %>%
+  rename(materialGatheringID = eventID)
+
+head(mat_gat)
+```
+
+## Create Material table
+
+Material includes:
+
+-   preserved individual fish
+
+-   stomach content of individual fish
+
+```{r material}
+individual_fish <- raw_data %>% 
+  filter(`Sample number` != "/") %>% # only select records with sample number
+  mutate(
+    materialEntityID = `Sample number`,
+    materialEntityType = "whole organism",  # TODO: check if occurrenceID with FP is whole organism
+    preparations = presrvation,
+    disposition = Location,
+    station_number_cleaned = str_remove_all(`Station number`, "\\s*"), # Remove white spaces
+    materialGatheringID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_MG"), # concatenate values
+    verbatimIdentification = Species
+    ) %>% 
+  select(
+    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition, verbatimIdentification
+  ) 
+
+stomach <- raw_stomach %>%
+  mutate(
+    seqNum = sprintf("%03d", row_number()), # zero-padded sequential number
+    materialEntityID = str_c(`Fish ID`, "_stomach_", seqNum, "_", `Stomach Item`),
+    materialEntityType = "stomach content",
+    derivedFromMaterialEntityID = `Fish ID`,
+    derivationType = "stomach content of",
+    partOfMaterialEntityID = `Fish ID`,
+    verbatimIdentification = `Stomach Item`,
+    materialEntityRemarks = Remarks
+  ) %>% 
+  left_join(individual_fish, by = c("derivedFromMaterialEntityID" = "materialEntityID")) %>%
+  # because left_join renamed the materialEntityType column since it is present in both individual_fish and stomach table
+  mutate(materialEntityType = materialEntityType.x,
+         verbatimIdentification = verbatimIdentification.x) %>% 
+  select(materialEntityID, materialEntityType, verbatimIdentification, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialGatheringID, materialEntityRemarks)
+
+# combine both tables into a Material table
+material <- bind_rows(individual_fish, stomach) 
+write_tsv(material, here("data", "output", "tsv", "material.txt"), na = "")
+
+# example of a full fish + its stomach content in Material table
+material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
+```
+
+## Create Agent table
+
+so that Identification table can point here.
+
+```{r agent}
+agent <- tibble(
+  agentID = c("https://orcid.org/0000-0003-1336-5554", "George-Jackson-ORCID"),
+  agentType = c("person", "person"),
+  preferredAgentName = c("Anton Van de Putte", "George Jackson")
+)
+```
+
+## Create Identification table
+
+```{r identification}
+identification <- material %>%
+  mutate(
+    identificationBasedOnMaterialEntityID = materialEntityID,
+    identificationType = "MaterialEntity",
+    identifiedBy = "",
+    identifiedByID = "",
+    identificationReferences = "",
+    identificationRemarks = "",
+    kingdom = "",
+    scientificName = ""
+    
+    
+  )
+```
+
+## Create Survey table
+
+Survey table is a table that contains current Humboldt Extension terms.
+
+```{r survey}
+survey <- humboldt %>%
+  filter(eventID != "BROKE_WEST") %>% # remove the expedition event
+  mutate(eventID = paste0(eventID, "_S")) %>%
+  rename(surveyID = eventID) %>%
+  select(-`ecoiri:targetTaxonomicScope`, -`excludedLifeStageScope`)
+
+head(survey)
+```
+
+## Create Survey Target table
+
+After extensive discussions on what `target` is, we decided to create survey-target table retrospectively.
+
+```{r survey-target}
+#| warning: false
+
+# get unique combination of species and lifeStage (C1)
+target <- raw_data %>% 
+  select(Species, C1) %>% 
+  distinct() %>%
+  filter(Species != "/") # / represents NA in raw data
+
+target
+```
+
+## Create Survey Target Abundance table
+
+```{r survey target abd}
+
+
+```
+
+## 

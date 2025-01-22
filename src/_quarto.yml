@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: ../docs
+  render: 
+    - "*.qmd"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
+website:
+  title: "BROKE-West fish to DwCA v2"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - icon: github
+        href: https://github.com/biodiversity-aq/
+  page-navigation: true
+  sidebar: 
+    style: "docked"
+    contents: 
+      - section: Background
+        contents: 
+          - href: dataset-background.qmd
+            text: Dataset background
+      - section: Transform data into DwCA v2
+        contents:
+          - href: generate-dwcav2.qmd
+            text: Generate tables for DwCA_v2
+          - href: reflections.qmd
+            text: Feedback and reflection
+
+
+
+

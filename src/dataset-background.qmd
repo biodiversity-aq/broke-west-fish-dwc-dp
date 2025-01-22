@@ -1,0 +1,16 @@
+---
+title: "Dataset background"
+date: today
+format: html
+editor: visual
+---
+
+# Dataset overview
+
+## Dataset introduction
+
+## Dataset as DwCA
+
+## Dataset as DwCA v2
+
+![](images/broke-west-fish_dwcav2-02.png){fig-alt="BROKE-West fish dataset in DwCA v2"}

@@ -1,0 +1,214 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "section": "",
+    "text": "This is an attempt to map BROKE-West Fish dataset as a marine survey and community measurements use case of the new data model to DwCAv2 and explore what information can be retrieve from DwCAv2."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "section": "",
+    "text": "This is an attempt to map BROKE-West Fish dataset as a marine survey and community measurements use case of the new data model to DwCAv2 and explore what information can be retrieve from DwCAv2."
+  },
+  {
+    "objectID": "index.html#acknowledgement",
+    "href": "index.html#acknowledgement",
+    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "section": "Acknowledgement",
+    "text": "Acknowledgement\nThis mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).\nWe are grateful and appreciate the various contributions received from the following contributors during this exercise:\n\nJohn Wieczorek\nAnton Van de Putte\nCecilie Svenningsen\nKate Ingenloff\nTim Robertson"
+  },
+  {
+    "objectID": "generate-dwcav2.html",
+    "href": "generate-dwcav2.html",
+    "title": "Transform dataset into DwCA v2",
+    "section": "",
+    "text": "The mapping is based on schema from https://rs.gbif.org/sandbox/experimental/data-packages/dwca_v2/0.1/",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#load-libraries",
+    "href": "generate-dwcav2.html#load-libraries",
+    "title": "Transform dataset into DwCA v2",
+    "section": "",
+    "text": "library(here)\nlibrary(tidyverse)",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#read-tables",
+    "href": "generate-dwcav2.html#read-tables",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Read tables",
+    "text": "Read tables\n\n# Tables from Humboldt Extension mapping exercise\nevents &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE) \nhumboldt &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE)\n\n# Sheet 1 of Fish_data_BROKE_west[14711]\nraw_data &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1033332446&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE)",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#dwca-v2",
+    "href": "generate-dwcav2.html#dwca-v2",
+    "title": "Transform dataset into DwCA v2",
+    "section": "",
+    "text": "The mapping is based on schema from https://rs.gbif.org/sandbox/experimental/data-packages/dwca_v2/0.1/",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-event-table",
+    "href": "generate-dwcav2.html#create-event-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Event table",
+    "text": "Create Event table\nEvent can not have multiple eventClass. Hence, a Survey Event would have the same spatiotemporal context information as the Material Gathering Event, but they would separate Events, one for eventID=surveyID and one for eventID=materialGatheringID. In order to achieve this, all Events are duplicated into eventID_S for Survey Event and eventID_MG for MaterialGathering Event.\n\nsurvey_events &lt;- events %&gt;%\n  filter(eventID != \"BROKE_WEST\") %&gt;% # Exclude expedition \n  mutate(\n    eventID = paste0(eventID, \"_S\"),  # Append \"_S\" for Survey\n    eventType = \"Survey\", \n    eventClass = \"Survey\"\n  )\n\nmat_gat_events &lt;- events %&gt;%\n  filter(eventID != \"BROKE_WEST\") %&gt;% # Exclude expedition \n  mutate(\n    eventID = paste0(eventID, \"_MG\"), # Append \"_MG\" for MaterialGathering\n    eventType = \"MaterialGathering\",\n    eventClass = \"MaterialGathering\"\n  )\n\n# Combine with the original BROKE_WEST row\ncombined_events &lt;- bind_rows(\n  events %&gt;% filter(eventID == \"BROKE_WEST\"), # Include only the root event\n  survey_events,\n  mat_gat_events\n)\n\n# example of resulting Event duplicated into Survey and MaterialGathering Event\ncombined_events %&gt;% \n  filter(str_starts(eventID, \"BROKE_WEST_RMT_001\")) %&gt;%\n  select(eventID, eventType, eventClass)",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-survey-table",
+    "href": "generate-dwcav2.html#create-survey-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Survey table",
+    "text": "Create Survey table\nSurvey table is a table that contains current Humboldt Extension terms.\n\nsurvey &lt;- humboldt %&gt;%\n  filter(eventID != \"BROKE_WEST\") %&gt;% # remove the expedition event\n  mutate(eventID = paste0(eventID, \"_S\")) %&gt;%\n  rename(surveyID = eventID) %&gt;%\n  select(-`ecoiri:targetTaxonomicScope`, -`excludedLifeStageScope`)\n\nhead(survey)",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-protocol-table",
+    "href": "generate-dwcav2.html#create-protocol-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Protocol table",
+    "text": "Create Protocol table\nPreliminary feedback - A single protocol needs to be repeated for all Events.",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-survey-target-table",
+    "href": "generate-dwcav2.html#create-survey-target-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Survey Target table",
+    "text": "Create Survey Target table\nAfter extensive discussions on what target is, we decided to create survey-target table retrospectively.\n\n# get unique combination of species and lifeStage (C1)\ntarget &lt;- raw_data %&gt;% \n  select(Species, C1) %&gt;% \n  distinct() %&gt;%\n  filter(Species != \"/\") # / represents NA in raw data\n\ntarget",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#modelling-dataset-into-dwca-v2",
+    "href": "generate-dwcav2.html#modelling-dataset-into-dwca-v2",
+    "title": "Transform dataset into DwCA v2",
+    "section": "",
+    "text": "Modelling BROKE-West fish dataset with DwCA v2",
+    "crumbs": [
+      "Home",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "reflections.html",
+    "href": "reflections.html",
+    "title": "Reflections",
+    "section": "",
+    "text": "Cannot express a Survey Event is also a MaterialGathering Event without duplicating the Event.",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Feedback and reflection"
+    ]
+  },
+  {
+    "objectID": "reflections.html#quarto",
+    "href": "reflections.html#quarto",
+    "title": "Reflections",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Feedback and reflection"
+    ]
+  },
+  {
+    "objectID": "reflections.html#running-code",
+    "href": "reflections.html#running-code",
+    "title": "Reflections",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Feedback and reflection"
+    ]
+  },
+  {
+    "objectID": "reflections.html#feedback",
+    "href": "reflections.html#feedback",
+    "title": "Reflections",
+    "section": "",
+    "text": "Cannot express a Survey Event is also a MaterialGathering Event without duplicating the Event.",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Feedback and reflection"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-materialgathering-table",
+    "href": "generate-dwcav2.html#create-materialgathering-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create MaterialGathering table",
+    "text": "Create MaterialGathering table\nMaterialGathering table is only consists of materialGatheringID.\n\nmat_gat &lt;- mat_gat_events %&gt;% \n  select(eventID) %&gt;%\n  rename(materialGatheringID = eventID)\n\nhead(mat_gat)",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-material-table",
+    "href": "generate-dwcav2.html#create-material-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Material table",
+    "text": "Create Material table\nMaterial includes:\n\npreserved individual fish\nstomach content of individual fish\nbody part of fish\n\n\nQuestions\nHow to document stomach content was examined but is empty? Can it be documented as a Material record? See materialEntityID: AAV3FF_00281_140_/\n\nindividual_fish &lt;- raw_data %&gt;% \n  filter(`Sample number` != \"/\") %&gt;% # only select records with sample number\n  mutate(\n    materialEntityID = `Sample number`,\n    materialEntityType = \"whole organism\",  # TODO: check if occurrenceID with FP is whole organism\n    preparations = presrvation,\n    disposition = Location,\n    station_number_cleaned = str_remove_all(`Station number`, \"\\\\s*\"), # Remove white spaces\n    materialGatheringID = str_c(\"BROKE_WEST_RMT_\", station_number_cleaned, \"_MG\") # concatenate values\n    ) %&gt;% \n  select(\n    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition\n  ) \n\nstomach &lt;- raw_stomach %&gt;%\n  mutate(\n    seqNum = sprintf(\"%03d\", row_number()), # zero-padded sequential number\n    materialEntityID = str_c(`Fish ID`, \"_stomach_\", seqNum, \"_\", `Stomach Item`),\n    materialEntityType = \"stomach content\",\n    derivedFromMaterialEntityID = `Fish ID`,\n    derivationType = \"stomach content of\",\n    partOfMaterialEntityID = `Fish ID`,\n    materialEntityRemarks = Remarks\n  ) %&gt;% \n  left_join(individual_fish, by = c(\"derivedFromMaterialEntityID\" = \"materialEntityID\")) %&gt;%\n  # because left_join renamed the materialEntityType column since it is present in both individual_fish and stomach table\n  mutate(materialEntityType = materialEntityType.x) %&gt;% \n  select(\"materialEntityID\", \"materialEntityType\", \"derivedFromMaterialEntityID\", \"derivationType\", \"partOfMaterialEntityID\", \"materialGatheringID\", \"materialEntityRemarks\")\n\n# combine both tables into a Material table\nmaterial &lt;- bind_rows(individual_fish, stomach) \n\n# example of a full fish + its stomach content in Material table\nmaterial %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#create-survey-target-abundance-table",
+    "href": "generate-dwcav2.html#create-survey-target-abundance-table",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Create Survey Target Abundance table",
+    "text": "Create Survey Target Abundance table",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  }
+]
