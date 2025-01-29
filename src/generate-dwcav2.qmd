@@ -148,8 +148,8 @@ individual_fish <- cleaned_fish %>%
     materialGatheringID = str_c(eventID, "_MG"), # concatenate values
     ) %>% 
   select(
-    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition, verbatimIdentification, scientificName, family, scientificNameID, kingdom, taxonRank
-  ) # keep verbatimIdentification, scientificName, family, scientificNameID, kingdom, taxonRank to construct Identification table
+    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition, verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank
+  ) # keep verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank to construct Identification table
 
 stomach <- raw_stomach %>%
   mutate(
@@ -166,7 +166,7 @@ stomach <- raw_stomach %>%
   # because left_join renamed the following columns since it is present in both individual_fish and stomach table
   mutate(materialEntityType = materialEntityType.x,
          verbatimIdentification = verbatimIdentification.x) %>% 
-  select(materialEntityID, materialEntityType, family, verbatimIdentification, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialGatheringID, materialEntityRemarks)
+  select(materialEntityID, materialEntityType, verbatimIdentification, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialGatheringID, materialEntityRemarks)
 
 # combine both tables into a Material table
 material <- bind_rows(individual_fish, stomach) 

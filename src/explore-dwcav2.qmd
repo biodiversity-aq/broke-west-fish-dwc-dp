@@ -55,7 +55,7 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 **eMoF table**
 
 | occurrenceID | measurementType | measurementValue | measurementUnit |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | relative percentage of dry mass | tegument |
 
 #### DwCA v2
