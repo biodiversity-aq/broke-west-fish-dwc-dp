@@ -18,7 +18,7 @@
     "href": "index.html#acknowledgement",
     "title": "Exploring DwCA_v2 with marine community measurements dataset",
     "section": "Acknowledgement",
-    "text": "Acknowledgement\nThis mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).\nWe are grateful and appreciate the various contributions received from the following contributors during this exercise:\n\nJohn Wieczorek\nAnton Van de Putte\nCecilie Svenningsen\nKate Ingenloff\nTim Robertson"
+    "text": "Acknowledgement\nThis mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).\nDocumenting this mapping exercise in Quarto is inspired by the approach of OBIS USA (Steve Formel and Kyla Richards).\nWe are grateful and appreciate the various contributions received from the following contributors during this exercise:\n\nJohn Wieczorek\nAnton Van de Putte\nCecilie Svenningsen\nKate Ingenloff\nTim Robertson"
   },
   {
     "objectID": "generate-dwcav2.html",

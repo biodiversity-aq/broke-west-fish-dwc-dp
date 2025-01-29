@@ -19,7 +19,7 @@ website:
       - href: index.qmd
         text: Home
       - icon: github
-        href: https://github.com/biodiversity-aq/
+        href: https://github.com/biodiversity-aq/broke-west-fish-dwcav2
   page-navigation: true
   sidebar: 
     style: "docked"
