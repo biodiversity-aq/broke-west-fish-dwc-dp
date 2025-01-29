@@ -94,7 +94,7 @@ cleaned_fish %>% distinct(verbatimIdentification, scientificName, scientificName
 
 ## Create Event table
 
-Event cannot have multiple eventClass. Hence, a Survey Event would have the same spatiotemporal context information as the Material Gathering Event, but they would be separate Events, one for `eventID` == `surveyID` and one for `eventID` == `materialGatheringID`. In order to achieve this, all Events are duplicated into eventID_S for Survey Event and eventID_MG for MaterialGathering Event. 
+Event cannot have multiple eventClass. Hence, a Survey Event would have the same spatiotemporal context information as the Material Gathering Event, but they would be separate Events, one for `eventID` == `surveyID` and one for `eventID` == `materialGatheringID`. In order to achieve this, all Events are duplicated into eventID_S for Survey Event and eventID_MG for MaterialGathering Event.
 
 ```{r survey and material gathering event}
 #| warning: false
@@ -177,7 +177,7 @@ material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
 
 ## Create Agent table
 
-There is only Anton here because this version of dataset does not contain squid records (from the catch). 
+There is only Anton here because this version of dataset does not contain squid records (from the catch).
 
 ```{r agent}
 agent <- tibble(
@@ -187,9 +187,9 @@ agent <- tibble(
 )
 ```
 
-## Create Identification table 
+## Create Identification table
 
-It was a mixed of remarks for material entity and identification in the original table, so I put the information under both `materialEntityRemarks` and `identificationRemarks`. 
+It was a mixed of remarks for material entity and identification in the original table, so I put the information under both `materialEntityRemarks` and `identificationRemarks`.
 
 Question: I am expecting OBIS to ask about why `taxonID` and not `scientificNameID`.
 
@@ -306,7 +306,7 @@ trawl_long <- trawl_count %>%
       surveyTargetValue == "Family" ~ "http://rs.tdwg.org/dwc/terms/family",
       TRUE ~ NA
     )
-  )
+  ) %>% filter(!(surveyTargetType == "lifeStage" & surveyTargetValue == "")) # exclude empty lifeStage row
 
 survey_target <- trawl_long %>%
   select(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueID, surveyTargetUnit, surveyTargetUnitID)

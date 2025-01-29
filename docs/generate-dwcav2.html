@@ -132,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/biodiversity-aq/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/biodiversity-aq/broke-west-fish-dwcav2"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -553,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>      surveyTargetValue <span class="sc">==</span> <span class="st">"Family"</span> <span class="sc">~</span> <span class="st">"http://rs.tdwg.org/dwc/terms/family"</span>,</span>
 <span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
 <span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>(surveyTargetType <span class="sc">==</span> <span class="st">"lifeStage"</span> <span class="sc">&amp;</span> surveyTargetValue <span class="sc">==</span> <span class="st">""</span>)) <span class="co"># exclude empty lifeStage row</span></span>
 <span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>survey_target <span class="ot">&lt;-</span> trawl_long <span class="sc">%&gt;%</span></span>
 <span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueID, surveyTargetUnit, surveyTargetUnitID)</span>
@@ -577,7 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["surveyTargetID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["surveyID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["surveyTargetType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["surveyTargetValue"],"name":[4],"type":["chr"],"align":["left"]},{"label":["surveyTargetValueID"],"name":[5],"type":["chr"],"align":["left"]},{"label":["surveyTargetUnit"],"name":[6],"type":["chr"],"align":["left"]},{"label":["surveyTargetUnitID"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"taxon","4":"Electrona antarctica","5":"urn:lsid:marinespecies.org:taxname:217697","6":"NA","7":"NA"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"lifeStage","4":"","5":"NA","6":"NA","7":"NA"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"taxonRank","4":"Species","5":"http://rs.tdwg.org/dwc/terms/specificEpithet","6":"NA","7":"NA"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"minimum body size","4":"0.85","5":"NA","6":"mm","7":"http://vocab.nerc.ac.uk/collection/P06/current/UXMM/"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"maximum body size","4":"3","5":"NA","6":"m","7":"http://vocab.nerc.ac.uk/collection/P06/current/ULAA/"},{"1":"217697_Larvae","2":"BROKE_WEST_RMT_004_8_S","3":"taxon","4":"Electrona antarctica","5":"urn:lsid:marinespecies.org:taxname:217697","6":"NA","7":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["surveyTargetID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["surveyID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["surveyTargetType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["surveyTargetValue"],"name":[4],"type":["chr"],"align":["left"]},{"label":["surveyTargetValueID"],"name":[5],"type":["chr"],"align":["left"]},{"label":["surveyTargetUnit"],"name":[6],"type":["chr"],"align":["left"]},{"label":["surveyTargetUnitID"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"taxon","4":"Electrona antarctica","5":"urn:lsid:marinespecies.org:taxname:217697","6":"NA","7":"NA"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"taxonRank","4":"Species","5":"http://rs.tdwg.org/dwc/terms/specificEpithet","6":"NA","7":"NA"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"minimum body size","4":"0.85","5":"NA","6":"mm","7":"http://vocab.nerc.ac.uk/collection/P06/current/UXMM/"},{"1":"217697","2":"BROKE_WEST_RMT_004_8_S","3":"maximum body size","4":"3","5":"NA","6":"m","7":"http://vocab.nerc.ac.uk/collection/P06/current/ULAA/"},{"1":"217697_Larvae","2":"BROKE_WEST_RMT_004_8_S","3":"taxon","4":"Electrona antarctica","5":"urn:lsid:marinespecies.org:taxname:217697","6":"NA","7":"NA"},{"1":"217697_Larvae","2":"BROKE_WEST_RMT_004_8_S","3":"lifeStage","4":"Larvae","5":"NA","6":"NA","7":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
