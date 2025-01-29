@@ -32,8 +32,11 @@ website:
         contents:
           - href: generate-dwcav2.qmd
             text: Generate tables for DwCA_v2
-          - href: reflections.qmd
-            text: Feedback and reflection
+      - section: Exploring DwCA v2
+        contents:
+          - href: explore-dwcav2.qmd
+            text: Exploring DwCA v2
+            
 
 
 

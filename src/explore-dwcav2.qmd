@@ -1,0 +1,71 @@
+---
+title: "Explore DwCA v2"
+date: today
+format: 
+  html: 
+    df-print: paged
+editor: visual
+---
+
+## Questions
+
+### How can I explore the tables for DwCA v2 from this mapping exercise?
+
+You can load the tables from the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.
+
+```{r load rda}
+#| warning: false
+#| message: false
+library(here)
+library(tidyverse)
+
+load(here("data", "output", "rda", "agent.rda"))
+load(here("data", "output", "rda", "event.rda"))
+load(here("data", "output", "rda", "identification.rda"))
+load(here("data", "output", "rda", "material.rda"))
+load(here("data", "output", "rda", "material_gathering.rda"))
+load(here("data", "output", "rda", "survey_target.rda"))
+load(here("data", "output", "rda", "survey_target_abundance.rda"))
+```
+
+### Does DwCA v2 solve community measurements issue?
+
+Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAbundance` table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the `Material` table.
+
+```{r}
+survey_target_abundance %>% filter(surveyID == "BROKE_WEST_RMT_051_8_S" & observedTaxon == "Electrona antarctica")
+
+material %>% filter(materialGatheringID == "BROKE_WEST_RMT_051_8_MG" & scientificName == "Electrona antarctica")
+```
+
+### Can relationship between Materials be expressed in DwCA v2?
+
+Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657>
+
+#### DwCA
+
+Currently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.
+
+**Occurrence table**
+
+| occurrenceID              | scientificName                          |
+|---------------------------|-----------------------------------------|
+| SO_Isotope_1985_2017_1013 | Glabraster antarctica (E.A.Smith, 1876) |
+
+**eMoF table**
+
+| occurrenceID | measurementType | measurementValue | measurementUnit |
+|------------------|------------------|------------------|------------------|
+| SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | relative percentage of dry mass | tegument |
+
+#### DwCA v2
+
+Yes! Relationship between Materials can be specified through the `Material` table. Example of a krill eaten by a fish can be modeled within a single `Material` table
+
+```{r}
+material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
+```
+
+### How non-detections are represented in DwCA v2?
+
+### Trade off between expressiveness of DwCA v2 and simplicity DwCA?
