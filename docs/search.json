@@ -33,35 +33,23 @@
     ]
   },
   {
-    "objectID": "generate-dwcav2.html#load-libraries",
-    "href": "generate-dwcav2.html#load-libraries",
-    "title": "Transform dataset into DwCA v2",
-    "section": "",
-    "text": "library(here)\nlibrary(tidyverse)",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#read-tables",
-    "href": "generate-dwcav2.html#read-tables",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Read tables",
-    "text": "Read tables\n\n# Tables from Humboldt Extension mapping exercise\nevents &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE) \nhumboldt &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE)\n\n# Sheet 1 of Fish_data_BROKE_west[14711]\nraw_data &lt;- read_delim(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1033332446&single=true&output=tsv\", delim = \"\\t\", show_col_types = FALSE)",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
     "objectID": "generate-dwcav2.html#dwca-v2",
     "href": "generate-dwcav2.html#dwca-v2",
     "title": "Transform dataset into DwCA v2",
     "section": "",
     "text": "The mapping is based on schema from https://rs.gbif.org/sandbox/experimental/data-packages/dwca_v2/0.1/",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
+    "objectID": "generate-dwcav2.html#clean-fish-data",
+    "href": "generate-dwcav2.html#clean-fish-data",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Clean fish data",
+    "text": "Clean fish data\nClean the fish data so that the fields are ready for use for further manipulation.\n\nlibrary(worrms)\n\ncleaned_fish &lt;- raw_fish_data %&gt;%\n  # exclude those without sample number\n  filter(`Sample number` != \"/\") %&gt;%\n  rename(\n    family = Family,\n    preparations = presrvation,\n    disposition = Location,\n    verbatimIdentification = Species,\n    lifeStage = C1,\n    materialEntityID = `Sample number`,\n    netSize = `Net Size`\n  ) %&gt;%\n  mutate(\n    station_number_cleaned = str_remove_all(`Station number`, \"\\\\s*\"), # Remove white spaces\n    eventID = str_c(\"BROKE_WEST_RMT_\", station_number_cleaned, \"_\", `netSize`), # net level of event is needed here because surveyTarget is pointing to a surveyID in which surveyTargetAbundance report the count. If netSize is not specified, we cannot tell which net caught the target \n    # need surveyID for join with target later to create survey_target_abundance table\n    surveyID = str_c(eventID, \"_S\"),\n    scientificName = case_when(\n      grepl(\" sp\\\\.$\", verbatimIdentification) ~ sub(\" sp\\\\.$\", \"\", verbatimIdentification),\n      # correct typo of scientificName based on WoRMS\n      verbatimIdentification == \"Protomytophum bollini\" ~ \"Protomyctophum bolini\",\n      verbatimIdentification == \"Artedidraco scottsbergi\" ~ \"Artedidraco skottsbergi\",\n      verbatimIdentification == \"Gymnoscophelus braueri\" ~ \"Gymnoscopelus braueri\",\n      # Unidentified == Biota because lifeStage = larvae for these records. Can we be sure that these are fish?\n      verbatimIdentification == \"Unidentified\" ~ \"Biota\", \n      verbatimIdentification == \"/\" ~ \"\",\n      TRUE ~ verbatimIdentification\n    ),\n    identificationQualifier = case_when(\n      grepl(\" sp\\\\.$\", verbatimIdentification) ~ \"sp.\",\n      TRUE ~ \"\"\n    )\n  )\n  \n# match unique scientificName to WoRMS to obtain LSID of AphiaID\nmatched_taxa &lt;- wm_records_names(unique(cleaned_fish$scientificName)) %&gt;%\n  # the taxon match returns list of lists, this function creates a table of the following fields out of the lists\n  # keep aphiaID for surveyTargetID\n  map_df(~ select(.x, scientificname, lsid, rank, kingdom, AphiaID)) %&gt;%\n  rename(scientificName = scientificname, scientificNameID = lsid, taxonRank = rank)\n\n# join table to get scientificNameID and taxonRank\ncleaned_fish &lt;- cleaned_fish %&gt;% \n  left_join(matched_taxa, by = \"scientificName\")\n\n# preview distinct verbatimIdentification and matched scientificName and scientificNameID from WoRMS\ncleaned_fish %&gt;% distinct(verbatimIdentification, scientificName, scientificNameID, kingdom)",
     "crumbs": [
       "Home",
       "Transform data into DwCA v2",
@@ -81,106 +69,11 @@
     ]
   },
   {
-    "objectID": "generate-dwcav2.html#create-survey-table",
-    "href": "generate-dwcav2.html#create-survey-table",
+    "objectID": "generate-dwcav2.html#create-material-gathering-table",
+    "href": "generate-dwcav2.html#create-material-gathering-table",
     "title": "Transform dataset into DwCA v2",
-    "section": "Create Survey table",
-    "text": "Create Survey table\nSurvey table is a table that contains current Humboldt Extension terms.\n\nsuffixes &lt;- c(\"1_S\",\"8_S\")\n\nsurvey &lt;- humboldt %&gt;%\n  filter(eventID != \"BROKE_WEST\") %&gt;% # remove the expedition event, only link humboldt to the lowest level of Survey Events\n  expand_grid(suffix = suffixes) %&gt;%\n  mutate(eventID = paste0(eventID, \"_\", suffix),\n         # need to cast netSize to string so that it can be joined later (so that it is not a double)\n         netSize = case_when(suffix == \"1_S\" ~ \"1\", suffix == \"8_S\" ~ \"8\", TRUE ~ NA)) %&gt;%\n  rename(surveyID = eventID) %&gt;%\n  # remove fields that were empty or need to be amended based on new understanding of survey target\n  select(-`ecoiri:targetTaxonomicScope`, -`excludedLifeStageScope`, -verbatimSiteDescriptions, -eventDuration, -isAbundanceReported, -isAbsenceReported, -hasMaterialSamples, -materialSampleTypes, -isTaxonomicScopeFullyReported, -isLifeStageScopeFullyReported, -isLeastSpecificTargetCategoryQuantityInclusive, -areNonTargetTaxaFullyReported, -suffix)\n\nhead(survey)",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-protocol-table",
-    "href": "generate-dwcav2.html#create-protocol-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create Protocol table",
-    "text": "Create Protocol table\nPreliminary feedback - A single protocol needs to be repeated for all Events.",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-survey-target-table",
-    "href": "generate-dwcav2.html#create-survey-target-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create Survey Target table",
-    "text": "Create Survey Target table\nAfter extensive discussions on what target is, we decided to create survey-target table retrospectively.\n\n# get unique combination of species and lifeStage (C1)\ntarget &lt;- raw_fish_data %&gt;% \n  select(Species, C1) %&gt;% \n  distinct() %&gt;%\n  filter(Species != \"/\") # / represents NA in raw data\n\ntarget",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#modelling-dataset-into-dwca-v2",
-    "href": "generate-dwcav2.html#modelling-dataset-into-dwca-v2",
-    "title": "Transform dataset into DwCA v2",
-    "section": "",
-    "text": "Modelling BROKE-West fish dataset with DwCA v2",
-    "crumbs": [
-      "Home",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "reflections.html",
-    "href": "reflections.html",
-    "title": "Reflections",
-    "section": "",
-    "text": "Cannot express a Survey Event is also a MaterialGathering Event without duplicating the Event.",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Feedback and reflection"
-    ]
-  },
-  {
-    "objectID": "reflections.html#quarto",
-    "href": "reflections.html#quarto",
-    "title": "Reflections",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Feedback and reflection"
-    ]
-  },
-  {
-    "objectID": "reflections.html#running-code",
-    "href": "reflections.html#running-code",
-    "title": "Reflections",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Feedback and reflection"
-    ]
-  },
-  {
-    "objectID": "reflections.html#feedback",
-    "href": "reflections.html#feedback",
-    "title": "Reflections",
-    "section": "",
-    "text": "Cannot express a Survey Event is also a MaterialGathering Event without duplicating the Event.",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Feedback and reflection"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-materialgathering-table",
-    "href": "generate-dwcav2.html#create-materialgathering-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create MaterialGathering table",
-    "text": "Create MaterialGathering table\nMaterialGathering table is only consists of materialGatheringID.\n\nmat_gat &lt;- events_expanded %&gt;% \n  filter(eventClass == \"MaterialGathering\") %&gt;%\n  select(eventID) %&gt;%\n  rename(materialGatheringID = eventID)\n\nhead(mat_gat)",
+    "section": "Create Material Gathering table",
+    "text": "Create Material Gathering table\nMaterialGathering table is only consists of materialGatheringID.\n\nmat_gat &lt;- event %&gt;% \n  filter(eventClass == \"MaterialGathering\") %&gt;%\n  select(eventID) %&gt;%\n  rename(materialGatheringID = eventID)\n\nhead(mat_gat)",
     "crumbs": [
       "Home",
       "Transform data into DwCA v2",
@@ -193,30 +86,6 @@
     "title": "Transform dataset into DwCA v2",
     "section": "Create Material table",
     "text": "Create Material table\nMaterial includes:\n\npreserved individual fish\nstomach content of individual fish\n\n\nindividual_fish &lt;- cleaned_fish %&gt;% \n  mutate(\n    materialEntityType = \"whole organism\",  # TODO: check if occurrenceID with FP is whole organism\n    materialGatheringID = str_c(eventID, \"_MG\"), # concatenate values\n    ) %&gt;% \n  select(\n    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition, verbatimIdentification, scientificName, family, scientificNameID, kingdom, taxonRank\n  ) # keep verbatimIdentification, scientificName, family, scientificNameID, kingdom, taxonRank to construct Identification table\n\nstomach &lt;- raw_stomach %&gt;%\n  mutate(\n    seqNum = sprintf(\"%03d\", row_number()), # zero-padded sequential number\n    materialEntityID = str_c(`Fish ID`, \"_stomach_\", seqNum, \"_\", `Stomach Item`),\n    materialEntityType = \"stomach content\",\n    derivedFromMaterialEntityID = `Fish ID`,\n    derivationType = \"stomach content of\",\n    partOfMaterialEntityID = `Fish ID`,\n    verbatimIdentification = `Stomach Item`,\n    materialEntityRemarks = Remarks\n  ) %&gt;% \n  left_join(individual_fish, by = c(\"derivedFromMaterialEntityID\" = \"materialEntityID\")) %&gt;%\n  # because left_join renamed the following columns since it is present in both individual_fish and stomach table\n  mutate(materialEntityType = materialEntityType.x,\n         verbatimIdentification = verbatimIdentification.x) %&gt;% \n  select(materialEntityID, materialEntityType, family, verbatimIdentification, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialGatheringID, materialEntityRemarks)\n\n# combine both tables into a Material table\nmaterial &lt;- bind_rows(individual_fish, stomach) \n\n# preview example of a full fish + its stomach content in Material table\nmaterial %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-survey-target-abundance-table",
-    "href": "generate-dwcav2.html#create-survey-target-abundance-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create Survey Target Abundance table",
-    "text": "Create Survey Target Abundance table",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#clean-fish-data",
-    "href": "generate-dwcav2.html#clean-fish-data",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Clean fish data",
-    "text": "Clean fish data\nClean the fish data so that the fields are ready for use for further manipulation.\n\nlibrary(worrms)\n\ncleaned_fish &lt;- raw_fish_data %&gt;%\n  # exclude those without sample number\n  filter(`Sample number` != \"/\") %&gt;%\n  rename(\n    family = Family,\n    preparations = presrvation,\n    disposition = Location,\n    verbatimIdentification = Species,\n    lifeStage = C1,\n    materialEntityID = `Sample number`,\n    netSize = `Net Size`\n  ) %&gt;%\n  mutate(\n    station_number_cleaned = str_remove_all(`Station number`, \"\\\\s*\"), # Remove white spaces\n    eventID = str_c(\"BROKE_WEST_RMT_\", station_number_cleaned, \"_\", `netSize`), # net level of event is needed here because surveyTarget is pointing to a surveyID in which surveyTargetAbundance report the count. If netSize is not specified, we cannot tell which net caught the target \n    # need surveyID for join with target later to create survey_target_abundance table\n    surveyID = str_c(eventID, \"_S\"),\n    scientificName = case_when(\n      grepl(\" sp\\\\.$\", verbatimIdentification) ~ sub(\" sp\\\\.$\", \"\", verbatimIdentification),\n      # correct typo of scientificName based on WoRMS\n      verbatimIdentification == \"Protomytophum bollini\" ~ \"Protomyctophum bolini\",\n      verbatimIdentification == \"Artedidraco scottsbergi\" ~ \"Artedidraco skottsbergi\",\n      verbatimIdentification == \"Gymnoscophelus braueri\" ~ \"Gymnoscopelus braueri\",\n      # Unidentified == Biota because lifeStage = larvae for these records. Can we be sure that these are fish?\n      verbatimIdentification == \"Unidentified\" ~ \"Biota\", \n      verbatimIdentification == \"/\" ~ \"\",\n      TRUE ~ verbatimIdentification\n    ),\n    identificationQualifier = case_when(\n      grepl(\" sp\\\\.$\", verbatimIdentification) ~ \"sp.\",\n      TRUE ~ \"\"\n    )\n  )\n  \n# match unique scientificName to WoRMS to obtain LSID of AphiaID\nmatched_taxa &lt;- wm_records_names(unique(cleaned_fish$scientificName)) %&gt;%\n  # the taxon match returns list of lists, this function creates a table of the following fields out of the lists\n  # keep aphiaID for surveyTargetID\n  map_df(~ select(.x, scientificname, lsid, rank, kingdom, AphiaID)) %&gt;%\n  rename(scientificName = scientificname, scientificNameID = lsid, taxonRank = rank)\n\n# join table to get scientificNameID and taxonRank\ncleaned_fish &lt;- cleaned_fish %&gt;% \n  left_join(matched_taxa, by = \"scientificName\")\n\n# preview distinct verbatimIdentification and matched scientificName and scientificNameID from WoRMS\ncleaned_fish %&gt;% distinct(verbatimIdentification, scientificName, scientificNameID, kingdom)",
     "crumbs": [
       "Home",
       "Transform data into DwCA v2",
@@ -248,35 +117,11 @@
     ]
   },
   {
-    "objectID": "generate-dwcav2.html#write-files",
-    "href": "generate-dwcav2.html#write-files",
+    "objectID": "generate-dwcav2.html#create-survey-table",
+    "href": "generate-dwcav2.html#create-survey-table",
     "title": "Transform dataset into DwCA v2",
-    "section": "Write files",
-    "text": "Write files\n\nsave(event, file = here(\"data\", \"output\", \"rda\", \"event.rda\"))\nsave(agent, file = here(\"data\", \"output\", \"rda\", \"agent.rda\"))\nsave(material, file = here(\"data\", \"output\", \"rda\", \"material.rda\"))\nsave(mat_gat, file = here(\"data\", \"output\", \"rda\", \"material_gathering.rda\"))\nsave(identification, file = here(\"data\", \"output\", \"rda\", \"identification.rda\"))\nsave(survey_target, file = here(\"data\", \"output\", \"rda\", \"survey_target.rda\"))\nsave(survey_target_abundance, file = here(\"data\", \"output\", \"rda\", \"survey_target_abundance.rda\"))\n\nwrite_tsv(event, here(\"data\", \"output\", \"tsv\", \"event.txt\"), na = \"\")\nwrite_tsv(agent, here(\"data\", \"output\", \"tsv\", \"agent.txt\"), na = \"\")\nwrite_tsv(material, here(\"data\", \"output\", \"tsv\", \"material.txt\"), na = \"\")\nwrite_tsv(mat_gat, here(\"data\", \"output\", \"tsv\", \"material_gathering.txt\"), na = \"\")\nwrite_tsv(identification, here(\"data\", \"output\", \"tsv\", \"identification.txt\"), na = \"\")\nwrite_tsv(survey_target, here(\"data\", \"output\", \"tsv\", \"survey_target.txt\"), na = \"\")\nwrite_tsv(survey_target_abundance, here(\"data\", \"output\", \"tsv\", \"survey_target.txt\"), na = \"\")",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-survey-target-and-survey-target-abundance-table",
-    "href": "generate-dwcav2.html#create-survey-target-and-survey-target-abundance-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create Survey Target and Survey Target Abundance table",
-    "text": "Create Survey Target and Survey Target Abundance table\nAfter extensive discussions on what target is, we decided to create survey-target table retrospectively. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID. SurveyTargetAbundance points to the Survey through the SurveyTarget record.\nChallenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any sex and lifeStage for all the taxa except Electrona antarctica. But sex and lifeStage are available in the Material table for a subset of data.\n\ntransform_rmt_count_to_long &lt;- function(df){\n  #' Convert wide count table into long table\n  #' \n  #' @param df A tibble of the count table with taxon as columns and trawl event as rows\n  #' @return A list of 2 tibbles, one is survey_target, the other is survey_target_abundance table\n  trawl &lt;- df %&gt;%\n  pivot_longer(cols = 5:ncol(df),\n               names_to = \"verbatimIdentification\",\n               values_to = \"organismQuantity\",\n               values_drop_na = TRUE) %&gt;%\n  mutate(\n    organismQuantityType = case_when(organismQuantity &gt;= 1 ~ \"individuals\", TRUE ~ \"individual\"),\n    lifeStage = case_when(\n      str_detect(verbatimIdentification, \" all$\") ~ \"\",\n      str_detect(verbatimIdentification, \" Larvae$\") ~ \"Larvae\",\n      str_detect(verbatimIdentification, \" Postmeta$\") ~ \"Postmeta\",\n      TRUE ~ \"\"\n    ),\n    identificationQualifier = if_else(str_detect(verbatimIdentification, \" sp\\\\.$\"), \"sp.\", \"\"),\n    # \\\\s* is needed to remove the white space for the resulting observedTaxon so that we don't get \"Electrona antarctica \"\n    # use field name \"taxon\" for surveyTargetType vocabulary later\n    taxon = str_remove_all(verbatimIdentification, \"\\\\s*(all|Larvae|Postmeta|sp\\\\.)$\"),\n    station_number_cleaned = str_remove_all(`Station number`, \"\\\\s*\"), # Remove white spaces\n    surveyID = str_c(\"BROKE_WEST_RMT_\", station_number_cleaned, \"_8_S\"),\n    # need to cast body size to string otherwise double cannot be in the same column with string after pivot_long\n    # only use size range for RMT8 here because there is no count data for RMT1 \n    `minimum body size` = \"0.85\",\n    `maximum body size` = \"3\"\n  )\n\ntrawl_taxa &lt;- wm_records_names(unique(trawl$taxon)) %&gt;%\n  # the taxon match returns list of lists, this function creates a table of the following fields out of the lists\n  map_df(~ select(.x, scientificname, lsid, AphiaID, rank)) %&gt;%\n  rename(taxon = scientificname, observedTaxonID = lsid, taxonRank = rank)\n\ntrawl_count &lt;- trawl %&gt;% \n  left_join(trawl_taxa, by = \"taxon\") %&gt;%\n  mutate(surveyTargetID = case_when(\n    lifeStage != \"\" ~ str_c(AphiaID, lifeStage, sep = \"_\"),\n    TRUE ~ as.character(AphiaID)))\n\ntrawl_long &lt;- trawl_count %&gt;%\n  pivot_longer(\n    cols = c(\"taxon\", \"lifeStage\", \"taxonRank\", \"minimum body size\", \"maximum body size\"),\n    names_to = \"surveyTargetType\",\n    values_to = \"surveyTargetValue\",\n    values_drop_na = TRUE\n  ) %&gt;%\n  mutate(\n    surveyTargetUnit = case_when(\n      surveyTargetType == \"minimum body size\" ~ \"mm\",\n      surveyTargetType == \"maximum body size\" ~ \"m\",\n      TRUE ~ NA\n    ),\n    surveyTargetUnitID = case_when(\n      surveyTargetUnit == \"mm\" ~ \"http://vocab.nerc.ac.uk/collection/P06/current/UXMM/\",\n      surveyTargetUnit == \"m\" ~ \"http://vocab.nerc.ac.uk/collection/P06/current/ULAA/\",\n      TRUE ~ NA\n    ),\n    surveyTargetValueID = case_when(\n      surveyTargetType == \"taxon\" ~ observedTaxonID,\n      surveyTargetValue == \"Genus\" ~ \"http://rs.tdwg.org/dwc/terms/genus\",\n      surveyTargetValue == \"Species\" ~ \"http://rs.tdwg.org/dwc/terms/specificEpithet\",\n      surveyTargetValue == \"Family\" ~ \"http://rs.tdwg.org/dwc/terms/family\",\n      TRUE ~ NA\n    )\n  )\n\nsurvey_target &lt;- trawl_long %&gt;%\n  select(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueID, surveyTargetUnit, surveyTargetUnitID)\n\nsurvey_target_abundance &lt;- trawl_long %&gt;%\n  filter(surveyTargetType == \"taxon\") %&gt;%\n  rename(observedTaxon = surveyTargetValue) %&gt;%\n  select(surveyTargetID, surveyID, observedTaxon, observedTaxonID, organismQuantity, organismQuantityType)\n\nreturn(list(survey_target = survey_target, survey_target_abundance = survey_target_abundance))\n}\n\nroutine_trawl &lt;- transform_rmt_count_to_long(raw_count_routine)\ntarget_trawl &lt;- transform_rmt_count_to_long(raw_count_target)\n\nsurvey_target &lt;- rbind(routine_trawl$survey_target, target_trawl$survey_target)\nsurvey_target_abundance &lt;- rbind(routine_trawl$survey_target_abundance, target_trawl$survey_target_abundance)\n\nSurveyTargetAbundance table seems to miss a surveyID field since surveyTargetID does not need to be unique.",
-    "crumbs": [
-      "Home",
-      "Transform data into DwCA v2",
-      "Generate tables for DwCA_v2"
-    ]
-  },
-  {
-    "objectID": "generate-dwcav2.html#create-material-gathering-table",
-    "href": "generate-dwcav2.html#create-material-gathering-table",
-    "title": "Transform dataset into DwCA v2",
-    "section": "Create Material Gathering table",
-    "text": "Create Material Gathering table\nMaterialGathering table is only consists of materialGatheringID.\n\nmat_gat &lt;- event %&gt;% \n  filter(eventClass == \"MaterialGathering\") %&gt;%\n  select(eventID) %&gt;%\n  rename(materialGatheringID = eventID)\n\nhead(mat_gat)",
+    "section": "Create Survey table",
+    "text": "Create Survey table\nSurvey table is a table that contains current Humboldt Extension terms.\n\nsuffixes &lt;- c(\"1_S\",\"8_S\")\n\nsurvey &lt;- humboldt %&gt;%\n  filter(eventID != \"BROKE_WEST\") %&gt;% # remove the expedition event, only link humboldt to the lowest level of Survey Events\n  expand_grid(suffix = suffixes) %&gt;%\n  mutate(eventID = paste0(eventID, \"_\", suffix),\n         # need to cast netSize to string so that it can be joined later (so that it is not a double)\n         netSize = case_when(suffix == \"1_S\" ~ \"1\", suffix == \"8_S\" ~ \"8\", TRUE ~ NA)) %&gt;%\n  rename(surveyID = eventID) %&gt;%\n  # remove fields that were empty or need to be amended based on new understanding of survey target\n  select(-`ecoiri:targetTaxonomicScope`, -`excludedLifeStageScope`, -verbatimSiteDescriptions, -eventDuration, -isAbundanceReported, -isAbsenceReported, -hasMaterialSamples, -materialSampleTypes, -isTaxonomicScopeFullyReported, -isLifeStageScopeFullyReported, -isLeastSpecificTargetCategoryQuantityInclusive, -areNonTargetTaxaFullyReported, -suffix)\n\nhead(survey)",
     "crumbs": [
       "Home",
       "Transform data into DwCA v2",
@@ -296,6 +141,18 @@
     ]
   },
   {
+    "objectID": "generate-dwcav2.html#write-files",
+    "href": "generate-dwcav2.html#write-files",
+    "title": "Transform dataset into DwCA v2",
+    "section": "Write files",
+    "text": "Write files\n\nsave(event, file = here(\"data\", \"output\", \"rda\", \"event.rda\"))\nsave(agent, file = here(\"data\", \"output\", \"rda\", \"agent.rda\"))\nsave(material, file = here(\"data\", \"output\", \"rda\", \"material.rda\"))\nsave(mat_gat, file = here(\"data\", \"output\", \"rda\", \"material_gathering.rda\"))\nsave(identification, file = here(\"data\", \"output\", \"rda\", \"identification.rda\"))\nsave(survey_target, file = here(\"data\", \"output\", \"rda\", \"survey_target.rda\"))\nsave(survey_target_abundance, file = here(\"data\", \"output\", \"rda\", \"survey_target_abundance.rda\"))\n\nwrite_tsv(event, here(\"data\", \"output\", \"tsv\", \"event.txt\"), na = \"\")\nwrite_tsv(agent, here(\"data\", \"output\", \"tsv\", \"agent.txt\"), na = \"\")\nwrite_tsv(material, here(\"data\", \"output\", \"tsv\", \"material.txt\"), na = \"\")\nwrite_tsv(mat_gat, here(\"data\", \"output\", \"tsv\", \"material_gathering.txt\"), na = \"\")\nwrite_tsv(identification, here(\"data\", \"output\", \"tsv\", \"identification.txt\"), na = \"\")\nwrite_tsv(survey_target, here(\"data\", \"output\", \"tsv\", \"survey_target.txt\"), na = \"\")\nwrite_tsv(survey_target_abundance, here(\"data\", \"output\", \"tsv\", \"survey_target_abundance.txt\"), na = \"\")",
+    "crumbs": [
+      "Home",
+      "Transform data into DwCA v2",
+      "Generate tables for DwCA_v2"
+    ]
+  },
+  {
     "objectID": "explore-dwcav2.html",
     "href": "explore-dwcav2.html",
     "title": "Explore DwCA v2",
@@ -303,7 +160,7 @@
     "text": "You can load the tables from the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n\nload(here(\"data\", \"output\", \"rda\", \"agent.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"event.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"identification.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"material.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"material_gathering.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"survey_target.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"survey_target_abundance.rda\"))\n\n\n\n\nYes! Example: Total count of electrona antarctica is recorded in SurveyTargetAbundance table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the Material table.\n\nsurvey_target_abundance %&gt;% filter(surveyID == \"BROKE_WEST_RMT_051_8_S\" & observedTaxon == \"Electrona antarctica\")\n\n\n  \n\n\nmaterial %&gt;% filter(materialGatheringID == \"BROKE_WEST_RMT_051_8_MG\" & scientificName == \"Electrona antarctica\")\n\n\n  \n\n\n\n\n\n\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\n\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\nOccurrence table\n\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\neMoF table\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nYes! Relationship between Materials can be specified through the Material table. Example of a krill eaten by a fish can be modeled within a single Material table\n\nmaterial %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
     "crumbs": [
       "Home",
-      "Exploring DwCA v2",
+      "Transform data into DwCA v2",
       "Exploring DwCA v2"
     ]
   },
@@ -315,7 +172,7 @@
     "text": "You can load the tables from the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n\nload(here(\"data\", \"output\", \"rda\", \"agent.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"event.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"identification.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"material.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"material_gathering.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"survey_target.rda\"))\nload(here(\"data\", \"output\", \"rda\", \"survey_target_abundance.rda\"))\n\n\n\n\nYes! Example: Total count of electrona antarctica is recorded in SurveyTargetAbundance table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the Material table.\n\nsurvey_target_abundance %&gt;% filter(surveyID == \"BROKE_WEST_RMT_051_8_S\" & observedTaxon == \"Electrona antarctica\")\n\n\n  \n\n\nmaterial %&gt;% filter(materialGatheringID == \"BROKE_WEST_RMT_051_8_MG\" & scientificName == \"Electrona antarctica\")\n\n\n  \n\n\n\n\n\n\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\n\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\nOccurrence table\n\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\neMoF table\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nYes! Relationship between Materials can be specified through the Material table. Example of a krill eaten by a fish can be modeled within a single Material table\n\nmaterial %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
     "crumbs": [
       "Home",
-      "Exploring DwCA v2",
+      "Transform data into DwCA v2",
       "Exploring DwCA v2"
     ]
   }
