@@ -349,6 +349,6 @@ write_tsv(material, here("data", "output", "tsv", "material.txt"), na = "")
 write_tsv(mat_gat, here("data", "output", "tsv", "material_gathering.txt"), na = "")
 write_tsv(identification, here("data", "output", "tsv", "identification.txt"), na = "")
 write_tsv(survey_target, here("data", "output", "tsv", "survey_target.txt"), na = "")
-write_tsv(survey_target_abundance, here("data", "output", "tsv", "survey_target.txt"), na = "")
+write_tsv(survey_target_abundance, here("data", "output", "tsv", "survey_target_abundance.txt"), na = "")
 
 ```

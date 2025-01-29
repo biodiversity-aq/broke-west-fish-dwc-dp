@@ -32,12 +32,6 @@ website:
         contents:
           - href: generate-dwcav2.qmd
             text: Generate tables for DwCA_v2
-      - section: Exploring DwCA v2
-        contents:
           - href: explore-dwcav2.qmd
             text: Exploring DwCA v2
-            
-
-
-
 

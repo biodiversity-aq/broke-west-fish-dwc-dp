@@ -68,4 +68,4 @@ material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
 
 ### How non-detections are represented in DwCA v2?
 
-### Trade off between expressiveness of DwCA v2 and simplicity DwCA?
+### Trade off between expressiveness of DwCA v2 and simplicity of DwCA?
