@@ -28,7 +28,7 @@ website:
         contents: 
           - href: dataset-background.qmd
             text: Dataset background
-      - section: Transform data into DwCA v2
+      - section: DwCA v2
         contents:
           - href: generate-dwcav2.qmd
             text: Generate tables for DwCA_v2
