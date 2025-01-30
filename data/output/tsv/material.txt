@@ -1,562 +1,562 @@
-materialEntityID	materialGatheringID	materialEntityType	preparations	disposition	verbatimIdentification	scientificName	scientificNameID	kingdom	taxonRank	derivedFromMaterialEntityID	derivationType	partOfMaterialEntityID	materialEntityRemarks
-AAV3FF_00322	BROKE_WEST_RMT_100_8_MG	whole organism	formalin	Anton	Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FF_00323	BROKE_WEST_RMT_100_8_MG	whole organism	Frozen	Anton	Pogonophryne marmorata	Pogonophryne marmorata	urn:lsid:marinespecies.org:taxname:234730	Animalia	Species				
-AAV3FF_00324	BROKE_WEST_RMT_100_8_MG	whole organism	Ethanol	Anton	Cygnodraco mawsoni	Cygnodraco mawsoni	urn:lsid:marinespecies.org:taxname:234834	Animalia	Species				
-AAV3FF_00325	BROKE_WEST_RMT_100_8_MG	whole organism	Ethanol	Anton	Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FF_00326	BROKE_WEST_RMT_101_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00327	BROKE_WEST_RMT_101_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00328	BROKE_WEST_RMT_101_8_MG	whole organism	formalin	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00329	BROKE_WEST_RMT_101_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00330	BROKE_WEST_RMT_101_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00331	BROKE_WEST_RMT_101_8_MG	whole organism	formalin	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00332	BROKE_WEST_RMT_101_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00333	BROKE_WEST_RMT_101_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00334	BROKE_WEST_RMT_101_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00335	BROKE_WEST_RMT_102_8_MG	whole organism	Frozen	Anton	Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FP_00026	BROKE_WEST_RMT_102_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00336	BROKE_WEST_RMT_105_8_MG	whole organism	formalin		Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00337	BROKE_WEST_RMT_105_8_MG	whole organism	formalin		Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00338	BROKE_WEST_RMT_105_8_MG	whole organism	formalin		Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00339	BROKE_WEST_RMT_105_8_MG	whole organism	Ethanol		Trematomus sp.	Trematomus	urn:lsid:marinespecies.org:taxname:234566	Animalia	Genus				
-AAV3FF_00340	BROKE_WEST_RMT_105_8_MG	whole organism	Ethanol		Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00341	BROKE_WEST_RMT_105_8_MG	whole organism	Ethanol		Gymnodraco acuticeps	Gymnodraco acuticeps	urn:lsid:marinespecies.org:taxname:234800	Animalia	Species				
-AAV3FF_00342	BROKE_WEST_RMT_105_8_MG	whole organism	Ethanol		Pagetopsis maculatus	Pagetopsis maculatus	urn:lsid:marinespecies.org:taxname:1621601	Animalia	Species				
-AAV3FF_00343	BROKE_WEST_RMT_105_8_MG	whole organism	Ethanol		Pogonophryne marmorata	Pogonophryne marmorata	urn:lsid:marinespecies.org:taxname:234730	Animalia	Species				
-AAV3FF_00344	BROKE_WEST_RMT_106_8_MG	whole organism			Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00345	BROKE_WEST_RMT_106_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00346	BROKE_WEST_RMT_106_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00347	BROKE_WEST_RMT_107_1_MG	whole organism			Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FF_00348	BROKE_WEST_RMT_107_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00349	BROKE_WEST_RMT_107_8_MG	whole organism			Pagetopsis maculatus	Pagetopsis maculatus	urn:lsid:marinespecies.org:taxname:1621601	Animalia	Species				
-AAV3FF_00350	BROKE_WEST_RMT_107_8_MG	whole organism			Pogonophryne marmorata	Pogonophryne marmorata	urn:lsid:marinespecies.org:taxname:234730	Animalia	Species				
-AAV3FF_00351	BROKE_WEST_RMT_107_8_MG	whole organism			Pagetopsis maculatus	Pagetopsis maculatus	urn:lsid:marinespecies.org:taxname:1621601	Animalia	Species				
-AAV3FF_00352	BROKE_WEST_RMT_107_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00353	BROKE_WEST_RMT_107_8_MG	whole organism			Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00354	BROKE_WEST_RMT_107_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00355	BROKE_WEST_RMT_107_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00356	BROKE_WEST_RMT_108_8_MG	whole organism			Trematomus sp.	Trematomus	urn:lsid:marinespecies.org:taxname:234566	Animalia	Genus				
-AAV3FF_00358	BROKE_WEST_RMT_109_8_MG	whole organism			Cryodraco antarcticus	Cryodraco antarcticus	urn:lsid:marinespecies.org:taxname:234720	Animalia	Species				
-AAV3FF_00359	BROKE_WEST_RMT_109_8_MG	whole organism			Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00360	BROKE_WEST_RMT_110_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00361	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00362	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00363	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00364	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00365	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00366	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00367	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00368	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00369	BROKE_WEST_RMT_110_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00370	BROKE_WEST_RMT_110_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00371	BROKE_WEST_RMT_110_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00372	BROKE_WEST_RMT_111_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00373	BROKE_WEST_RMT_111_8_MG	whole organism			Cryodraco antarcticus	Cryodraco antarcticus	urn:lsid:marinespecies.org:taxname:234720	Animalia	Species				
-AAV3FF_00374	BROKE_WEST_RMT_112_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00375	BROKE_WEST_RMT_112_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00376	BROKE_WEST_RMT_112_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00377	BROKE_WEST_RMT_113_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00378	BROKE_WEST_RMT_113_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00379	BROKE_WEST_RMT_113_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00380	BROKE_WEST_RMT_114_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00381	BROKE_WEST_RMT_114_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00382	BROKE_WEST_RMT_114_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FP_00027	BROKE_WEST_RMT_114_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00383	BROKE_WEST_RMT_115_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00384	BROKE_WEST_RMT_115_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00385	BROKE_WEST_RMT_115_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00386	BROKE_WEST_RMT_115_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00387	BROKE_WEST_RMT_115_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00388	BROKE_WEST_RMT_115_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00389	BROKE_WEST_RMT_115_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00390	BROKE_WEST_RMT_115_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00391	BROKE_WEST_RMT_115_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00392	BROKE_WEST_RMT_115_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00393	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00394	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00395	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00396	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00397	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00398	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00399	BROKE_WEST_RMT_115_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00400	BROKE_WEST_RMT_116_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00401	BROKE_WEST_RMT_116_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00402	BROKE_WEST_RMT_116_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00403	BROKE_WEST_RMT_116_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00404	BROKE_WEST_RMT_116_8_MG	whole organism		Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00405	BROKE_WEST_RMT_116_8_MG	whole organism		Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00406	BROKE_WEST_RMT_116_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00407	BROKE_WEST_RMT_116_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00408	BROKE_WEST_RMT_116_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00409	BROKE_WEST_RMT_116_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00410	BROKE_WEST_RMT_116_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00411	BROKE_WEST_RMT_116_8_MG	whole organism			Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FF_00412	BROKE_WEST_RMT_116_1_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00413	BROKE_WEST_RMT_116_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00414	BROKE_WEST_RMT_116_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00415	BROKE_WEST_RMT_116_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00416	BROKE_WEST_RMT_116_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00417	BROKE_WEST_RMT_116_1_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00028	BROKE_WEST_RMT_116_8_MG	whole organism			Unidentified	Biota	urn:lsid:marinespecies.org:taxname:1		Superdomain				
-AAV3FP_00029	BROKE_WEST_RMT_116_8_MG	whole organism			Unidentified	Biota	urn:lsid:marinespecies.org:taxname:1		Superdomain				
-AAV3FP_00030	BROKE_WEST_RMT_116_8_MG	whole organism			Unidentified	Biota	urn:lsid:marinespecies.org:taxname:1		Superdomain				
-AAV3FF_00418	BROKE_WEST_RMT_117_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00419	BROKE_WEST_RMT_118_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00420	BROKE_WEST_RMT_122_8_MG	whole organism			Cygnodraco mawsoni	Cygnodraco mawsoni	urn:lsid:marinespecies.org:taxname:234834	Animalia	Species				
-AAV3FF_00421	BROKE_WEST_RMT_125_8_MG	whole organism			Pagetopsis maculatus	Pagetopsis maculatus	urn:lsid:marinespecies.org:taxname:1621601	Animalia	Species				
-AAV3FF_00005	BROKE_WEST_RMT_011_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00006	BROKE_WEST_RMT_011_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00007	BROKE_WEST_RMT_011_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00008	BROKE_WEST_RMT_017_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00009	BROKE_WEST_RMT_017_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00012	BROKE_WEST_RMT_020_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00013	BROKE_WEST_RMT_021_8_MG	whole organism	Ethanol	Anton	Pagetopsis maculatus	Pagetopsis maculatus	urn:lsid:marinespecies.org:taxname:1621601	Animalia	Species				
-AAV3FF_00014	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00015	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00016	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00017	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00018	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00019	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00020	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00021	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00022	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00023	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00024	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00025	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00026	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00027	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00028	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00029	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00030	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00031	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00032	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00033	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00034	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00035	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00036	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00037	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00038	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00039	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00040	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00041	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00042	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00043	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00044	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00045	BROKE_WEST_RMT_022_8_MG	whole organism	formalin	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00046	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00047	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00048	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00049	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00050	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00051	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00052	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00053	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00054	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00055	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00056	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00057	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00058	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00059	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00060	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00061	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00062	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00063	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00064	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00065	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00066	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00067	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00068	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00069	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00070	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00071	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00072	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00073	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00074	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00075	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00076	BROKE_WEST_RMT_022_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00077	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00078	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00079	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00080	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00081	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00082	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00083	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00084	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00085	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00086	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00087	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00088	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00089	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00090	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00091	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00092	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00093	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00094	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00095	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00096	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00097	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00098	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00099	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00100	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00101	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00102	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00103	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00104	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00105	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00106	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00107	BROKE_WEST_RMT_022_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00108	BROKE_WEST_RMT_024_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00109	BROKE_WEST_RMT_024_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00110	BROKE_WEST_RMT_024_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00111	BROKE_WEST_RMT_024_8_MG	whole organism	Ethanol	Anton	Trematomus sp.	Trematomus	urn:lsid:marinespecies.org:taxname:234566	Animalia	Genus				
-AAV3FF_00112	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00113	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00114	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00115	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00116	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00117	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00118	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00119	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00120	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00121	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00123	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00124	BROKE_WEST_RMT_031_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00001	BROKE_WEST_RMT_031_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00002	BROKE_WEST_RMT_031_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00003	BROKE_WEST_RMT_031_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00004	BROKE_WEST_RMT_031_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00005	BROKE_WEST_RMT_031_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00125	BROKE_WEST_RMT_032_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00126	BROKE_WEST_RMT_032_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00130	BROKE_WEST_RMT_034_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00132	BROKE_WEST_RMT_034_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00133	BROKE_WEST_RMT_034_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00134	BROKE_WEST_RMT_034_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00135	BROKE_WEST_RMT_034_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00136	BROKE_WEST_RMT_034_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00137	BROKE_WEST_RMT_034_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00139	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00140	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00141	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00142	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00143	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00144	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00145	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00146	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00147	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00148	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00149	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00150	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00151	BROKE_WEST_RMT_037_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00154	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00155	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00156	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00157	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00158	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00159	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00160	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00161	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00162	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00163	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00164	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00165	BROKE_WEST_RMT_037_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00166	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00167	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00168	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00169	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00170	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00171	BROKE_WEST_RMT_038_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FP_00006	BROKE_WEST_RMT_038_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00007	BROKE_WEST_RMT_038_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00172	BROKE_WEST_RMT_039_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00173	BROKE_WEST_RMT_039_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00174	BROKE_WEST_RMT_042_8_MG	whole organism	Ethanol	Anton	Gymnodraco acuticeps	Gymnodraco acuticeps	urn:lsid:marinespecies.org:taxname:234800	Animalia	Species				
-AAV3FF_00175	BROKE_WEST_RMT_042_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00176	BROKE_WEST_RMT_042_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00177	BROKE_WEST_RMT_042_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00178	BROKE_WEST_RMT_042_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00179	BROKE_WEST_RMT_042_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FP_00008	BROKE_WEST_RMT_042_8_MG	whole organism			Unidentified	Biota	urn:lsid:marinespecies.org:taxname:1		Superdomain				
-AAV3FF_00181	BROKE_WEST_RMT_043_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00182	BROKE_WEST_RMT_043_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00183	BROKE_WEST_RMT_043_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00184	BROKE_WEST_RMT_043_8_MG	whole organism	Frozen	Megan	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00185	BROKE_WEST_RMT_043_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00186	BROKE_WEST_RMT_044_1_MG	whole organism	Ethanol	Anton	Prionodraco evansii	Prionodraco evansii	urn:lsid:marinespecies.org:taxname:234777	Animalia	Species				
-AAV3FF_00196	BROKE_WEST_RMT_050_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00197	BROKE_WEST_RMT_050_8_MG	whole organism	Frozen	Anton	Protomytophum bollini	Protomyctophum bolini	urn:lsid:marinespecies.org:taxname:234714	Animalia	Species				
-AAV3FF_00198	BROKE_WEST_RMT_050_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00199	BROKE_WEST_RMT_050_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00201	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00202	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00203	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00204	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00205	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00206	BROKE_WEST_RMT_050_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00207	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00208	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00209	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00210	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00211	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00212	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00213	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00214	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00215	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00216	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00217	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00218	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00219	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00220	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00221	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00222	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00223	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00224	BROKE_WEST_RMT_051_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00227	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00228	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00229	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00230	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00231	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00232	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00233	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00234	BROKE_WEST_RMT_051_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00235	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00236	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00237	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00238	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00239	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00240	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00241	BROKE_WEST_RMT_051_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FP_00009	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00010	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00011	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00012	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00013	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00014	BROKE_WEST_RMT_051_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00015	BROKE_WEST_RMT_051_8_MG	whole organism			Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00244	BROKE_WEST_RMT_052_8_MG	whole organism	Ethanol	Anton	Artedidraco scottsbergi	Artedidraco skottsbergi	urn:lsid:marinespecies.org:taxname:234621	Animalia	Species				
-AAV3FF_00247	BROKE_WEST_RMT_053_1_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00248	BROKE_WEST_RMT_053_8_MG	whole organism	formalin	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00249	BROKE_WEST_RMT_053_8_MG	whole organism	formalin	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00250	BROKE_WEST_RMT_053_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00251	BROKE_WEST_RMT_053_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00252	BROKE_WEST_RMT_053_8_MG	whole organism	Frozen	Bart	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00253	BROKE_WEST_RMT_053_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FP_00016	BROKE_WEST_RMT_055_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00254	BROKE_WEST_RMT_056_8_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00255	BROKE_WEST_RMT_059_1_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00256	BROKE_WEST_RMT_059_1_MG	whole organism	Ethanol	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00257	BROKE_WEST_RMT_059_1_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00258	BROKE_WEST_RMT_059_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00259	BROKE_WEST_RMT_059_8_MG	whole organism	Frozen	Anton	Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00260	BROKE_WEST_RMT_059_8_MG	whole organism	Ethanol	Anton	Gerlachea australis	Gerlachea australis	urn:lsid:marinespecies.org:taxname:234808	Animalia	Species				
-AAV3FF_00261	BROKE_WEST_RMT_059_8_MG	whole organism	?	Anton	Gymnodraco acuticeps	Gymnodraco acuticeps	urn:lsid:marinespecies.org:taxname:234800	Animalia	Species				
-AAV3FF_00262	BROKE_WEST_RMT_061_1_MG	whole organism	Ethanol		Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00263	BROKE_WEST_RMT_065_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00264	BROKE_WEST_RMT_065_8_MG	whole organism	Frozen	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00265	BROKE_WEST_RMT_065_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00266	BROKE_WEST_RMT_065_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00267	BROKE_WEST_RMT_065_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00268	BROKE_WEST_RMT_065_8_MG	whole organism	Frozen	Anton	Gymnoscophelus braueri	Gymnoscopelus braueri	urn:lsid:marinespecies.org:taxname:234642	Animalia	Species				
-AAV3FP_00017	BROKE_WEST_RMT_066_8_MG	whole organism			Unidentified	Biota	urn:lsid:marinespecies.org:taxname:1		Superdomain				
-AAV3FF_00269	BROKE_WEST_RMT_069_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00270	BROKE_WEST_RMT_069_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00271	BROKE_WEST_RMT_069_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00272	BROKE_WEST_RMT_069_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00273	BROKE_WEST_RMT_069_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00274	BROKE_WEST_RMT_069_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00275	BROKE_WEST_RMT_069_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00276	BROKE_WEST_RMT_070_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00277	BROKE_WEST_RMT_070_8_MG	whole organism	Frozen	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00278	BROKE_WEST_RMT_072_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00279	BROKE_WEST_RMT_077_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00018	BROKE_WEST_RMT_077_8_MG	whole organism			Pleuragramma antarcticum	Pleuragramma antarcticum	urn:lsid:marinespecies.org:taxname:234721	Animalia	Species				
-AAV3FF_00281	BROKE_WEST_RMT_079_8_MG	whole organism	formalin	Evgeny	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00282	BROKE_WEST_RMT_079_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00283	BROKE_WEST_RMT_081_8_MG	whole organism	Ethanol	Anton	Chionodraco sp.	Chionodraco	urn:lsid:marinespecies.org:taxname:234582	Animalia	Genus				
-AAV3FF_00284	BROKE_WEST_RMT_085_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00285	BROKE_WEST_RMT_086_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00286	BROKE_WEST_RMT_086_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00287	BROKE_WEST_RMT_087_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00288	BROKE_WEST_RMT_087_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00289	BROKE_WEST_RMT_087_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00290	BROKE_WEST_RMT_087_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00291	BROKE_WEST_RMT_088_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00292	BROKE_WEST_RMT_088_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00293	BROKE_WEST_RMT_088_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00294	BROKE_WEST_RMT_088_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00295	BROKE_WEST_RMT_089_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00296	BROKE_WEST_RMT_089_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00297	BROKE_WEST_RMT_089_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00298	BROKE_WEST_RMT_093_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00299	BROKE_WEST_RMT_093_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00300	BROKE_WEST_RMT_093_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00301	BROKE_WEST_RMT_093_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00302	BROKE_WEST_RMT_093_1_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00303	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00304	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00305	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00306	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00307	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00308	BROKE_WEST_RMT_093_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00309	BROKE_WEST_RMT_094_1_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00310	BROKE_WEST_RMT_096_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00311	BROKE_WEST_RMT_097_8_MG	whole organism	Frozen	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00312	BROKE_WEST_RMT_097_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00313	BROKE_WEST_RMT_097_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00314	BROKE_WEST_RMT_097_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00315	BROKE_WEST_RMT_097_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00019	BROKE_WEST_RMT_097_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00020	BROKE_WEST_RMT_097_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00021	BROKE_WEST_RMT_097_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00022	BROKE_WEST_RMT_097_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00023	BROKE_WEST_RMT_097_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00316	BROKE_WEST_RMT_098_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00024	BROKE_WEST_RMT_098_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FP_00025	BROKE_WEST_RMT_098_8_MG	whole organism			Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00317	BROKE_WEST_RMT_099_8_MG	whole organism	Frozen	Anton	Cygnodraco mawsoni	Cygnodraco mawsoni	urn:lsid:marinespecies.org:taxname:234834	Animalia	Species				
-AAV3FF_00318	BROKE_WEST_RMT_099_8_MG	whole organism	formalin	Anton	Cygnodraco mawsoni	Cygnodraco mawsoni	urn:lsid:marinespecies.org:taxname:234834	Animalia	Species				
-AAV3FF_00320	BROKE_WEST_RMT_099_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00321	BROKE_WEST_RMT_099_8_MG	whole organism	Frozen	Anton	Bathydraco sp.	Bathydraco	urn:lsid:marinespecies.org:taxname:234552	Animalia	Genus				
-AAV3FF_00001	BROKE_WEST_RMT_006_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00002	BROKE_WEST_RMT_007_8_MG	whole organism	Ethanol	Anton	Macrouridae sp.	Macrouridae	urn:lsid:marinespecies.org:taxname:125471	Animalia	Family				
-AAV3FF_00003	BROKE_WEST_RMT_008_8_MG	whole organism	Ethanol	Anton	Electrona antarctica	Electrona antarctica	urn:lsid:marinespecies.org:taxname:217697	Animalia	Species				
-AAV3FF_00004	BROKE_WEST_RMT_008_8_MG	whole organism	Ethanol	Anton	Notolepis coatsi	Notolepis coatsi	urn:lsid:marinespecies.org:taxname:234695	Animalia	Species				
-AAV3FF_00338_stomach_001_Tyhsanoessa macrura	BROKE_WEST_RMT_105_8_MG	stomach content			Tyhsanoessa macrura					AAV3FF_00338	stomach content of	AAV3FF_00338	
-AAV3FF_00337_stomach_002_Euphausiid	BROKE_WEST_RMT_105_8_MG	stomach content			Euphausiid					AAV3FF_00337	stomach content of	AAV3FF_00337	several euphausiid (?) parts
-AAV3FF_00337_stomach_003_larval euphausiid	BROKE_WEST_RMT_105_8_MG	stomach content			larval euphausiid					AAV3FF_00337	stomach content of	AAV3FF_00337	tail
-AAV3FF_00337_stomach_004_Crustecean	BROKE_WEST_RMT_105_8_MG	stomach content			Crustecean					AAV3FF_00337	stomach content of	AAV3FF_00337	carapax
-AAV3FF_00337_stomach_005_Copepod	BROKE_WEST_RMT_105_8_MG	stomach content			Copepod					AAV3FF_00337	stomach content of	AAV3FF_00337	large; Head with ant
-AAV3FF_00337_stomach_006_Copepod	BROKE_WEST_RMT_105_8_MG	stomach content			Copepod					AAV3FF_00337	stomach content of	AAV3FF_00337	
-AAV3FF_00337_stomach_007_Copepod	BROKE_WEST_RMT_105_8_MG	stomach content			Copepod					AAV3FF_00337	stomach content of	AAV3FF_00337	presumable copepod remainders
-AAV3FF_00337_stomach_008_Crustecean	BROKE_WEST_RMT_105_8_MG	stomach content			Crustecean					AAV3FF_00337	stomach content of	AAV3FF_00337	head with long ant
-AAV3FF_00374_stomach_009_St wall	BROKE_WEST_RMT_112_8_MG	stomach content			St wall					AAV3FF_00374	stomach content of	AAV3FF_00374	gland ?
-AAV3FF_00374_stomach_010_Mucus	BROKE_WEST_RMT_112_8_MG	stomach content			Mucus					AAV3FF_00374	stomach content of	AAV3FF_00374	mucus
-AAV3FF_00377_stomach_011_Euphausia superba	BROKE_WEST_RMT_113_8_MG	stomach content			Euphausia superba					AAV3FF_00377	stomach content of	AAV3FF_00377	
-AAV3FF_00378_stomach_012_Euphausia superba	BROKE_WEST_RMT_113_8_MG	stomach content			Euphausia superba					AAV3FF_00378	stomach content of	AAV3FF_00378	
-AAV3FF_00022_stomach_013_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00022	stomach content of	AAV3FF_00022	cf. Oithona sp.
-AAV3FF_00022_stomach_014_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00022	stomach content of	AAV3FF_00022	
-AAV3FF_00022_stomach_015_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00022	stomach content of	AAV3FF_00022	tail off
-AAV3FF_00022_stomach_016_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00022	stomach content of	AAV3FF_00022	
-AAV3FF_00022_stomach_017_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00022	stomach content of	AAV3FF_00022	Scale
-AAV3FF_00025_stomach_018_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00025	stomach content of	AAV3FF_00025	
-AAV3FF_00025_stomach_019_Crustecean	BROKE_WEST_RMT_022_8_MG	stomach content			Crustecean					AAV3FF_00025	stomach content of	AAV3FF_00025	rear part; long tail spine
-AAV3FF_00025_stomach_020_Mucus	BROKE_WEST_RMT_022_8_MG	stomach content			Mucus					AAV3FF_00025	stomach content of	AAV3FF_00025	
-AAV3FF_00040_stomach_021_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00040	stomach content of	AAV3FF_00040	
-AAV3FF_00040_stomach_022_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00040	stomach content of	AAV3FF_00040	
-AAV3FF_00040_stomach_023_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00040	stomach content of	AAV3FF_00040	tail off
-AAV3FF_00040_stomach_024_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00040	stomach content of	AAV3FF_00040	
-AAV3FF_00040_stomach_025_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00040	stomach content of	AAV3FF_00040	rear part
-AAV3FF_00040_stomach_026_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00040	stomach content of	AAV3FF_00040	
-AAV3FF_00040_stomach_027_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00040	stomach content of	AAV3FF_00040	cf. Oithona sp.
-AAV3FF_00040_stomach_028_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00040	stomach content of	AAV3FF_00040	
-AAV3FF_00040_stomach_029_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00040	stomach content of	AAV3FF_00040	piece of tissue
-AAV3FF_00040_stomach_030_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00040	stomach content of	AAV3FF_00040	sand crystal?
-AAV3FF_00041_stomach_031_Furcilia	BROKE_WEST_RMT_022_8_MG	stomach content			Furcilia					AAV3FF_00041	stomach content of	AAV3FF_00041	w/o head
-AAV3FF_00041_stomach_032_Calyptotis	BROKE_WEST_RMT_022_8_MG	stomach content			Calyptotis					AAV3FF_00041	stomach content of	AAV3FF_00041	
-AAV3FF_00041_stomach_033_Facet eye	BROKE_WEST_RMT_022_8_MG	stomach content			Facet eye					AAV3FF_00041	stomach content of	AAV3FF_00041	Facet eye
-AAV3FF_00041_stomach_034_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00041	stomach content of	AAV3FF_00041	cf. Oithona sp.; copepodite
-AAV3FF_00041_stomach_035_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00041	stomach content of	AAV3FF_00041	
-AAV3FF_00041_stomach_036_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00041	stomach content of	AAV3FF_00041	
-AAV3FF_00041_stomach_037_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00041	stomach content of	AAV3FF_00041	tail off
-AAV3FF_00041_stomach_038_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00041	stomach content of	AAV3FF_00041	
-AAV3FF_00041_stomach_039_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00041	stomach content of	AAV3FF_00041	cf. Oithona sp.
-AAV3FF_00041_stomach_040_Harpacticoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Harpacticoid copepod					AAV3FF_00041	stomach content of	AAV3FF_00041	cf. Miracia minor or Microstellata rosea
-AAV3FF_00041_stomach_041_Mucus	BROKE_WEST_RMT_022_8_MG	stomach content			Mucus					AAV3FF_00041	stomach content of	AAV3FF_00041	
-AAV3FF_00028_stomach_042_Amphipod	BROKE_WEST_RMT_022_8_MG	stomach content			Amphipod					AAV3FF_00028	stomach content of	AAV3FF_00028	rear part
-AAV3FF_00028_stomach_043_Primno macropa	BROKE_WEST_RMT_022_8_MG	stomach content			Primno macropa					AAV3FF_00028	stomach content of	AAV3FF_00028	front part
-AAV3FF_00028_stomach_044_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_045_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_046_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00028	stomach content of	AAV3FF_00028	tail off
-AAV3FF_00028_stomach_047_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_048_Nauplius	BROKE_WEST_RMT_022_8_MG	stomach content			Nauplius					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_049_Calyptotis	BROKE_WEST_RMT_022_8_MG	stomach content			Calyptotis					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_050_Euphausia superba	BROKE_WEST_RMT_022_8_MG	stomach content			Euphausia superba					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_051_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00028	stomach content of	AAV3FF_00028	broken
-AAV3FF_00028_stomach_052_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00028	stomach content of	AAV3FF_00028	tail off
-AAV3FF_00028_stomach_053_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00028	stomach content of	AAV3FF_00028	
-AAV3FF_00028_stomach_054_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00028	stomach content of	AAV3FF_00028	tail off => cf. Metridia sp.?
-AAV3FF_00028_stomach_055_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00028	stomach content of	AAV3FF_00028	tail broken; O. Similis male?
-AAV3FF_00029_stomach_056_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_057_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_058_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_059_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_060_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_061_Scaphocalanus vervoorti	BROKE_WEST_RMT_022_8_MG	stomach content			Scaphocalanus vervoorti					AAV3FF_00029	stomach content of	AAV3FF_00029	initially thought to be Drepanopus sp.
-AAV3FF_00029_stomach_062_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	cf. S. vervoorti
-AAV3FF_00029_stomach_063_Scaphocalanus vervoorti	BROKE_WEST_RMT_022_8_MG	stomach content			Scaphocalanus vervoorti					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_064_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	tail broken
-AAV3FF_00029_stomach_065_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_066_Crustecean	BROKE_WEST_RMT_022_8_MG	stomach content			Crustecean					AAV3FF_00029	stomach content of	AAV3FF_00029	parts of amphipod?
-AAV3FF_00029_stomach_067_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	rear part
-AAV3FF_00029_stomach_068_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	front part
-AAV3FF_00029_stomach_069_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00029_stomach_070_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	cf. Temorites brevis
-AAV3FF_00029_stomach_071_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	cf. Temorites brevis
-AAV3FF_00029_stomach_072_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00029	stomach content of	AAV3FF_00029	cf. Temorites brevis
-AAV3FF_00029_stomach_073_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	tail broken
-AAV3FF_00029_stomach_074_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00029	stomach content of	AAV3FF_00029	
-AAV3FF_00037_stomach_075_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00037	stomach content of	AAV3FF_00037	
-AAV3FF_00037_stomach_076_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00037	stomach content of	AAV3FF_00037	tail off
-AAV3FF_00037_stomach_077_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00037	stomach content of	AAV3FF_00037	
-AAV3FF_00037_stomach_078_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00037	stomach content of	AAV3FF_00037	
-AAV3FF_00037_stomach_079_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00037	stomach content of	AAV3FF_00037	squeezed
-AAV3FF_00037_stomach_080_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00037	stomach content of	AAV3FF_00037	
-AAV3FF_00037_stomach_081_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00037	stomach content of	AAV3FF_00037	tail off; copepodite?
-AAV3FF_00037_stomach_082_Aetidius armatus	BROKE_WEST_RMT_022_8_MG	stomach content			Aetidius armatus					AAV3FF_00037	stomach content of	AAV3FF_00037	tail off
-AAV3FF_00037_stomach_083_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00037	stomach content of	AAV3FF_00037	cf. Ctenocalanus sp.
-AAV3FF_00039_stomach_084_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00039	stomach content of	AAV3FF_00039	rear part
-AAV3FF_00039_stomach_085_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00039	stomach content of	AAV3FF_00039	
-AAV3FF_00039_stomach_086_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00039	stomach content of	AAV3FF_00039	
-AAV3FF_00039_stomach_087_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00039	stomach content of	AAV3FF_00039	strange spiny thing => Meroplankton larva?
-AAV3FF_00039_stomach_088_Euphausia superba	BROKE_WEST_RMT_022_8_MG	stomach content			Euphausia superba					AAV3FF_00039	stomach content of	AAV3FF_00039	Metanauplius II
-AAV3FF_00039_stomach_089_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00039	stomach content of	AAV3FF_00039	front part
-AAV3FF_00039_stomach_090_Mucus	BROKE_WEST_RMT_022_8_MG	stomach content			Mucus					AAV3FF_00039	stomach content of	AAV3FF_00039	
-AAV3FF_00039_stomach_091_Crustecean	BROKE_WEST_RMT_022_8_MG	stomach content			Crustecean					AAV3FF_00039	stomach content of	AAV3FF_00039	Crustacean remainders
-AAV3FF_00039_stomach_092_Scaphocalanus vervoorti	BROKE_WEST_RMT_022_8_MG	stomach content			Scaphocalanus vervoorti					AAV3FF_00039	stomach content of	AAV3FF_00039	specimen got lost
-AAV3FF_00039_stomach_093_Amphipod	BROKE_WEST_RMT_022_8_MG	stomach content			Amphipod					AAV3FF_00039	stomach content of	AAV3FF_00039	check if harpacticoid
-AAV3FF_00036_stomach_094_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00036	stomach content of	AAV3FF_00036	Egg? Eye lense? Parasites?
-AAV3FF_00036_stomach_095_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_096_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	rear part
-AAV3FF_00036_stomach_097_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	rear part
-AAV3FF_00036_stomach_098_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_099_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	front part
-AAV3FF_00036_stomach_100_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_101_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_102_other	BROKE_WEST_RMT_022_8_MG	stomach content			other					AAV3FF_00036	stomach content of	AAV3FF_00036	gills (?)
-AAV3FF_00036_stomach_103_Crustecean	BROKE_WEST_RMT_022_8_MG	stomach content			Crustecean					AAV3FF_00036	stomach content of	AAV3FF_00036	Crustacean remains
-AAV3FF_00036_stomach_104_Other	BROKE_WEST_RMT_022_8_MG	stomach content			Other					AAV3FF_00036	stomach content of	AAV3FF_00036	Appendicularian? - Can they be this small?
-AAV3FF_00036_stomach_105_Primno macropa	BROKE_WEST_RMT_022_8_MG	stomach content			Primno macropa					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_106_Euphausia superba	BROKE_WEST_RMT_022_8_MG	stomach content			Euphausia superba					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_107_Euphausia superba	BROKE_WEST_RMT_022_8_MG	stomach content			Euphausia superba					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_108_larval euphausiid	BROKE_WEST_RMT_022_8_MG	stomach content			larval euphausiid					AAV3FF_00036	stomach content of	AAV3FF_00036	Furcilia / calypt tail
-AAV3FF_00036_stomach_109_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_110_Undinella sp.	BROKE_WEST_RMT_022_8_MG	stomach content			Undinella sp.					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_111_Mucus	BROKE_WEST_RMT_022_8_MG	stomach content			Mucus					AAV3FF_00036	stomach content of	AAV3FF_00036	
-AAV3FF_00036_stomach_112_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00036	stomach content of	AAV3FF_00036	Copepod remains
-AAV3FF_00024_stomach_113_Primno macropa	BROKE_WEST_RMT_022_8_MG	stomach content			Primno macropa					AAV3FF_00024	stomach content of	AAV3FF_00024	Pereonites I, II nor fused; large subchela on P5 with 3 large teeth; all other P simple; small rostrum; residual ANT; possible alternative: P. Latreilli
-AAV3FF_00024_stomach_114_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	Copepodite; cf. M. gerlachei
-AAV3FF_00024_stomach_115_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	head
-AAV3FF_00024_stomach_116_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	squeezed; tail off; 0.55 mm
-AAV3FF_00024_stomach_117_Stephos longipes	BROKE_WEST_RMT_022_8_MG	stomach content			Stephos longipes					AAV3FF_00024	stomach content of	AAV3FF_00024	sturdy body shape with short urosome; Ur: 2=3=4=Sgan; fat Sgan
-AAV3FF_00024_stomach_118_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_119_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_120_Hyperiid	BROKE_WEST_RMT_022_8_MG	stomach content			Hyperiid					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_121_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00024	stomach content of	AAV3FF_00024	tail crumpled
-AAV3FF_00024_stomach_122_Primno macropa	BROKE_WEST_RMT_022_8_MG	stomach content			Primno macropa					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_123_Ctenocalanus vanus	BROKE_WEST_RMT_022_8_MG	stomach content			Ctenocalanus vanus					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_124_Ctenocalanus vanus	BROKE_WEST_RMT_022_8_MG	stomach content			Ctenocalanus vanus					AAV3FF_00024	stomach content of	AAV3FF_00024	Prosoma crumpled
-AAV3FF_00024_stomach_125_Ctenocalanus vanus	BROKE_WEST_RMT_022_8_MG	stomach content			Ctenocalanus vanus					AAV3FF_00024	stomach content of	AAV3FF_00024	
-AAV3FF_00024_stomach_126_Oithona similis	BROKE_WEST_RMT_022_8_MG	stomach content			Oithona similis					AAV3FF_00024	stomach content of	AAV3FF_00024	tail broken
-AAV3FF_00024_stomach_127_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	Cf. O. Similis
-AAV3FF_00024_stomach_128_Calanoid copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Calanoid copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	Cf. C. vanus
-AAV3FF_00024_stomach_129_Copepod	BROKE_WEST_RMT_022_8_MG	stomach content			Copepod					AAV3FF_00024	stomach content of	AAV3FF_00024	cf. O. Similis; damaged; tail broken
-AAV3FF_00328_stomach_130_Paraeuchaeta antarctica	BROKE_WEST_RMT_101_8_MG	stomach content			Paraeuchaeta antarctica					AAV3FF_00328	stomach content of	AAV3FF_00328	Stage IV
-AAV3FF_00328_stomach_131_Cyllopus magellanicus	BROKE_WEST_RMT_101_8_MG	stomach content			Cyllopus magellanicus					AAV3FF_00328	stomach content of	AAV3FF_00328	
-AAV3FF_00331_stomach_132_Calanus propinquus	BROKE_WEST_RMT_101_8_MG	stomach content			Calanus propinquus					AAV3FF_00331	stomach content of	AAV3FF_00331	
-AAV3FF_00331_stomach_133_Hyperiella spp.	BROKE_WEST_RMT_101_8_MG	stomach content			Hyperiella spp.					AAV3FF_00331	stomach content of	AAV3FF_00331	
-AAV3FF_00404_stomach_134_Thysanoessa macrura	BROKE_WEST_RMT_116_8_MG	stomach content			Thysanoessa macrura					AAV3FF_00404	stomach content of	AAV3FF_00404	
-AAV3FF_00405_stomach_135_/	BROKE_WEST_RMT_116_8_MG	stomach content			/					AAV3FF_00405	stomach content of	AAV3FF_00405	empty stomach
-AAV3FF_00248_stomach_136_Rhincalanus gigas	BROKE_WEST_RMT_053_8_MG	stomach content			Rhincalanus gigas					AAV3FF_00248	stomach content of	AAV3FF_00248	Stage IV
-AAV3FF_00248_stomach_137_Siphonophora nectophore	BROKE_WEST_RMT_053_8_MG	stomach content			Siphonophora nectophore					AAV3FF_00248	stomach content of	AAV3FF_00248	
-AAV3FF_00248_stomach_138_Paraeuchaeta antarctica	BROKE_WEST_RMT_053_8_MG	stomach content			Paraeuchaeta antarctica					AAV3FF_00248	stomach content of	AAV3FF_00248	Stage IV
-AAV3FF_00249_stomach_139_Rhincalanus gigas	BROKE_WEST_RMT_053_8_MG	stomach content			Rhincalanus gigas					AAV3FF_00249	stomach content of	AAV3FF_00249	Stage IV
-AAV3FF_00281_stomach_140_/	BROKE_WEST_RMT_079_8_MG	stomach content			/					AAV3FF_00281	stomach content of	AAV3FF_00281	empty sotmach
+materialEntityID	materialEntityType	preparations	disposition	materialEntityRemarks	materialGatheringID	derivedFromMaterialEntityID	derivationType	partOfMaterialEntityID
+AAV3FF_00322	whole organism	formalin	Anton		BROKE_WEST_RMT_100_8_MG			
+AAV3FF_00323	whole organism	Frozen	Anton		BROKE_WEST_RMT_100_8_MG			
+AAV3FF_00324	whole organism	Ethanol	Anton		BROKE_WEST_RMT_100_8_MG			
+AAV3FF_00325	whole organism	Ethanol	Anton		BROKE_WEST_RMT_100_8_MG			
+AAV3FF_00326	whole organism	Frozen	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00327	whole organism	Frozen	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00328	whole organism	formalin	Evgeny		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00329	whole organism	Frozen	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00330	whole organism	Frozen	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00331	whole organism	formalin	Evgeny		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00332	whole organism	Frozen	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00333	whole organism	Ethanol	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00334	whole organism	Ethanol	Anton		BROKE_WEST_RMT_101_8_MG			
+AAV3FF_00335	whole organism	Frozen	Anton		BROKE_WEST_RMT_102_8_MG			
+AAV3FP_00026	whole organism				BROKE_WEST_RMT_102_8_MG			
+AAV3FF_00336	whole organism	formalin			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00337	whole organism	formalin			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00338	whole organism	formalin			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00339	whole organism	Ethanol			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00340	whole organism	Ethanol			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00341	whole organism	Ethanol			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00342	whole organism	Ethanol			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00343	whole organism	Ethanol			BROKE_WEST_RMT_105_8_MG			
+AAV3FF_00344	whole organism				BROKE_WEST_RMT_106_8_MG			
+AAV3FF_00345	whole organism				BROKE_WEST_RMT_106_8_MG			
+AAV3FF_00346	whole organism				BROKE_WEST_RMT_106_8_MG			
+AAV3FF_00347	whole organism				BROKE_WEST_RMT_107_1_MG			
+AAV3FF_00348	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00349	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00350	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00351	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00352	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00353	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00354	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00355	whole organism				BROKE_WEST_RMT_107_8_MG			
+AAV3FF_00356	whole organism				BROKE_WEST_RMT_108_8_MG			
+AAV3FF_00358	whole organism				BROKE_WEST_RMT_109_8_MG			
+AAV3FF_00359	whole organism				BROKE_WEST_RMT_109_8_MG			
+AAV3FF_00360	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00361	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00362	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00363	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00364	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00365	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00366	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00367	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00368	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00369	whole organism				BROKE_WEST_RMT_110_8_MG			
+AAV3FF_00370	whole organism				BROKE_WEST_RMT_110_1_MG			
+AAV3FF_00371	whole organism				BROKE_WEST_RMT_110_1_MG			
+AAV3FF_00372	whole organism				BROKE_WEST_RMT_111_8_MG			
+AAV3FF_00373	whole organism				BROKE_WEST_RMT_111_8_MG			
+AAV3FF_00374	whole organism				BROKE_WEST_RMT_112_8_MG			
+AAV3FF_00375	whole organism				BROKE_WEST_RMT_112_8_MG			
+AAV3FF_00376	whole organism				BROKE_WEST_RMT_112_8_MG			
+AAV3FF_00377	whole organism				BROKE_WEST_RMT_113_8_MG			
+AAV3FF_00378	whole organism				BROKE_WEST_RMT_113_8_MG			
+AAV3FF_00379	whole organism				BROKE_WEST_RMT_113_8_MG			
+AAV3FF_00380	whole organism				BROKE_WEST_RMT_114_8_MG			
+AAV3FF_00381	whole organism				BROKE_WEST_RMT_114_1_MG			
+AAV3FF_00382	whole organism				BROKE_WEST_RMT_114_1_MG			
+AAV3FP_00027	whole organism				BROKE_WEST_RMT_114_8_MG			
+AAV3FF_00383	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00384	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00385	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00386	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00387	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00388	whole organism				BROKE_WEST_RMT_115_8_MG			
+AAV3FF_00389	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00390	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00391	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00392	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00393	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00394	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00395	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00396	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00397	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00398	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00399	whole organism				BROKE_WEST_RMT_115_1_MG			
+AAV3FF_00400	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00401	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00402	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00403	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00404	whole organism		Evgeny		BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00405	whole organism		Evgeny		BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00406	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00407	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00408	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00409	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00410	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00411	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00412	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FF_00413	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FF_00414	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FF_00415	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FF_00416	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FF_00417	whole organism				BROKE_WEST_RMT_116_1_MG			
+AAV3FP_00028	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FP_00029	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FP_00030	whole organism				BROKE_WEST_RMT_116_8_MG			
+AAV3FF_00418	whole organism				BROKE_WEST_RMT_117_8_MG			
+AAV3FF_00419	whole organism				BROKE_WEST_RMT_118_8_MG			
+AAV3FF_00420	whole organism				BROKE_WEST_RMT_122_8_MG			
+AAV3FF_00421	whole organism				BROKE_WEST_RMT_125_8_MG			
+AAV3FF_00005	whole organism	Ethanol	Anton		BROKE_WEST_RMT_011_1_MG			
+AAV3FF_00006	whole organism	Ethanol	Anton		BROKE_WEST_RMT_011_8_MG			
+AAV3FF_00007	whole organism	Ethanol	Anton		BROKE_WEST_RMT_011_8_MG			
+AAV3FF_00008	whole organism	Ethanol	Anton		BROKE_WEST_RMT_017_1_MG			
+AAV3FF_00009	whole organism	Ethanol	Anton		BROKE_WEST_RMT_017_1_MG			
+AAV3FF_00012	whole organism	Ethanol	Anton		BROKE_WEST_RMT_020_8_MG			
+AAV3FF_00013	whole organism	Ethanol	Anton		BROKE_WEST_RMT_021_8_MG			
+AAV3FF_00014	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00015	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00016	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00017	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00018	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00019	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00020	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00021	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00022	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00023	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00024	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00025	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00026	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00027	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00028	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00029	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00030	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00031	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00032	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00033	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00034	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00035	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00036	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00037	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00038	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00039	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00040	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00041	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00042	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00043	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00044	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00045	whole organism	formalin	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00046	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00047	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00048	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00049	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00050	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00051	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00052	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00053	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00054	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00055	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00056	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00057	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00058	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00059	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00060	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00061	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00062	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00063	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00064	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00065	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00066	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00067	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00068	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00069	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00070	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00071	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00072	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00073	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00074	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00075	whole organism	Frozen	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00076	whole organism	Frozen	Megan		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00077	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00078	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00079	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00080	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00081	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00082	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00083	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00084	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00085	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00086	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00087	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00088	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00089	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00090	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00091	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00092	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00093	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00094	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00095	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00096	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00097	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00098	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00099	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00100	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00101	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00102	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00103	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00104	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00105	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00106	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00107	whole organism	Ethanol	Anton		BROKE_WEST_RMT_022_8_MG			
+AAV3FF_00108	whole organism	Ethanol	Anton		BROKE_WEST_RMT_024_8_MG			
+AAV3FF_00109	whole organism	Ethanol	Anton		BROKE_WEST_RMT_024_8_MG			
+AAV3FF_00110	whole organism	Ethanol	Anton		BROKE_WEST_RMT_024_8_MG			
+AAV3FF_00111	whole organism	Ethanol	Anton		BROKE_WEST_RMT_024_8_MG			
+AAV3FF_00112	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00113	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00114	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00115	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00116	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00117	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00118	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00119	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00120	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00121	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00123	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00124	whole organism	Ethanol	Anton		BROKE_WEST_RMT_031_8_MG			
+AAV3FP_00001	whole organism				BROKE_WEST_RMT_031_8_MG			
+AAV3FP_00002	whole organism				BROKE_WEST_RMT_031_8_MG			
+AAV3FP_00003	whole organism				BROKE_WEST_RMT_031_8_MG			
+AAV3FP_00004	whole organism				BROKE_WEST_RMT_031_8_MG			
+AAV3FP_00005	whole organism				BROKE_WEST_RMT_031_8_MG			
+AAV3FF_00125	whole organism	Ethanol	Anton		BROKE_WEST_RMT_032_8_MG			
+AAV3FF_00126	whole organism	Ethanol	Anton		BROKE_WEST_RMT_032_8_MG			
+AAV3FF_00130	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_8_MG			
+AAV3FF_00132	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_8_MG			
+AAV3FF_00133	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_1_MG			
+AAV3FF_00134	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_1_MG			
+AAV3FF_00135	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_1_MG			
+AAV3FF_00136	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_1_MG			
+AAV3FF_00137	whole organism	Ethanol	Anton		BROKE_WEST_RMT_034_1_MG			
+AAV3FF_00139	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00140	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00141	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00142	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00143	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00144	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00145	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00146	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00147	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00148	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00149	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00150	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00151	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_1_MG			
+AAV3FF_00154	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00155	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00156	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00157	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00158	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00159	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00160	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00161	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00162	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00163	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00164	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00165	whole organism	Ethanol	Anton		BROKE_WEST_RMT_037_8_MG			
+AAV3FF_00166	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00167	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00168	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00169	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00170	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00171	whole organism	Ethanol	Anton		BROKE_WEST_RMT_038_8_MG			
+AAV3FP_00006	whole organism				BROKE_WEST_RMT_038_8_MG			
+AAV3FP_00007	whole organism				BROKE_WEST_RMT_038_8_MG			
+AAV3FF_00172	whole organism	Ethanol	Anton		BROKE_WEST_RMT_039_8_MG			
+AAV3FF_00173	whole organism	Ethanol	Anton		BROKE_WEST_RMT_039_1_MG			
+AAV3FF_00174	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_8_MG			
+AAV3FF_00175	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_8_MG			
+AAV3FF_00176	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_1_MG			
+AAV3FF_00177	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_1_MG			
+AAV3FF_00178	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_1_MG			
+AAV3FF_00179	whole organism	Ethanol	Anton		BROKE_WEST_RMT_042_1_MG			
+AAV3FP_00008	whole organism				BROKE_WEST_RMT_042_8_MG			
+AAV3FF_00181	whole organism	Frozen	Megan		BROKE_WEST_RMT_043_8_MG			
+AAV3FF_00182	whole organism	Frozen	Anton		BROKE_WEST_RMT_043_8_MG			
+AAV3FF_00183	whole organism	Frozen	Anton		BROKE_WEST_RMT_043_8_MG			
+AAV3FF_00184	whole organism	Frozen	Megan		BROKE_WEST_RMT_043_8_MG			
+AAV3FF_00185	whole organism	Frozen	Anton		BROKE_WEST_RMT_043_8_MG			
+AAV3FF_00186	whole organism	Ethanol	Anton		BROKE_WEST_RMT_044_1_MG			
+AAV3FF_00196	whole organism	Frozen	Anton		BROKE_WEST_RMT_050_8_MG			
+AAV3FF_00197	whole organism	Frozen	Anton		BROKE_WEST_RMT_050_8_MG			
+AAV3FF_00198	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_8_MG			
+AAV3FF_00199	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_8_MG			
+AAV3FF_00201	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00202	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00203	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00204	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00205	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00206	whole organism	Ethanol	Anton		BROKE_WEST_RMT_050_1_MG			
+AAV3FF_00207	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00208	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00209	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00210	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00211	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00212	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00213	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00214	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00215	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00216	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00217	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00218	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00219	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00220	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00221	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00222	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00223	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00224	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_1_MG			
+AAV3FF_00227	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00228	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00229	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00230	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00231	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00232	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00233	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00234	whole organism	Ethanol	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00235	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00236	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00237	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00238	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00239	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00240	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00241	whole organism	Frozen	Anton		BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00009	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00010	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00011	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00012	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00013	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00014	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FP_00015	whole organism				BROKE_WEST_RMT_051_8_MG			
+AAV3FF_00244	whole organism	Ethanol	Anton		BROKE_WEST_RMT_052_8_MG			
+AAV3FF_00247	whole organism	Frozen	Anton		BROKE_WEST_RMT_053_1_MG			
+AAV3FF_00248	whole organism	formalin	Evgeny		BROKE_WEST_RMT_053_8_MG			
+AAV3FF_00249	whole organism	formalin	Evgeny		BROKE_WEST_RMT_053_8_MG			
+AAV3FF_00250	whole organism	Frozen	Anton		BROKE_WEST_RMT_053_8_MG			
+AAV3FF_00251	whole organism	Frozen	Anton		BROKE_WEST_RMT_053_8_MG			
+AAV3FF_00252	whole organism	Frozen	Bart		BROKE_WEST_RMT_053_8_MG			
+AAV3FF_00253	whole organism	Frozen	Anton		BROKE_WEST_RMT_053_8_MG			
+AAV3FP_00016	whole organism				BROKE_WEST_RMT_055_8_MG			
+AAV3FF_00254	whole organism	Ethanol	Anton		BROKE_WEST_RMT_056_8_MG			
+AAV3FF_00255	whole organism	Ethanol	Anton		BROKE_WEST_RMT_059_1_MG			
+AAV3FF_00256	whole organism	Ethanol	Anton		BROKE_WEST_RMT_059_1_MG			
+AAV3FF_00257	whole organism	Frozen	Anton		BROKE_WEST_RMT_059_1_MG			
+AAV3FF_00258	whole organism	Frozen	Anton		BROKE_WEST_RMT_059_8_MG			
+AAV3FF_00259	whole organism	Frozen	Anton		BROKE_WEST_RMT_059_8_MG			
+AAV3FF_00260	whole organism	Ethanol	Anton		BROKE_WEST_RMT_059_8_MG			
+AAV3FF_00261	whole organism	?	Anton		BROKE_WEST_RMT_059_8_MG			
+AAV3FF_00262	whole organism	Ethanol			BROKE_WEST_RMT_061_1_MG			
+AAV3FF_00263	whole organism	Ethanol	Anton		BROKE_WEST_RMT_065_8_MG			
+AAV3FF_00264	whole organism	Frozen	Evgeny		BROKE_WEST_RMT_065_8_MG			
+AAV3FF_00265	whole organism	Frozen	Anton		BROKE_WEST_RMT_065_8_MG			
+AAV3FF_00266	whole organism	Frozen	Anton		BROKE_WEST_RMT_065_8_MG			
+AAV3FF_00267	whole organism	Frozen	Anton		BROKE_WEST_RMT_065_8_MG			
+AAV3FF_00268	whole organism	Frozen	Anton		BROKE_WEST_RMT_065_8_MG			
+AAV3FP_00017	whole organism				BROKE_WEST_RMT_066_8_MG			
+AAV3FF_00269	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_1_MG			
+AAV3FF_00270	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_1_MG			
+AAV3FF_00271	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_1_MG			
+AAV3FF_00272	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_8_MG			
+AAV3FF_00273	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_8_MG			
+AAV3FF_00274	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_8_MG			
+AAV3FF_00275	whole organism	Ethanol	Anton		BROKE_WEST_RMT_069_8_MG			
+AAV3FF_00276	whole organism	Ethanol	Anton		BROKE_WEST_RMT_070_8_MG			
+AAV3FF_00277	whole organism	Frozen	Anton		BROKE_WEST_RMT_070_8_MG			
+AAV3FF_00278	whole organism	Ethanol	Anton		BROKE_WEST_RMT_072_8_MG			
+AAV3FF_00279	whole organism	Ethanol	Anton		BROKE_WEST_RMT_077_8_MG			
+AAV3FP_00018	whole organism				BROKE_WEST_RMT_077_8_MG			
+AAV3FF_00281	whole organism	formalin	Evgeny		BROKE_WEST_RMT_079_8_MG			
+AAV3FF_00282	whole organism	Frozen	Anton		BROKE_WEST_RMT_079_8_MG			
+AAV3FF_00283	whole organism	Ethanol	Anton		BROKE_WEST_RMT_081_8_MG			
+AAV3FF_00284	whole organism	Frozen	Anton		BROKE_WEST_RMT_085_8_MG			
+AAV3FF_00285	whole organism	Ethanol	Anton		BROKE_WEST_RMT_086_1_MG			
+AAV3FF_00286	whole organism	Ethanol	Anton		BROKE_WEST_RMT_086_8_MG			
+AAV3FF_00287	whole organism	Ethanol	Anton		BROKE_WEST_RMT_087_8_MG			
+AAV3FF_00288	whole organism	Ethanol	Anton		BROKE_WEST_RMT_087_8_MG			
+AAV3FF_00289	whole organism	Ethanol	Anton		BROKE_WEST_RMT_087_8_MG			
+AAV3FF_00290	whole organism	Ethanol	Anton		BROKE_WEST_RMT_087_8_MG			
+AAV3FF_00291	whole organism	Ethanol	Anton		BROKE_WEST_RMT_088_8_MG			
+AAV3FF_00292	whole organism	Ethanol	Anton		BROKE_WEST_RMT_088_8_MG			
+AAV3FF_00293	whole organism	Ethanol	Anton		BROKE_WEST_RMT_088_8_MG			
+AAV3FF_00294	whole organism	Ethanol	Anton		BROKE_WEST_RMT_088_8_MG			
+AAV3FF_00295	whole organism	Ethanol	Anton		BROKE_WEST_RMT_089_8_MG			
+AAV3FF_00296	whole organism	Ethanol	Anton		BROKE_WEST_RMT_089_8_MG			
+AAV3FF_00297	whole organism	Ethanol	Anton		BROKE_WEST_RMT_089_1_MG			
+AAV3FF_00298	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_1_MG			
+AAV3FF_00299	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_1_MG			
+AAV3FF_00300	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_1_MG			
+AAV3FF_00301	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_1_MG			
+AAV3FF_00302	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_1_MG			
+AAV3FF_00303	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00304	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00305	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00306	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00307	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00308	whole organism	Ethanol	Anton		BROKE_WEST_RMT_093_8_MG			
+AAV3FF_00309	whole organism	Ethanol	Anton		BROKE_WEST_RMT_094_1_MG			
+AAV3FF_00310	whole organism	Ethanol	Anton		BROKE_WEST_RMT_096_8_MG			
+AAV3FF_00311	whole organism	Frozen	Anton		BROKE_WEST_RMT_097_8_MG			
+AAV3FF_00312	whole organism	Ethanol	Anton		BROKE_WEST_RMT_097_8_MG			
+AAV3FF_00313	whole organism	Ethanol	Anton		BROKE_WEST_RMT_097_8_MG			
+AAV3FF_00314	whole organism	Ethanol	Anton		BROKE_WEST_RMT_097_8_MG			
+AAV3FF_00315	whole organism	Ethanol	Anton		BROKE_WEST_RMT_097_8_MG			
+AAV3FP_00019	whole organism				BROKE_WEST_RMT_097_8_MG			
+AAV3FP_00020	whole organism				BROKE_WEST_RMT_097_8_MG			
+AAV3FP_00021	whole organism				BROKE_WEST_RMT_097_8_MG			
+AAV3FP_00022	whole organism				BROKE_WEST_RMT_097_8_MG			
+AAV3FP_00023	whole organism				BROKE_WEST_RMT_097_8_MG			
+AAV3FF_00316	whole organism	Ethanol	Anton		BROKE_WEST_RMT_098_8_MG			
+AAV3FP_00024	whole organism				BROKE_WEST_RMT_098_8_MG			
+AAV3FP_00025	whole organism				BROKE_WEST_RMT_098_8_MG			
+AAV3FF_00317	whole organism	Frozen	Anton		BROKE_WEST_RMT_099_8_MG			
+AAV3FF_00318	whole organism	formalin	Anton		BROKE_WEST_RMT_099_8_MG			
+AAV3FF_00320	whole organism	Ethanol	Anton		BROKE_WEST_RMT_099_8_MG			
+AAV3FF_00321	whole organism	Frozen	Anton		BROKE_WEST_RMT_099_8_MG			
+AAV3FF_00001	whole organism	Ethanol	Anton		BROKE_WEST_RMT_006_8_MG			
+AAV3FF_00002	whole organism	Ethanol	Anton		BROKE_WEST_RMT_007_8_MG			
+AAV3FF_00003	whole organism	Ethanol	Anton		BROKE_WEST_RMT_008_8_MG			
+AAV3FF_00004	whole organism	Ethanol	Anton		BROKE_WEST_RMT_008_8_MG			
+AAV3FF_00338_stomach_001_Tyhsanoessa macrura	stomach content				BROKE_WEST_RMT_105_8_MG	AAV3FF_00338	stomach content of	AAV3FF_00338
+AAV3FF_00337_stomach_002_Euphausiid	stomach content			several euphausiid (?) parts	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_003_larval euphausiid	stomach content			tail	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_004_Crustecean	stomach content			carapax	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_005_Copepod	stomach content			large; Head with ant	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_006_Copepod	stomach content				BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_007_Copepod	stomach content			presumable copepod remainders	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00337_stomach_008_Crustecean	stomach content			head with long ant	BROKE_WEST_RMT_105_8_MG	AAV3FF_00337	stomach content of	AAV3FF_00337
+AAV3FF_00374_stomach_009_St wall	stomach content			gland ?	BROKE_WEST_RMT_112_8_MG	AAV3FF_00374	stomach content of	AAV3FF_00374
+AAV3FF_00374_stomach_010_Mucus	stomach content			mucus	BROKE_WEST_RMT_112_8_MG	AAV3FF_00374	stomach content of	AAV3FF_00374
+AAV3FF_00377_stomach_011_Euphausia superba	stomach content				BROKE_WEST_RMT_113_8_MG	AAV3FF_00377	stomach content of	AAV3FF_00377
+AAV3FF_00378_stomach_012_Euphausia superba	stomach content				BROKE_WEST_RMT_113_8_MG	AAV3FF_00378	stomach content of	AAV3FF_00378
+AAV3FF_00022_stomach_013_Copepod	stomach content			cf. Oithona sp.	BROKE_WEST_RMT_022_8_MG	AAV3FF_00022	stomach content of	AAV3FF_00022
+AAV3FF_00022_stomach_014_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00022	stomach content of	AAV3FF_00022
+AAV3FF_00022_stomach_015_Oithona similis	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00022	stomach content of	AAV3FF_00022
+AAV3FF_00022_stomach_016_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00022	stomach content of	AAV3FF_00022
+AAV3FF_00022_stomach_017_Other	stomach content			Scale	BROKE_WEST_RMT_022_8_MG	AAV3FF_00022	stomach content of	AAV3FF_00022
+AAV3FF_00025_stomach_018_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00025	stomach content of	AAV3FF_00025
+AAV3FF_00025_stomach_019_Crustecean	stomach content			rear part; long tail spine	BROKE_WEST_RMT_022_8_MG	AAV3FF_00025	stomach content of	AAV3FF_00025
+AAV3FF_00025_stomach_020_Mucus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00025	stomach content of	AAV3FF_00025
+AAV3FF_00040_stomach_021_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_022_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_023_Oithona similis	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_024_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_025_Copepod	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_026_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_027_Copepod	stomach content			cf. Oithona sp.	BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_028_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_029_Other	stomach content			piece of tissue	BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00040_stomach_030_Other	stomach content			sand crystal?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00040	stomach content of	AAV3FF_00040
+AAV3FF_00041_stomach_031_Furcilia	stomach content			w/o head	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_032_Calyptotis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_033_Facet eye	stomach content			Facet eye	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_034_Copepod	stomach content			cf. Oithona sp.; copepodite	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_035_Calanoid copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_036_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_037_Oithona similis	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_038_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_039_Copepod	stomach content			cf. Oithona sp.	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_040_Harpacticoid copepod	stomach content			cf. Miracia minor or Microstellata rosea	BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00041_stomach_041_Mucus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00041	stomach content of	AAV3FF_00041
+AAV3FF_00028_stomach_042_Amphipod	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_043_Primno macropa	stomach content			front part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_044_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_045_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_046_Oithona similis	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_047_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_048_Nauplius	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_049_Calyptotis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_050_Euphausia superba	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_051_Copepod	stomach content			broken	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_052_Copepod	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_053_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_054_Copepod	stomach content			tail off => cf. Metridia sp.?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00028_stomach_055_Copepod	stomach content			tail broken; O. Similis male?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00028	stomach content of	AAV3FF_00028
+AAV3FF_00029_stomach_056_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_057_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_058_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_059_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_060_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_061_Scaphocalanus vervoorti	stomach content			initially thought to be Drepanopus sp.	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_062_Calanoid copepod	stomach content			cf. S. vervoorti	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_063_Scaphocalanus vervoorti	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_064_Calanoid copepod	stomach content			tail broken	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_065_Calanoid copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_066_Crustecean	stomach content			parts of amphipod?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_067_Copepod	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_068_Copepod	stomach content			front part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_069_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_070_Calanoid copepod	stomach content			cf. Temorites brevis	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_071_Calanoid copepod	stomach content			cf. Temorites brevis	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_072_Calanoid copepod	stomach content			cf. Temorites brevis	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_073_Oithona similis	stomach content			tail broken	BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00029_stomach_074_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00029	stomach content of	AAV3FF_00029
+AAV3FF_00037_stomach_075_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_076_Oithona similis	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_077_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_078_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_079_Copepod	stomach content			squeezed	BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_080_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_081_Calanoid copepod	stomach content			tail off; copepodite?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_082_Aetidius armatus	stomach content			tail off	BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00037_stomach_083_Calanoid copepod	stomach content			cf. Ctenocalanus sp.	BROKE_WEST_RMT_022_8_MG	AAV3FF_00037	stomach content of	AAV3FF_00037
+AAV3FF_00039_stomach_084_Oithona similis	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_085_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_086_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_087_Other	stomach content			strange spiny thing => Meroplankton larva?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_088_Euphausia superba	stomach content			Metanauplius II	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_089_Copepod	stomach content			front part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_090_Mucus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_091_Crustecean	stomach content			Crustacean remainders	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_092_Scaphocalanus vervoorti	stomach content			specimen got lost	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00039_stomach_093_Amphipod	stomach content			check if harpacticoid	BROKE_WEST_RMT_022_8_MG	AAV3FF_00039	stomach content of	AAV3FF_00039
+AAV3FF_00036_stomach_094_Other	stomach content			Egg? Eye lense? Parasites?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_095_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_096_Oithona similis	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_097_Oithona similis	stomach content			rear part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_098_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_099_Oithona similis	stomach content			front part	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_100_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_101_Copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_102_other	stomach content			gills (?)	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_103_Crustecean	stomach content			Crustacean remains	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_104_Other	stomach content			Appendicularian? - Can they be this small?	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_105_Primno macropa	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_106_Euphausia superba	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_107_Euphausia superba	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_108_larval euphausiid	stomach content			Furcilia / calypt tail	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_109_Calanoid copepod	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_110_Undinella sp.	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_111_Mucus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00036_stomach_112_Copepod	stomach content			Copepod remains	BROKE_WEST_RMT_022_8_MG	AAV3FF_00036	stomach content of	AAV3FF_00036
+AAV3FF_00024_stomach_113_Primno macropa	stomach content			Pereonites I, II nor fused; large subchela on P5 with 3 large teeth; all other P simple; small rostrum; residual ANT; possible alternative: P. Latreilli	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_114_Calanoid copepod	stomach content			Copepodite; cf. M. gerlachei	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_115_Calanoid copepod	stomach content			head	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_116_Calanoid copepod	stomach content			squeezed; tail off; 0.55 mm	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_117_Stephos longipes	stomach content			sturdy body shape with short urosome; Ur: 2=3=4=Sgan; fat Sgan	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_118_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_119_Oithona similis	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_120_Hyperiid	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_121_Oithona similis	stomach content			tail crumpled	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_122_Primno macropa	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_123_Ctenocalanus vanus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_124_Ctenocalanus vanus	stomach content			Prosoma crumpled	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_125_Ctenocalanus vanus	stomach content				BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_126_Oithona similis	stomach content			tail broken	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_127_Copepod	stomach content			Cf. O. Similis	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_128_Calanoid copepod	stomach content			Cf. C. vanus	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00024_stomach_129_Copepod	stomach content			cf. O. Similis; damaged; tail broken	BROKE_WEST_RMT_022_8_MG	AAV3FF_00024	stomach content of	AAV3FF_00024
+AAV3FF_00328_stomach_130_Paraeuchaeta antarctica	stomach content			Stage IV	BROKE_WEST_RMT_101_8_MG	AAV3FF_00328	stomach content of	AAV3FF_00328
+AAV3FF_00328_stomach_131_Cyllopus magellanicus	stomach content				BROKE_WEST_RMT_101_8_MG	AAV3FF_00328	stomach content of	AAV3FF_00328
+AAV3FF_00331_stomach_132_Calanus propinquus	stomach content				BROKE_WEST_RMT_101_8_MG	AAV3FF_00331	stomach content of	AAV3FF_00331
+AAV3FF_00331_stomach_133_Hyperiella spp.	stomach content				BROKE_WEST_RMT_101_8_MG	AAV3FF_00331	stomach content of	AAV3FF_00331
+AAV3FF_00404_stomach_134_Thysanoessa macrura	stomach content				BROKE_WEST_RMT_116_8_MG	AAV3FF_00404	stomach content of	AAV3FF_00404
+AAV3FF_00405_stomach_135_/	stomach content			empty stomach	BROKE_WEST_RMT_116_8_MG	AAV3FF_00405	stomach content of	AAV3FF_00405
+AAV3FF_00248_stomach_136_Rhincalanus gigas	stomach content			Stage IV	BROKE_WEST_RMT_053_8_MG	AAV3FF_00248	stomach content of	AAV3FF_00248
+AAV3FF_00248_stomach_137_Siphonophora nectophore	stomach content				BROKE_WEST_RMT_053_8_MG	AAV3FF_00248	stomach content of	AAV3FF_00248
+AAV3FF_00248_stomach_138_Paraeuchaeta antarctica	stomach content			Stage IV	BROKE_WEST_RMT_053_8_MG	AAV3FF_00248	stomach content of	AAV3FF_00248
+AAV3FF_00249_stomach_139_Rhincalanus gigas	stomach content			Stage IV	BROKE_WEST_RMT_053_8_MG	AAV3FF_00249	stomach content of	AAV3FF_00249
+AAV3FF_00281_stomach_140_/	stomach content			empty sotmach	BROKE_WEST_RMT_079_8_MG	AAV3FF_00281	stomach content of	AAV3FF_00281

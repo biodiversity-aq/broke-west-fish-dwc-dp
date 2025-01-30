@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-01-29">
+<meta name="dcterms.date" content="2025-01-30">
 
 <title>Transform dataset into DwCA v2 – BROKE-West fish to DwCA v2</title>
 <style>
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Transform data into DwCA v2</a></li><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Generate tables for DwCA_v2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./generate-dwcav2.html">DwCA v2</a></li><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Generate tables for DwCA_v2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -179,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Transform data into DwCA v2</span></a>
+ <span class="menu-text">DwCA v2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -218,14 +218,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-identification-table" id="toc-create-identification-table" class="nav-link" data-scroll-target="#create-identification-table">Create Identification table</a></li>
   <li><a href="#create-survey-table" id="toc-create-survey-table" class="nav-link" data-scroll-target="#create-survey-table">Create Survey table</a></li>
   <li><a href="#create-survey-target-and-survey-target-abundance-tables" id="toc-create-survey-target-and-survey-target-abundance-tables" class="nav-link" data-scroll-target="#create-survey-target-and-survey-target-abundance-tables">Create Survey Target and Survey Target Abundance tables</a></li>
-  <li><a href="#write-files" id="toc-write-files" class="nav-link" data-scroll-target="#write-files">Write files</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Transform data into DwCA v2</a></li><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Generate tables for DwCA_v2</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./generate-dwcav2.html">DwCA v2</a></li><li class="breadcrumb-item"><a href="./generate-dwcav2.html">Generate tables for DwCA_v2</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Transform dataset into DwCA v2</h1>
 </div>
@@ -238,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 29, 2025</p>
+      <p class="date">January 30, 2025</p>
     </div>
   </div>
   
@@ -591,26 +590,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>SurveyTargetAbundance table seems to miss a <code>surveyID</code> field since <code>surveyTargetID</code> does not need to be unique.</p>
-</section>
-<section id="write-files" class="level2">
-<h2 class="anchored" data-anchor-id="write-files">Write files</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(event, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"event.rda"</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(agent, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"agent.rda"</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(material, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"material.rda"</span>))</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(mat_gat, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"material_gathering.rda"</span>))</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(identification, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"identification.rda"</span>))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(survey_target, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"survey_target.rda"</span>))</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(survey_target_abundance, <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>, <span class="st">"survey_target_abundance.rda"</span>))</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(event, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"event.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(agent, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"agent.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(material, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"material.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(mat_gat, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"material_gathering.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(identification, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"identification.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(survey_target, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"survey_target.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">write_tsv</span>(survey_target_abundance, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"tsv"</span>, <span class="st">"survey_target_abundance.txt"</span>), <span class="at">na =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 
 
 </section>

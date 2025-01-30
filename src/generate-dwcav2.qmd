@@ -332,9 +332,15 @@ head(survey_target_abundance)
 
 SurveyTargetAbundance table seems to miss a `surveyID` field since `surveyTargetID` does not need to be unique.
 
-## Write files
 
 ```{r write files}
+#| warning: false
+#| message: false
+#| echo: false
+
+# subset material table to only columns in DwCA v2
+material <- material %>% select(materialEntityID, materialEntityType, preparations, disposition, materialEntityRemarks, materialGatheringID, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID)
+
 save(event, file = here("data", "output", "rda", "event.rda"))
 save(agent, file = here("data", "output", "rda", "agent.rda"))
 save(material, file = here("data", "output", "rda", "material.rda"))
