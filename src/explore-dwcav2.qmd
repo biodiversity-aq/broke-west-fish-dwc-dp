@@ -63,7 +63,7 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 Yes! Relationship between Materials can be specified through the `Material` table. Example of a krill eaten by a fish can be modeled within a single `Material` table
 
 ```{r material relationship}
-material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
+material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) 
 ```
 
 ### How non-detections are represented in DwCA v2?
