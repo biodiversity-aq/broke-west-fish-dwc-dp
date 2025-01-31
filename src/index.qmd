@@ -15,7 +15,7 @@ This is an attempt to map BROKE-West Fish dataset as a marine [survey](https://d
 
 This mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).
 
-Documenting this mapping exercise in Quarto is inspired by the approach of OBIS USA (Steve Formel and Kyla Richards).
+Documenting this mapping exercise in Quarto is inspired by the approach of OBIS USA (Steve Formel and Kylie Hollis)
 
 We are grateful and appreciate the various contributions received from the following contributors during this exercise:
 
