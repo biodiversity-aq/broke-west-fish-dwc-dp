@@ -16,9 +16,11 @@ library(readxl)
 library(tidyverse)
 
 # Tables from Humboldt Extension mapping exercise 2024-12-13_brokewest-fish_DwCAv2
-events <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv", delim = "\t", show_col_types = FALSE) 
-humboldt <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
-emof <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vTzxqpYCe1tVdichPPMCVgP9fyY6duJrtgyO8zGwm7xMKL5WLb3l6MPq0Ke5TIlwU97ovdZ__ptkkMw/pub?gid=2088877587&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+event_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv", delim = "\t", show_col_types = FALSE) 
+humboldt <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv", delim = "\t", show_col_types = FALSE, col_types = cols(isSamplingEffortReported = col_character(), isTaxonomicScopeFullyReported = col_character(), isLeastSpecificTargetCategoryQuantityInclusive = col_character(), areNonTargetTaxaFullyReported = col_character(), isAbsenceReported = col_character()))
+emof <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1747744771&single=true&output=tsv", delim = "\t", col_types = cols(measurementValueID = col_character()), show_col_types = FALSE)
+media_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1234999790&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+
 
 # Using Sheet 1 of Fish_data_BROKE_west[14711] but this excluded all the squids
 # This version is used instead of the Occurrence used in Humboldt Extension mapping because that version only contains fish and squid from RMT8. It also lacks abundance data and only contain individual fish data. Abundance data is crucial to demonstrate community measurement use case.
@@ -32,9 +34,9 @@ raw_stomach <- read_excel(here("data", "original_data", "DatatforAADdatacentre",
 # raw_squid_data <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "FishandsquidforAADdatacentre.xls"), sheet = "Squid")
 ```
 
-## DwCA v2
+## Darwin Core Data Package
 
-The mapping is based on schema from <https://rs.gbif.org/sandbox/experimental/data-packages/dwca_v2/0.1/>
+The mapping is based on schema from <https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/>
 
 ## Clean fish data
 
@@ -50,16 +52,17 @@ cleaned_fish <- raw_fish_data %>%
     family = Family,
     preparations = presrvation,
     disposition = Location,
-    verbatimIdentification = Species,
     lifeStage = C1,
     materialEntityID = `Sample number`,
     netSize = `Net Size`
   ) %>%
   mutate(
     station_number_cleaned = str_remove_all(`Station number`, "\\s*"), # Remove white spaces
-    eventID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_", `netSize`), # net level of event is needed here because surveyTarget is pointing to a surveyID in which surveyTargetAbundance report the count. If netSize is not specified, we cannot tell which net caught the target 
-    # need surveyID for join with target later to create survey_target_abundance table
-    surveyID = str_c(eventID, "_S"),
+    eventID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_RMT", `netSize`), 
+    verbatimIdentification = case_when(
+      Species == "Unidentified" ~ "", 
+      Species == "/" ~ "",
+      TRUE ~ Species),
     scientificName = case_when(
       grepl(" sp\\.$", verbatimIdentification) ~ sub(" sp\\.$", "", verbatimIdentification),
       # correct typo of scientificName based on WoRMS
@@ -67,14 +70,11 @@ cleaned_fish <- raw_fish_data %>%
       verbatimIdentification == "Artedidraco scottsbergi" ~ "Artedidraco skottsbergi",
       verbatimIdentification == "Gymnoscophelus braueri" ~ "Gymnoscopelus braueri",
       # Unidentified == Biota because lifeStage = larvae for these records. Can we be sure that these are fish?
-      verbatimIdentification == "Unidentified" ~ "Biota", 
-      verbatimIdentification == "/" ~ "",
+      Species == "Unidentified" ~ "Biota", 
+      Species == "/" ~ "",
       TRUE ~ verbatimIdentification
-    ),
-    identificationQualifier = case_when(
-      grepl(" sp\\.$", verbatimIdentification) ~ "sp.",
-      TRUE ~ ""
     )
+    # no more identificationQualifier, use verbatimIdentification :)
   )
   
 # match unique scientificName to WoRMS to obtain LSID of AphiaID
@@ -91,82 +91,107 @@ cleaned_fish <- cleaned_fish %>%
 # preview distinct verbatimIdentification and matched scientificName and scientificNameID from WoRMS
 cleaned_fish %>% distinct(verbatimIdentification, scientificName, scientificNameID, kingdom)
 ```
+## Main tables
 
-## Create Event table
+### Agent
 
-Event cannot have multiple eventClass. Hence, a Survey Event would have the same spatiotemporal context information as the Material Gathering Event, but they would be separate Events, one for `eventID` == `surveyID` and one for `eventID` == `materialGatheringID`. In order to achieve this, all Events are duplicated into eventID_S for Survey Event and eventID_MG for MaterialGathering Event.
+There is only Anton here because this version of dataset does not contain squid records (from the catch).
 
-```{r survey and material gathering event}
-#| warning: false
+```{r agent}
+agent <- tibble(
+  agentID = c("AVdP_collector", "AVdP_specimen_identifier"),
+  agentType = c("person", "person"),
+  preferredAgentName = c("Anton Van de Putte", "Anton Van de Putte")
+)
 
-# netSize level of event is needed here because surveyTarget is pointing to a surveyID in which surveyTargetAbundance report the count. If netSize is not specified, we cannot tell which net caught the target  
-# Suffix options: net-size_Survey, net-size_MaterialGathering
-suffixes <- c("1_S", "1_MG", "8_S", "8_MG")
-
-# Generate replicated rows with new eventIDs
-event <- events %>%
-  filter(eventID != "BROKE_WEST") %>%
-  expand_grid(suffix = suffixes) %>%
-  mutate(eventID = paste0(eventID, "_", suffix), 
-         eventType = case_when(suffix == "1_S" | suffix == "8_S" ~ "Survey",
-                               suffix == "1_MG" | suffix == "8_MG" ~ "MaterialGathering",
-                               TRUE ~ NA),
-         eventClass = case_when(eventType == "Survey" ~ "Survey",
-                                eventType == "MaterialGathering" ~ "MaterialGathering")) %>%
-  bind_rows(events %>% filter(eventID == "BROKE_WEST"))
-
-# example of resulting Event duplicated into Survey and MaterialGathering Event
-event %>% 
-  filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>%
-  select(eventID, eventType, eventClass)
+agent
 ```
 
-## Create Material Gathering table
+### Event
 
-MaterialGathering table is only consists of `materialGatheringID`.
+How do we determine what `eventType` to use? e.g. an Event can be both `Survey` and `MaterialGathering`.
 
-```{r material gathering}
-mat_gat <- event %>% 
-  filter(eventClass == "MaterialGathering") %>%
-  select(eventID) %>%
-  rename(materialGatheringID = eventID)
+```{r event}
+# Create subevents with net because it is the lowest event with organisms
+subevents <- event_google %>%
+  filter(eventID != "BROKE_WEST") %>% # Exclude the main event
+  mutate(eventType = "Survey - net type") %>% # Set eventType for subevents
+  expand_grid(suffix = c("_RMT1", "_RMT8")) %>% # Create subevent suffixes with net size
+  mutate(
+    eventID = paste0(eventID, suffix), # Append suffix to eventID
+    parentEventID = eventID %>% sub("_RMT[18]$", "", .) # Assign correct parent
+  ) %>%
+  select(-suffix) # Remove the suffix column
 
-head(mat_gat)
+# Combine original and subevents
+event <- bind_rows(event_google, subevents)
+event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, parentEventID, eventType)
 ```
 
-## Create Material table
+### Material
 
 Material includes:
 
 -   preserved individual fish
 -   stomach content of individual fish
 
+Can stomach content material have `collectedBy` and `collectedByID`?
+
 ```{r material}
 individual_fish <- cleaned_fish %>% 
   mutate(
-    materialEntityType = "whole organism",  # TODO: check if occurrenceID with FP is whole organism
-    materialGatheringID = str_c(eventID, "_MG"), # concatenate values
+    materialEntityType = "whole organism",  
+    collectedBy = "Anton Van de Putte",
+    collectedByID = "https://orcid.org/0000-0003-1336-5554",
+    identifiedBy = "Anton Van de Putte",
+    identifiedByID = "https://orcid.org/0000-0003-1336-5554",
+    identificationRemarks = case_when(
+      str_detect(COMMENTS, "closely resembles") ~ COMMENTS,
+      str_detect(COMMENTS, "Protomyctophum") ~ COMMENTS,
+      TRUE ~ ""
+    ),
+    materialEntityRemarks = case_when(
+      str_detect(COMMENTS, "BROKEN | Check | Microsattelite") ~ COMMENTS,
+      TRUE ~ ""
+    )
     ) %>% 
   select(
-    materialEntityID, materialGatheringID, materialEntityType, preparations, disposition, verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank
-  ) # keep verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank to construct Identification table
+    materialEntityID, eventID, materialEntityType, preparations, disposition, collectedBy, collectedByID, identifiedBy, identifiedByID, verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank, identificationRemarks, materialEntityRemarks
+  ) %>% rename(taxonID = scientificNameID) # keep verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank to construct Identification table
 
 stomach <- raw_stomach %>%
+  rename(stomachItem = `Stomach Item`) %>%
   mutate(
     seqNum = sprintf("%03d", row_number()), # zero-padded sequential number
-    materialEntityID = str_c(`Fish ID`, "_stomach_", seqNum, "_", `Stomach Item`),
-    materialEntityType = "stomach content",
+    materialEntityID = str_c(`Fish ID`, "_stomach_", seqNum, "_", stomachItem),
+    materialEntityType = case_when(
+      stomachItem == "St wall" ~ "stomach content - st wall",
+      stomachItem == "Mucus" ~ "stomach content - mucus",
+      stomachItem == "Other" ~ "stomach content - other",
+      stomachItem == "Facet eye" ~ "stomach content - facet eye",
+      stomachItem == "/" ~ "stomach content - empty",
+      TRUE ~ "stomach content"),
     derivedFromMaterialEntityID = `Fish ID`,
     derivationType = "stomach content of",
     partOfMaterialEntityID = `Fish ID`,
-    verbatimIdentification = `Stomach Item`,
-    materialEntityRemarks = Remarks
+    identifiedBy = "Anton Van de Putte",
+    identifiedByID = "https://orcid.org/0000-0003-1336-5554",
+    verbatimIdentification = case_when(
+      str_detect(stomachItem, "St wall|Mucus|Other|Facet eye|\\/") ~  "",
+      TRUE ~ stomachItem
+    ),
+    identificationRemarks = case_when(str_detect(Remarks, "cf.") ~ Remarks, TRUE ~ ""),
+    materialEntityRemarks = case_when(str_detect(Remarks, "cf.") ~ "", TRUE ~ Remarks),
   ) %>% 
   left_join(individual_fish, by = c("derivedFromMaterialEntityID" = "materialEntityID")) %>%
   # because left_join renamed the following columns since it is present in both individual_fish and stomach table
   mutate(materialEntityType = materialEntityType.x,
-         verbatimIdentification = verbatimIdentification.x) %>% 
-  select(materialEntityID, materialEntityType, verbatimIdentification, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialGatheringID, materialEntityRemarks)
+         verbatimIdentification = verbatimIdentification.x,
+         materialEntityRemarks = materialEntityRemarks.x,
+         identificationRemarks = identificationRemarks.x,
+         identifiedBy = identifiedBy.x,
+         identifiedByID = identifiedByID.x) %>% 
+  select(materialEntityID, eventID, materialEntityType, identifiedBy, identifiedByID, verbatimIdentification, identificationRemarks, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialEntityRemarks)
 
 # combine both tables into a Material table
 material <- bind_rows(individual_fish, stomach) 
@@ -174,22 +199,9 @@ material <- bind_rows(individual_fish, stomach)
 # preview example of a full fish + its stomach content in Material table
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
 ```
+### Identification
 
-## Create Agent table
-
-There is only Anton here because this version of dataset does not contain squid records (from the catch).
-
-```{r agent}
-agent <- tibble(
-  agentID = "https://orcid.org/0000-0003-1336-5554",
-  agentType = "person",
-  preferredAgentName = "Anton Van de Putte"
-)
-```
-
-## Create Identification table
-
-It was a mixed of remarks for material entity and identification in the original table, so I put the information under both `materialEntityRemarks` and `identificationRemarks`.
+Identification terms are mostly part of Material table.
 
 Question: I am expecting OBIS to ask about why `taxonID` and not `scientificNameID`.
 
@@ -197,8 +209,6 @@ Question: I am expecting OBIS to ask about why `taxonID` and not `scientificName
 fish_id_guide <- "https://archive.org/details/fishesofsouthern00gono | Kellermann, A. (1990): Identification Key and Catalogue of Larval Antarctic Fishes , Berichte zur Polarforschung (Reports on Polar Research), Bremerhaven, Alfred Wegener Institute for Polar and Marine Research, 67 , 136 p. . doi: 10.2312/BzP_0067_1990 | https://archive.org/details/cybium-7-002-003-074"
 
 identification <- material %>%
-  rename(identificationRemarks = materialEntityRemarks,
-         taxonID = scientificNameID) %>%
   mutate(
     identificationID = paste(materialEntityID, "ID", sep = "_"),
     identificationBasedOnMaterialEntityID = materialEntityID,
@@ -211,33 +221,58 @@ identification <- material %>%
 head(identification)
 ```
 
-## Create Survey table
+### Media
+
+```{r media}
+#| warning: false
+#| message: false
+
+media <- media_google %>% 
+  left_join(material, by = "materialEntityID") %>% 
+  # remove these media records because there is no data associated with these pictures -> we don't know what these are
+  filter(!is.na(eventID)) %>%
+  mutate(mediaDescription = str_c("Photo of ", scientificName, " with its label and a grid.")) 
+head(media)
+```
+
+### Survey 
 
 Survey table is a table that contains current Humboldt Extension terms.
 
 ```{r survey}
-suffixes <- c("1_S","8_S")
+suffixes <- c("_RMT1","_RMT8")
 
 survey <- humboldt %>%
   filter(eventID != "BROKE_WEST") %>% # remove the expedition event, only link humboldt to the lowest level of Survey Events
   expand_grid(suffix = suffixes) %>%
-  mutate(eventID = paste0(eventID, "_", suffix),
+  mutate(eventID = paste0(eventID, suffix),
          # need to cast netSize to string so that it can be joined later (so that it is not a double)
-         netSize = case_when(suffix == "1_S" ~ "1", suffix == "8_S" ~ "8", TRUE ~ NA)) %>%
-  rename(surveyID = eventID) %>%
+         netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA)) %>%
   # remove fields that were empty or need to be amended based on new understanding of survey target
-  select(-`ecoiri:targetTaxonomicScope`, -`excludedLifeStageScope`, -verbatimSiteDescriptions, -eventDuration, -isAbundanceReported, -isAbsenceReported, -hasMaterialSamples, -materialSampleTypes, -isTaxonomicScopeFullyReported, -isLifeStageScopeFullyReported, -isLeastSpecificTargetCategoryQuantityInclusive, -areNonTargetTaxaFullyReported, -suffix)
-
+  select(-`ecoiri:targetTaxonomicScope`, -verbatimSiteDescriptions, -suffix)
 head(survey)
 ```
 
-## Create Survey Target and Survey Target Abundance tables
+### Protocol
+
+```{r protocol}
+protocol <- survey %>% 
+  distinct(protocolNames, protocolDescription, protocolReferences) %>%
+  rename(protocolName = protocolNames, protocolCitation = protocolReferences) %>% 
+  mutate(protocolType = "Sampling Effort",
+         protocolID = case_when(
+           str_detect(protocolName, "routine") ~ "RMT_Routine",
+           str_detect(protocolName, "target") ~ "RMT_Target"
+         )) 
+```
+
+### Survey Target & Occurrence
 
 After extensive discussions on what `target` is, we decided to create survey-target table retrospectively. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID. SurveyTargetAbundance points to the Survey through the SurveyTarget record.
 
-Challenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica. But sex and lifeStage are available in the Material table for a subset of data.
+Challenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica. 
 
-```{r survey target and abundance}
+```{r survey target and occurrence}
 #| warning: false
 
 transform_rmt_count_to_long <- function(df){
@@ -252,18 +287,17 @@ transform_rmt_count_to_long <- function(df){
                values_drop_na = TRUE) %>%
   mutate(
     organismQuantityType = case_when(organismQuantity >= 1 ~ "individuals", TRUE ~ "individual"),
-    lifeStage = case_when(
+    life_stage = case_when(
       str_detect(verbatimIdentification, " all$") ~ "",
       str_detect(verbatimIdentification, " Larvae$") ~ "Larvae",
       str_detect(verbatimIdentification, " Postmeta$") ~ "Postmeta",
       TRUE ~ ""
     ),
-    identificationQualifier = if_else(str_detect(verbatimIdentification, " sp\\.$"), "sp.", ""),
-    # \\s* is needed to remove the white space for the resulting observedTaxon so that we don't get "Electrona antarctica "
+    lifeStage = life_stage, # create extra lifeStage column for occurrence table
     # use field name "taxon" for surveyTargetType vocabulary later
     taxon = str_remove_all(verbatimIdentification, "\\s*(all|Larvae|Postmeta|sp\\.)$"),
     station_number_cleaned = str_remove_all(`Station number`, "\\s*"), # Remove white spaces
-    surveyID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_8_S"),
+    surveyID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_RMT8"),
     # need to cast body size to string otherwise double cannot be in the same column with string after pivot_long
     # only use size range for RMT8 here because there is no count data for RMT1 
     `minimum body size` = "0.85",
@@ -272,8 +306,9 @@ transform_rmt_count_to_long <- function(df){
 
 trawl_taxa <- wm_records_names(unique(trawl$taxon)) %>%
   # the taxon match returns list of lists, this function creates a table of the following fields out of the lists
-  map_df(~ select(.x, scientificname, lsid, AphiaID, rank)) %>%
-  rename(taxon = scientificname, observedTaxonID = lsid, taxonRank = rank)
+  map_df(~ select(.x, scientificname, lsid, AphiaID, rank, kingdom)) %>%
+  rename(taxon = scientificname, taxonID = lsid, taxonRank = rank) %>%
+  mutate(taxon_rank = taxonRank) # create extra taxonRank column for occurrence table
 
 trawl_count <- trawl %>% 
   left_join(trawl_taxa, by = "taxon") %>%
@@ -283,7 +318,7 @@ trawl_count <- trawl %>%
 
 trawl_long <- trawl_count %>%
   pivot_longer(
-    cols = c("taxon", "lifeStage", "taxonRank", "minimum body size", "maximum body size"),
+    cols = c("taxon", "life_stage", "taxon_rank", "minimum body size", "maximum body size"),
     names_to = "surveyTargetType",
     values_to = "surveyTargetValue",
     values_drop_na = TRUE
@@ -294,66 +329,195 @@ trawl_long <- trawl_count %>%
       surveyTargetType == "maximum body size" ~ "m",
       TRUE ~ NA
     ),
-    surveyTargetUnitID = case_when(
+    surveyTargetUnitIRI = case_when(
       surveyTargetUnit == "mm" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UXMM/",
       surveyTargetUnit == "m" ~ "http://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
       TRUE ~ NA
     ),
-    surveyTargetValueID = case_when(
-      surveyTargetType == "taxon" ~ observedTaxonID,
+    surveyTargetValueIRI = case_when(
+      surveyTargetType == "taxon" ~ taxonID,
       surveyTargetValue == "Genus" ~ "http://rs.tdwg.org/dwc/terms/genus",
       surveyTargetValue == "Species" ~ "http://rs.tdwg.org/dwc/terms/specificEpithet",
       surveyTargetValue == "Family" ~ "http://rs.tdwg.org/dwc/terms/family",
       TRUE ~ NA
-    )
-  ) %>% filter(!(surveyTargetType == "lifeStage" & surveyTargetValue == "")) # exclude empty lifeStage row
+    ),
+    surveyTargetType = case_when(
+      surveyTargetType == "life_stage" ~ "life stage",
+      surveyTargetType == "taxon_rank" ~ "taxon rank",
+      TRUE ~ surveyTargetType
+    ),
+    includeOrExclude = "include",
+    isSurveyTargetFullyReported = "true"
+  ) %>% filter(!(surveyTargetType == "life stage" & surveyTargetValue == "")) # remove empty lifeStage row
 
 survey_target <- trawl_long %>%
-  select(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueID, surveyTargetUnit, surveyTargetUnitID)
+  select(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueIRI, surveyTargetUnit, surveyTargetUnitIRI)
 
-survey_target_abundance <- trawl_long %>%
-  filter(surveyTargetType == "taxon") %>%
-  rename(observedTaxon = surveyTargetValue) %>%
-  select(surveyTargetID, surveyID, observedTaxon, observedTaxonID, organismQuantity, organismQuantityType)
-
-return(list(survey_target = survey_target, survey_target_abundance = survey_target_abundance))
+occurrence <- trawl_long %>%
+  filter(surveyTargetType == "taxon" & organismQuantity != 0) %>%
+  rename(
+    scientificName = surveyTargetValue, 
+    eventID = surveyID) %>%
+  mutate(
+    occurrenceStatus = "present",
+    recordedBy = "Anton Van de Putte",
+    recordedByID = "https://orcid.org/0000-0003-1336-5554",
+    identifiedBy = "Anton Van de Putte",
+    identifiedByID = "https://orcid.org/0000-0003-1336-5554",
+  )
+return(list(survey_target = survey_target, occurrence = occurrence))
 }
 
 routine_trawl <- transform_rmt_count_to_long(raw_count_routine)
 target_trawl <- transform_rmt_count_to_long(raw_count_target)
 
 survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target)
-survey_target_abundance <- rbind(routine_trawl$survey_target_abundance, target_trawl$survey_target_abundance)
+occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
+  mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_")) %>%
+  select(occurrenceID, eventID, recordedBy, recordedByID, identifiedBy, identifiedByID, verbatimIdentification, scientificName, taxonID, taxonRank, kingdom,lifeStage, organismQuantityType, organismQuantity)
 
 # preview example tables
 head(survey_target)
-head(survey_target_abundance)
+head(occurrence)
 ```
 
-SurveyTargetAbundance table seems to miss a `surveyID` field since `surveyTargetID` does not need to be unique.
+
+## Common tables
+
+### Agent role
+
+#### Agent Agent role
+
+```{r agent agent role}
+agent_agent_role <- tibble(
+  agentID = "AVdP_collector",
+  agentRole = "collector",
+)
+agent_agent_role
+```
+
+#### Event Agent role
+
+```{r event agent role}
+event_agent_role <- event %>% 
+  select(eventID) %>% filter(eventID != "BROKE_WEST") %>%
+  mutate(agentID = "AVdP_collector", agentRole = "collector")
+event_agent_role %>% filter(eventID == "BROKE_WEST_RMT_001")
+```
+
+#### Identification Agent role
+
+```{r identification agent role}
+identification_agent_role <- identification %>% 
+  select(identificationID) %>%
+  mutate(agentID = "AVdP_specimen_identifier", agentRole = "specimen identifier")
+head(identification_agent_role)
+```
+
+### Assertion
+
+#### Event Assertion
+
+```{r event assertion}
+#| warning: false
+#| message: false
+
+event_assertion <- emof %>% 
+  filter(is.na(occurrenceID)) %>%
+  rename(assertionID = measurementID, assertionType = measurementType, assertionTypeIRI = measurementTypeID, assertionValueIRI = measurementValueID, assertionUnit = measurementUnit, assertionUnitIRI = measurementUnitID) %>%
+  mutate(
+    assertionTypeVocabulary = "http://vocab.nerc.ac.uk/collection/P01/current/",
+    assertionValue = if_else(grepl("[a-zA-Z]", measurementValue), measurementValue, NA),
+    assertionValueNumeric = if_else(!grepl("[a-zA-Z]", measurementValue), as.numeric(measurementValue), NA),
+    assertionBy = "Anton Van de Putte",
+    assertionByID = "https://orcid.org/0000-0003-1336-5554",
+    assertionUnitVocabulary = "http://vocab.nerc.ac.uk/collection/P06/current/"
+    ) %>%
+  select(assertionID, eventID, assertionType, assertionTypeIRI, assertionTypeVocabulary, assertionValue,
+         assertionValueNumeric, assertionValueIRI, assertionUnit, assertionUnitIRI, assertionUnitVocabulary)
+event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
+```
+
+### Citation
+
+#### 
+
+```{r citation}
+```
+
+### Media
+
+### Protocol
+
+#### Event Protocol
+
+```{r event protocol}
+event_protocol <- humboldt %>% 
+  select(eventID, samplingProtocol) %>% 
+  rename(protocolID = samplingProtocol) %>%
+  filter(!is.na(protocolID))
+event_protocol %>% filter(eventID == "BROKE_WEST_RMT_001")
+```
+
+### Identifier
+
+#### Agent Identifier
+
+```{r identifier}
+agent_identifier <- tibble(
+  identifier = c("https://orcid.org/0000-0003-1336-5554", "https://orcid.org/0000-0003-1336-5554"),
+  agentID = c("AVdP_collector", "AVdP_specimen_identifier"),
+  identifierType = c("ORCID", "ORCID"),
+  identifierLanguage = c("eng", "eng")
+)
+```
+
+
+
+
 
 ```{r write files}
 #| warning: false
 #| message: false
 #| echo: false
 
-# subset material table to only columns in DwCA v2
-material <- material %>% select(materialEntityID, materialGatheringID, materialEntityType, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, preparations, disposition, materialEntityRemarks)
+save_and_write <- function(data_list, output_dir = here("data", "output")) {
+  # Ensure the output directories exist
+  dir.create(here(output_dir, "rda"), recursive = TRUE, showWarnings = FALSE)
+  dir.create(here(output_dir, "tsv"), recursive = TRUE, showWarnings = FALSE)
+  
+  # Iterate over each dataset in the list
+  for (name in names(data_list)) {
+    data <- data_list[[name]]
+    
+    # Save as .rda
+    save(data, file = here(output_dir, "rda", paste0(name, ".rda")))
+    
+    # Save as .tsv
+    write_tsv(data, here(output_dir, "tsv", paste0(name, ".txt")), na = "")
+  }
+}
 
-save(event, file = here("data", "output", "rda", "event.rda"))
-save(agent, file = here("data", "output", "rda", "agent.rda"))
-save(material, file = here("data", "output", "rda", "material.rda"))
-save(mat_gat, file = here("data", "output", "rda", "material_gathering.rda"))
-save(identification, file = here("data", "output", "rda", "identification.rda"))
-save(survey_target, file = here("data", "output", "rda", "survey_target.rda"))
-save(survey_target_abundance, file = here("data", "output", "rda", "survey_target_abundance.rda"))
+# Example usage
+data_list <- list(
+  # main tables
+  event = event,
+  agent = agent,
+  material = material,
+  identification = identification,
+  media = media,
+  survey = survey,
+  protocol = protocol,
+  survey_target = survey_target,
+  occurrence = occurrence,
+  # common tables
+  agent_agent_role = agent_agent_role,
+  event_agent_role = event_agent_role,
+  identification_agent_role = identification_agent_role,
+  event_assertion = event_assertion,
+  event_protocol = event_protocol,
+  agent_identifier = agent_identifier
+)
 
-write_tsv(event, here("data", "output", "tsv", "event.txt"), na = "")
-write_tsv(agent, here("data", "output", "tsv", "agent.txt"), na = "")
-write_tsv(material, here("data", "output", "tsv", "material.txt"), na = "")
-write_tsv(mat_gat, here("data", "output", "tsv", "material_gathering.txt"), na = "")
-write_tsv(identification, here("data", "output", "tsv", "identification.txt"), na = "")
-write_tsv(survey_target, here("data", "output", "tsv", "survey_target.txt"), na = "")
-write_tsv(survey_target_abundance, here("data", "output", "tsv", "survey_target_abundance.txt"), na = "")
-
+save_and_write(data_list)
 ```

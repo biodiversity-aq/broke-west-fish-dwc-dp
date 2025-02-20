@@ -19,13 +19,7 @@ You can load the tables from the RDA files like below and play around with the t
 library(here)
 library(tidyverse)
 
-load(here("data", "output", "rda", "agent.rda"))
-load(here("data", "output", "rda", "event.rda"))
-load(here("data", "output", "rda", "identification.rda"))
-load(here("data", "output", "rda", "material.rda"))
-load(here("data", "output", "rda", "material_gathering.rda"))
-load(here("data", "output", "rda", "survey_target.rda"))
-load(here("data", "output", "rda", "survey_target_abundance.rda"))
+
 ```
 
 ### Does DwCA v2 solve community measurements issue?
@@ -33,9 +27,7 @@ load(here("data", "output", "rda", "survey_target_abundance.rda"))
 Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAbundance` table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the `Material` table.
 
 ```{r community measurement}
-survey_target_abundance %>% filter(surveyID == "BROKE_WEST_RMT_051_8_S" & observedTaxon == "Electrona antarctica")
 
-material %>% filter(materialGatheringID == "BROKE_WEST_RMT_051_8_MG")
 ```
 
 ### Can relationship between Materials be expressed in DwCA v2?
@@ -54,8 +46,8 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 
 **eMoF table**
 
-| occurrenceID | measurementType | measurementValue | measurementUnit | measurementRemarks
-|------------------|------------------|------------------|------------------|------------------|
+| occurrenceID | measurementType | measurementValue | measurementUnit | measurementRemarks |
+|---------------|---------------|---------------|---------------|---------------|
 | SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | 12.28 | relative percentage of dry mass | tegument |
 
 #### DwCA v2
@@ -63,7 +55,7 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 Yes! Relationship between Materials can be specified through the `Material` table. Example of a krill eaten by a fish can be modeled within a single `Material` table
 
 ```{r material relationship}
-material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) 
+#material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) 
 ```
 
 ### How non-detections are represented in DwCA v2?
