@@ -30,7 +30,7 @@ Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAb
 
 ```
 
-### Can relationship between Materials be expressed in DwCA v2?
+### How is relationship between Materials expressed in DwCA v2?
 
 Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657>
 

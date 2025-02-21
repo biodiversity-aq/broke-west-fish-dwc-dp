@@ -19,8 +19,8 @@ library(tidyverse)
 event_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv", delim = "\t", show_col_types = FALSE) 
 humboldt <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1335548147&single=true&output=tsv", delim = "\t", show_col_types = FALSE, col_types = cols(isSamplingEffortReported = col_character(), isTaxonomicScopeFullyReported = col_character(), isLeastSpecificTargetCategoryQuantityInclusive = col_character(), areNonTargetTaxaFullyReported = col_character(), isAbsenceReported = col_character()))
 emof <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1747744771&single=true&output=tsv", delim = "\t", col_types = cols(measurementValueID = col_character()), show_col_types = FALSE)
-media_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1234999790&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
-
+media_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1514323106&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+protocol <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1759980170&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 
 # Using Sheet 1 of Fish_data_BROKE_west[14711] but this excluded all the squids
 # This version is used instead of the Occurrence used in Humboldt Extension mapping because that version only contains fish and squid from RMT8. It also lacks abundance data and only contain individual fish data. Abundance data is crucial to demonstrate community measurement use case.
@@ -29,6 +29,7 @@ raw_count_routine <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-
 raw_count_target <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1626893517&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 # stomach content data
 raw_stomach <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "StomachcontentforAADdatacentre.xls"), sheet = "Data")
+
 
 ## exclude squid data right now because of different versions of dataset received.
 # raw_squid_data <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "FishandsquidforAADdatacentre.xls"), sheet = "Squid")
@@ -247,7 +248,8 @@ survey <- humboldt %>%
   expand_grid(suffix = suffixes) %>%
   mutate(eventID = paste0(eventID, suffix),
          # need to cast netSize to string so that it can be joined later (so that it is not a double)
-         netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA)) %>%
+         netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA),
+         surveyID = eventID) %>%
   # remove fields that were empty or need to be amended based on new understanding of survey target
   select(-`ecoiri:targetTaxonomicScope`, -verbatimSiteDescriptions, -suffix)
 head(survey)
@@ -256,14 +258,7 @@ head(survey)
 ### Protocol
 
 ```{r protocol}
-protocol <- survey %>% 
-  distinct(protocolNames, protocolDescription, protocolReferences) %>%
-  rename(protocolName = protocolNames, protocolCitation = protocolReferences) %>% 
-  mutate(protocolType = "Sampling Effort",
-         protocolID = case_when(
-           str_detect(protocolName, "routine") ~ "RMT_Routine",
-           str_detect(protocolName, "target") ~ "RMT_Target"
-         )) 
+protocol
 ```
 
 ### Survey Target & Occurrence
@@ -413,51 +408,94 @@ identification_agent_role <- identification %>%
   mutate(agentID = "AVdP_specimen_identifier", agentRole = "specimen identifier")
 head(identification_agent_role)
 ```
+#### Survey Agent role
+
+```{r survey agent role}
+survey_agent_role <- survey %>% 
+  select(surveyID) %>%
+  mutate(agentID = "AVdP_collector", agentRole = "collector")
+head(survey_agent_role)
+```
+
 
 ### Assertion
 
 #### Event Assertion
 
+Placing environmental measurements under Event Assertion instead of Survey Assertion because it is for both RMT1 and RMT8. Putting this at the level of station Event and not net Event.
+
+```
+Expedition
+|__ Sampling station
+    |__ RMT1
+    |__ RMT8
+```
+
 ```{r event assertion}
 #| warning: false
 #| message: false
 
-event_assertion <- emof %>% 
-  filter(is.na(occurrenceID)) %>%
+assertion <- emof %>% 
   rename(assertionID = measurementID, assertionType = measurementType, assertionTypeIRI = measurementTypeID, assertionValueIRI = measurementValueID, assertionUnit = measurementUnit, assertionUnitIRI = measurementUnitID) %>%
+  mutate(assertionValue = if_else(grepl("[a-zA-Z]", measurementValue), measurementValue, NA),
+    assertionValueNumeric = if_else(!grepl("[a-zA-Z]", measurementValue), as.numeric(measurementValue), NA))
+
+event_assertion <- assertion %>% 
+  filter(is.na(occurrenceID)) %>%
   mutate(
     assertionTypeVocabulary = "http://vocab.nerc.ac.uk/collection/P01/current/",
-    assertionValue = if_else(grepl("[a-zA-Z]", measurementValue), measurementValue, NA),
-    assertionValueNumeric = if_else(!grepl("[a-zA-Z]", measurementValue), as.numeric(measurementValue), NA),
-    assertionBy = "Anton Van de Putte",
-    assertionByID = "https://orcid.org/0000-0003-1336-5554",
-    assertionUnitVocabulary = "http://vocab.nerc.ac.uk/collection/P06/current/"
+    assertionProtocol = case_when(
+      assertionType %in% c("Average temperature", "Maximum Pressure", "Average Salinity", "Average Conductivity", "Average fluoresence") ~ "CTD",
+      assertionType %in% c("Solar Azimuth", "Solar elevation", "daylength") ~ "solar azimuth, elevation and day length",
+      TRUE ~ ""),
+    assertionProtocolID = case_when(
+      assertionProtocol == "CTD" ~ "ctd",
+      assertionProtocol == "solar azimuth, elevation and day length" ~ "light_conditions",
+      TRUE ~ ""),
+    assertionUnitVocabulary = "http://vocab.nerc.ac.uk/collection/P06/current/" 
     ) %>%
   select(assertionID, eventID, assertionType, assertionTypeIRI, assertionTypeVocabulary, assertionValue,
-         assertionValueNumeric, assertionValueIRI, assertionUnit, assertionUnitIRI, assertionUnitVocabulary)
+         assertionValueNumeric, assertionValueIRI, assertionUnit, assertionUnitIRI, assertionUnitVocabulary, assertionProtocol, assertionProtocolID)
 event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
 ```
 
-### Citation
+#### Material Assertion
 
-#### 
-
-```{r citation}
+```{r material assertion}
+material_assertion <- assertion %>% 
+  filter(!is.na(occurrenceID)) %>%
+  rename(materialEntityID = occurrenceID) %>%
+  select(-"assertionValueIRI", -"eventID")
+material_assertion %>% filter(materialEntityID == "AAV3FF_00001")
 ```
 
 ### Media
 
+#### Material Media
+
+```{r material media}
+material_media <- media %>%
+  select(mediaID, materialEntityID) %>%
+  mutate(mediaSubjectCategory = "specimen photo")
+head(material_media)
+```
+
 ### Protocol
 
-#### Event Protocol
+#### Survey Protocol
 
-```{r event protocol}
-event_protocol <- humboldt %>% 
-  select(eventID, samplingProtocol) %>% 
+As Event is also a Survey, I use Survey Protocol table instead of Event Protocol table.
+
+```{r survey protocol}
+survey_protocol <- survey %>% 
+  select(surveyID, samplingProtocol) %>% 
   rename(protocolID = samplingProtocol) %>%
   filter(!is.na(protocolID))
-event_protocol %>% filter(eventID == "BROKE_WEST_RMT_001")
+survey_protocol %>% filter(surveyID == "BROKE_WEST_RMT_001_RMT8")
 ```
+
+
+
 
 ### Identifier
 
@@ -470,6 +508,7 @@ agent_identifier <- tibble(
   identifierType = c("ORCID", "ORCID"),
   identifierLanguage = c("eng", "eng")
 )
+agent_identifier
 ```
 
 
@@ -514,8 +553,11 @@ data_list <- list(
   agent_agent_role = agent_agent_role,
   event_agent_role = event_agent_role,
   identification_agent_role = identification_agent_role,
+  survey_agent_role = survey_agent_role,
   event_assertion = event_assertion,
-  event_protocol = event_protocol,
+  material_assertion = material_assertion,
+  material_media = material_media,
+  survey_protocol = survey_protocol,
   agent_identifier = agent_identifier
 )
 
