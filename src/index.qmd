@@ -1,5 +1,5 @@
 ---
-title: "Exploring DwCA_v2 with marine community measurements dataset"
+title: "Exploring DwC-DP with marine community measurements dataset"
 date: today
 author:
   - name: "Yi-Ming Gan"

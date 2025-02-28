@@ -13,7 +13,7 @@ format:
 editor: visual
 
 website:
-  title: "BROKE-West fish to DwCA v2"
+  title: "BROKE-West fish to DwC-DP"
   navbar:
     left:
       - href: index.qmd

@@ -2,21 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "title": "Exploring DwC-DP with marine community measurements dataset",
     "section": "",
     "text": "This is an attempt to map BROKE-West Fish dataset as a marine survey and community measurements use case of the new data model to DwC-DP and explore what information can be retrieve from DwC-DP."
   },
   {
     "objectID": "index.html#introduction",
     "href": "index.html#introduction",
-    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "title": "Exploring DwC-DP with marine community measurements dataset",
     "section": "",
     "text": "This is an attempt to map BROKE-West Fish dataset as a marine survey and community measurements use case of the new data model to DwC-DP and explore what information can be retrieve from DwC-DP."
   },
   {
     "objectID": "index.html#acknowledgement",
     "href": "index.html#acknowledgement",
-    "title": "Exploring DwCA_v2 with marine community measurements dataset",
+    "title": "Exploring DwC-DP with marine community measurements dataset",
     "section": "Acknowledgement",
     "text": "Acknowledgement\nThis mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).\nDocumenting this mapping exercise in Quarto is inspired by the approach of OBIS USA (Steve Formel and Kylie Hollis)\nWe are grateful and appreciate the various contributions received from the following contributors during this exercise:\n\nJohn Wieczorek\nAnton Van de Putte\nCecilie Svenningsen\nKate Ingenloff\nTim Robertson"
   },
