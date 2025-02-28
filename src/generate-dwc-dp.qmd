@@ -450,6 +450,7 @@ event_assertion <- assertion %>%
     ) %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event-assertion.json")
 event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
+
 ```
 
 #### Material Assertion

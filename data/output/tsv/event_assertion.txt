@@ -495,130 +495,130 @@ BROKE_WEST_RMT_122_sal	BROKE_WEST_RMT_122	Average Salinity	http://vocab.nerc.ac.
 BROKE_WEST_RMT_123_sal	BROKE_WEST_RMT_123	Average Salinity	http://vocab.nerc.ac.uk/collection/P01/current/SSAMP001	http://vocab.nerc.ac.uk/collection/P01/current/			33.032557778	PSU	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
 BROKE_WEST_RMT_124_sal	BROKE_WEST_RMT_124	Average Salinity	http://vocab.nerc.ac.uk/collection/P01/current/SSAMP001	http://vocab.nerc.ac.uk/collection/P01/current/			33.768529885	PSU	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
 BROKE_WEST_RMT_125_sal	BROKE_WEST_RMT_125	Average Salinity	http://vocab.nerc.ac.uk/collection/P01/current/SSAMP001	http://vocab.nerc.ac.uk/collection/P01/current/			33.405621463	PSU	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_001_sal	BROKE_WEST_RMT_001	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.9399718			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_002_sal	BROKE_WEST_RMT_002	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.853141223			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_003_sal	BROKE_WEST_RMT_003	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.815801058			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_004_sal	BROKE_WEST_RMT_004	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.916237069			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_005_sal	BROKE_WEST_RMT_005	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.060509892			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_006_sal	BROKE_WEST_RMT_006	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.068347093			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_007_sal	BROKE_WEST_RMT_007	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.987598256			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_008_sal	BROKE_WEST_RMT_008	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.016027887			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_009_sal	BROKE_WEST_RMT_009	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.263102027			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_010_sal	BROKE_WEST_RMT_010	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.265974764			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_011_sal	BROKE_WEST_RMT_011	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.281095665			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_012_sal	BROKE_WEST_RMT_012	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.632906711			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_013_sal	BROKE_WEST_RMT_013	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.11462514			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_014_sal	BROKE_WEST_RMT_014	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.693272574			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_015_sal	BROKE_WEST_RMT_015	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.020702632			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_016_sal	BROKE_WEST_RMT_016	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.996864417			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_017_sal	BROKE_WEST_RMT_017	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.024996333			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_018_sal	BROKE_WEST_RMT_018	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.091036695			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_019_sal	BROKE_WEST_RMT_019	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.272409236			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_020_sal	BROKE_WEST_RMT_020	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.258193617			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_021_sal	BROKE_WEST_RMT_021	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.007221603			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_022_sal	BROKE_WEST_RMT_022	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.900427762			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_023_sal	BROKE_WEST_RMT_023	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.938398294			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_024_sal	BROKE_WEST_RMT_024	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.069549143			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_025_sal	BROKE_WEST_RMT_025	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.078528144			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_026_sal	BROKE_WEST_RMT_026	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.017985714			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_027_sal	BROKE_WEST_RMT_027	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.190120779			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_028_sal	BROKE_WEST_RMT_028	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.162375397			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_029_sal	BROKE_WEST_RMT_029	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.049793077			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_030_sal	BROKE_WEST_RMT_030	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.442531099			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_031_sal	BROKE_WEST_RMT_031	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.380154601			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_032_sal	BROKE_WEST_RMT_032	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.926529739			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_033_sal	BROKE_WEST_RMT_033	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.280781295			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_034_sal	BROKE_WEST_RMT_034	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.743311838			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_035_sal	BROKE_WEST_RMT_035	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.687784197			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_036_sal	BROKE_WEST_RMT_036	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.114889493			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_037_sal	BROKE_WEST_RMT_037	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.189832465			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_038_sal	BROKE_WEST_RMT_038	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.078941235			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_039_sal	BROKE_WEST_RMT_039	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.358665933			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_040_sal	BROKE_WEST_RMT_040	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.734490116			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_041_sal	BROKE_WEST_RMT_041	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.833577117			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_042_sal	BROKE_WEST_RMT_042	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.991528431			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_043_sal	BROKE_WEST_RMT_043	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.938262878			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_044_sal	BROKE_WEST_RMT_044	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.946995464			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_045_sal	BROKE_WEST_RMT_045	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.440511588			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_046_sal	BROKE_WEST_RMT_046	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.193912109			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_047_sal	BROKE_WEST_RMT_047	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.098426616			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_048_sal	BROKE_WEST_RMT_048	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.932010435			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_049_sal	BROKE_WEST_RMT_049	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.958889474			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_050_sal	BROKE_WEST_RMT_050	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.597782756			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_051_sal	BROKE_WEST_RMT_051	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.622134917			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_052_sal	BROKE_WEST_RMT_052	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.404145418			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_053_sal	BROKE_WEST_RMT_053	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.303117685			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_054_sal	BROKE_WEST_RMT_054	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.319527768			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_055_sal	BROKE_WEST_RMT_055	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.362915297			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_056_sal	BROKE_WEST_RMT_056	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.473435249			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_057_sal	BROKE_WEST_RMT_057	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.321371338			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_058_sal	BROKE_WEST_RMT_058	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.888720408			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_059_sal	BROKE_WEST_RMT_059	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.318813223			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_060_sal	BROKE_WEST_RMT_060	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.004166135			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_061_sal	BROKE_WEST_RMT_061	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.840138562			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_062_sal	BROKE_WEST_RMT_062	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.035128814			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_063_sal	BROKE_WEST_RMT_063	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.459343671			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_064_sal	BROKE_WEST_RMT_064	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.678887004			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_065_sal	BROKE_WEST_RMT_065	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.975841699			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_066_sal	BROKE_WEST_RMT_066	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.749725229			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_067_sal	BROKE_WEST_RMT_067	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.330704647			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_068_sal	BROKE_WEST_RMT_068	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.472419294			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_069_sal	BROKE_WEST_RMT_069	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.945687394			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_070_sal	BROKE_WEST_RMT_070	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.372648261			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_071_sal	BROKE_WEST_RMT_071	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.463073258			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_072_sal	BROKE_WEST_RMT_072	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.958669002			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_073_sal	BROKE_WEST_RMT_073	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.34725485			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_074_sal	BROKE_WEST_RMT_074	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.251062534			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_075_sal	BROKE_WEST_RMT_075	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.003717188			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_076_sal	BROKE_WEST_RMT_076	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.354863			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_077_sal	BROKE_WEST_RMT_077	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.363770222			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_078_sal	BROKE_WEST_RMT_078	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.274550787			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_079_sal	BROKE_WEST_RMT_079	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.488493854			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_080_sal	BROKE_WEST_RMT_080	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.145447599			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_081_sal	BROKE_WEST_RMT_081	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.089547564			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_082_sal	BROKE_WEST_RMT_082	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.190468889			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_083_sal	BROKE_WEST_RMT_083	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.126083784			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_084_sal	BROKE_WEST_RMT_084	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.144932604			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_085_sal	BROKE_WEST_RMT_085	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.188878386			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_086_sal	BROKE_WEST_RMT_086	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.296087642			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_087_sal	BROKE_WEST_RMT_087	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.635580635			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_088_sal	BROKE_WEST_RMT_088	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.061234084			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_089_sal	BROKE_WEST_RMT_089	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.156021243			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_091_sal	BROKE_WEST_RMT_091	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.412100965			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_092_sal	BROKE_WEST_RMT_092	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.319855049			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_093_sal	BROKE_WEST_RMT_093	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.71329451			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_094_sal	BROKE_WEST_RMT_094	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.349850625			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_095_sal	BROKE_WEST_RMT_095	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.161728349			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_096_sal	BROKE_WEST_RMT_096	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.337383962			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_097_sal	BROKE_WEST_RMT_097	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.52582158			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_098_sal	BROKE_WEST_RMT_098	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.71504421			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_099_sal	BROKE_WEST_RMT_099	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.323282813			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_100_sal	BROKE_WEST_RMT_100	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.099540503			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_101_sal	BROKE_WEST_RMT_101	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.43166669			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_102_sal	BROKE_WEST_RMT_102	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.212035554			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_103_sal	BROKE_WEST_RMT_103	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.999382857			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_104_sal	BROKE_WEST_RMT_104	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.255042239			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_105_sal	BROKE_WEST_RMT_105	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.041858734			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_106_sal	BROKE_WEST_RMT_106	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.7554			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_107_sal	BROKE_WEST_RMT_107	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.014653277			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_108_sal	BROKE_WEST_RMT_108	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.903139147			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_109_sal	BROKE_WEST_RMT_109	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.325884307			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_110_sal	BROKE_WEST_RMT_110	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.962255495			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_111_sal	BROKE_WEST_RMT_111	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.505394563			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_112_sal	BROKE_WEST_RMT_112	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.951704937			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_113_sal	BROKE_WEST_RMT_113	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.5081393			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_114_sal	BROKE_WEST_RMT_114	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.265939654			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_115_sal	BROKE_WEST_RMT_115	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.478395033			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_116_sal	BROKE_WEST_RMT_116	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.224749609			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_117_sal	BROKE_WEST_RMT_117	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.501947714			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_118_sal	BROKE_WEST_RMT_118	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.959327897			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_119_sal	BROKE_WEST_RMT_119	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.069265479			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_120_sal	BROKE_WEST_RMT_120	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.054459883			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_121_sal	BROKE_WEST_RMT_121	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.150291374			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_122_sal	BROKE_WEST_RMT_122	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.953291959			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_123_sal	BROKE_WEST_RMT_123	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.474828148			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_124_sal	BROKE_WEST_RMT_124	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.065242857			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
-BROKE_WEST_RMT_125_sal	BROKE_WEST_RMT_125	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.362086829			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_001_Average Conductivity	BROKE_WEST_RMT_001	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.9399718			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_002_Average Conductivity	BROKE_WEST_RMT_002	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.853141223			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_003_Average Conductivity	BROKE_WEST_RMT_003	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.815801058			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_004_Average Conductivity	BROKE_WEST_RMT_004	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.916237069			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_005_Average Conductivity	BROKE_WEST_RMT_005	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.060509892			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_006_Average Conductivity	BROKE_WEST_RMT_006	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.068347093			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_007_Average Conductivity	BROKE_WEST_RMT_007	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.987598256			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_008_Average Conductivity	BROKE_WEST_RMT_008	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.016027887			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_009_Average Conductivity	BROKE_WEST_RMT_009	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.263102027			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_010_Average Conductivity	BROKE_WEST_RMT_010	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.265974764			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_011_Average Conductivity	BROKE_WEST_RMT_011	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.281095665			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_012_Average Conductivity	BROKE_WEST_RMT_012	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.632906711			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_013_Average Conductivity	BROKE_WEST_RMT_013	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.11462514			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_014_Average Conductivity	BROKE_WEST_RMT_014	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.693272574			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_015_Average Conductivity	BROKE_WEST_RMT_015	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.020702632			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_016_Average Conductivity	BROKE_WEST_RMT_016	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.996864417			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_017_Average Conductivity	BROKE_WEST_RMT_017	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.024996333			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_018_Average Conductivity	BROKE_WEST_RMT_018	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.091036695			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_019_Average Conductivity	BROKE_WEST_RMT_019	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.272409236			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_020_Average Conductivity	BROKE_WEST_RMT_020	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.258193617			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_021_Average Conductivity	BROKE_WEST_RMT_021	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.007221603			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_022_Average Conductivity	BROKE_WEST_RMT_022	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.900427762			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_023_Average Conductivity	BROKE_WEST_RMT_023	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.938398294			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_024_Average Conductivity	BROKE_WEST_RMT_024	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.069549143			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_025_Average Conductivity	BROKE_WEST_RMT_025	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.078528144			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_026_Average Conductivity	BROKE_WEST_RMT_026	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.017985714			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_027_Average Conductivity	BROKE_WEST_RMT_027	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.190120779			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_028_Average Conductivity	BROKE_WEST_RMT_028	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.162375397			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_029_Average Conductivity	BROKE_WEST_RMT_029	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.049793077			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_030_Average Conductivity	BROKE_WEST_RMT_030	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.442531099			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_031_Average Conductivity	BROKE_WEST_RMT_031	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.380154601			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_032_Average Conductivity	BROKE_WEST_RMT_032	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.926529739			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_033_Average Conductivity	BROKE_WEST_RMT_033	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.280781295			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_034_Average Conductivity	BROKE_WEST_RMT_034	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.743311838			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_035_Average Conductivity	BROKE_WEST_RMT_035	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.687784197			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_036_Average Conductivity	BROKE_WEST_RMT_036	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.114889493			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_037_Average Conductivity	BROKE_WEST_RMT_037	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.189832465			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_038_Average Conductivity	BROKE_WEST_RMT_038	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.078941235			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_039_Average Conductivity	BROKE_WEST_RMT_039	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.358665933			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_040_Average Conductivity	BROKE_WEST_RMT_040	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.734490116			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_041_Average Conductivity	BROKE_WEST_RMT_041	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.833577117			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_042_Average Conductivity	BROKE_WEST_RMT_042	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.991528431			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_043_Average Conductivity	BROKE_WEST_RMT_043	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.938262878			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_044_Average Conductivity	BROKE_WEST_RMT_044	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.946995464			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_045_Average Conductivity	BROKE_WEST_RMT_045	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.440511588			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_046_Average Conductivity	BROKE_WEST_RMT_046	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.193912109			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_047_Average Conductivity	BROKE_WEST_RMT_047	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			29.098426616			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_048_Average Conductivity	BROKE_WEST_RMT_048	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.932010435			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_049_Average Conductivity	BROKE_WEST_RMT_049	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.958889474			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_050_Average Conductivity	BROKE_WEST_RMT_050	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.597782756			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_051_Average Conductivity	BROKE_WEST_RMT_051	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.622134917			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_052_Average Conductivity	BROKE_WEST_RMT_052	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.404145418			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_053_Average Conductivity	BROKE_WEST_RMT_053	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.303117685			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_054_Average Conductivity	BROKE_WEST_RMT_054	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.319527768			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_055_Average Conductivity	BROKE_WEST_RMT_055	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.362915297			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_056_Average Conductivity	BROKE_WEST_RMT_056	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.473435249			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_057_Average Conductivity	BROKE_WEST_RMT_057	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.321371338			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_058_Average Conductivity	BROKE_WEST_RMT_058	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.888720408			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_059_Average Conductivity	BROKE_WEST_RMT_059	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.318813223			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_060_Average Conductivity	BROKE_WEST_RMT_060	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.004166135			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_061_Average Conductivity	BROKE_WEST_RMT_061	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.840138562			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_062_Average Conductivity	BROKE_WEST_RMT_062	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.035128814			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_063_Average Conductivity	BROKE_WEST_RMT_063	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.459343671			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_064_Average Conductivity	BROKE_WEST_RMT_064	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.678887004			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_065_Average Conductivity	BROKE_WEST_RMT_065	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.975841699			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_066_Average Conductivity	BROKE_WEST_RMT_066	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.749725229			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_067_Average Conductivity	BROKE_WEST_RMT_067	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.330704647			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_068_Average Conductivity	BROKE_WEST_RMT_068	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.472419294			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_069_Average Conductivity	BROKE_WEST_RMT_069	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.945687394			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_070_Average Conductivity	BROKE_WEST_RMT_070	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.372648261			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_071_Average Conductivity	BROKE_WEST_RMT_071	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.463073258			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_072_Average Conductivity	BROKE_WEST_RMT_072	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.958669002			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_073_Average Conductivity	BROKE_WEST_RMT_073	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.34725485			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_074_Average Conductivity	BROKE_WEST_RMT_074	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.251062534			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_075_Average Conductivity	BROKE_WEST_RMT_075	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.003717188			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_076_Average Conductivity	BROKE_WEST_RMT_076	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.354863			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_077_Average Conductivity	BROKE_WEST_RMT_077	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.363770222			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_078_Average Conductivity	BROKE_WEST_RMT_078	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.274550787			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_079_Average Conductivity	BROKE_WEST_RMT_079	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.488493854			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_080_Average Conductivity	BROKE_WEST_RMT_080	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.145447599			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_081_Average Conductivity	BROKE_WEST_RMT_081	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.089547564			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_082_Average Conductivity	BROKE_WEST_RMT_082	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.190468889			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_083_Average Conductivity	BROKE_WEST_RMT_083	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.126083784			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_084_Average Conductivity	BROKE_WEST_RMT_084	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.144932604			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_085_Average Conductivity	BROKE_WEST_RMT_085	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.188878386			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_086_Average Conductivity	BROKE_WEST_RMT_086	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.296087642			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_087_Average Conductivity	BROKE_WEST_RMT_087	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.635580635			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_088_Average Conductivity	BROKE_WEST_RMT_088	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.061234084			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_089_Average Conductivity	BROKE_WEST_RMT_089	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.156021243			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_091_Average Conductivity	BROKE_WEST_RMT_091	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.412100965			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_092_Average Conductivity	BROKE_WEST_RMT_092	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.319855049			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_093_Average Conductivity	BROKE_WEST_RMT_093	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.71329451			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_094_Average Conductivity	BROKE_WEST_RMT_094	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.349850625			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_095_Average Conductivity	BROKE_WEST_RMT_095	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.161728349			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_096_Average Conductivity	BROKE_WEST_RMT_096	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.337383962			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_097_Average Conductivity	BROKE_WEST_RMT_097	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.52582158			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_098_Average Conductivity	BROKE_WEST_RMT_098	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.71504421			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_099_Average Conductivity	BROKE_WEST_RMT_099	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.323282813			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_100_Average Conductivity	BROKE_WEST_RMT_100	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.099540503			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_101_Average Conductivity	BROKE_WEST_RMT_101	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.43166669			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_102_Average Conductivity	BROKE_WEST_RMT_102	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.212035554			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_103_Average Conductivity	BROKE_WEST_RMT_103	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.999382857			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_104_Average Conductivity	BROKE_WEST_RMT_104	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.255042239			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_105_Average Conductivity	BROKE_WEST_RMT_105	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.041858734			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_106_Average Conductivity	BROKE_WEST_RMT_106	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.7554			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_107_Average Conductivity	BROKE_WEST_RMT_107	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.014653277			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_108_Average Conductivity	BROKE_WEST_RMT_108	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.903139147			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_109_Average Conductivity	BROKE_WEST_RMT_109	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			30.325884307			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_110_Average Conductivity	BROKE_WEST_RMT_110	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.962255495			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_111_Average Conductivity	BROKE_WEST_RMT_111	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.505394563			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_112_Average Conductivity	BROKE_WEST_RMT_112	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.951704937			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_113_Average Conductivity	BROKE_WEST_RMT_113	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.5081393			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_114_Average Conductivity	BROKE_WEST_RMT_114	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.265939654			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_115_Average Conductivity	BROKE_WEST_RMT_115	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.478395033			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_116_Average Conductivity	BROKE_WEST_RMT_116	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			28.224749609			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_117_Average Conductivity	BROKE_WEST_RMT_117	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.501947714			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_118_Average Conductivity	BROKE_WEST_RMT_118	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.959327897			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_119_Average Conductivity	BROKE_WEST_RMT_119	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.069265479			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_120_Average Conductivity	BROKE_WEST_RMT_120	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.054459883			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_121_Average Conductivity	BROKE_WEST_RMT_121	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.150291374			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_122_Average Conductivity	BROKE_WEST_RMT_122	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.953291959			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_123_Average Conductivity	BROKE_WEST_RMT_123	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			26.474828148			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_124_Average Conductivity	BROKE_WEST_RMT_124	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.065242857			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
+BROKE_WEST_RMT_125_Average Conductivity	BROKE_WEST_RMT_125	Average Conductivity		http://vocab.nerc.ac.uk/collection/P01/current/			27.362086829			http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
 BROKE_WEST_RMT_001_fluo	BROKE_WEST_RMT_001	Average fluoresence		http://vocab.nerc.ac.uk/collection/P01/current/			17.435220607	ug/L_chlA	http://vocab.nerc.ac.uk/collection/P06/current/UGPL/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
 BROKE_WEST_RMT_002_fluo	BROKE_WEST_RMT_002	Average fluoresence		http://vocab.nerc.ac.uk/collection/P01/current/			2.2341532915	ug/L_chlA	http://vocab.nerc.ac.uk/collection/P06/current/UGPL/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
 BROKE_WEST_RMT_003_fluo	BROKE_WEST_RMT_003	Average fluoresence		http://vocab.nerc.ac.uk/collection/P01/current/			3.0075680776	ug/L_chlA	http://vocab.nerc.ac.uk/collection/P06/current/UGPL/	http://vocab.nerc.ac.uk/collection/P06/current/	CTD	ctd
