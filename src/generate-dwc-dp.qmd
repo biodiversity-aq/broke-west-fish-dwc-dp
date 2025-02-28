@@ -1,5 +1,5 @@
 ---
-title: "Transform dataset into DwCA v2"
+title: "Transform dataset into DwC-DP"
 date: today
 format: 
   html: 
