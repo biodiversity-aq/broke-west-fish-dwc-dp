@@ -1,5 +1,5 @@
 ---
-title: "Explore DwCA v2"
+title: "Explore DwC-DP"
 date: today
 format: 
   html: 
@@ -9,7 +9,7 @@ editor: visual
 
 ## Questions
 
-### How can I explore the tables for DwCA v2 from this mapping exercise?
+### How can I explore the tables for DwC-DP from this mapping exercise?
 
 You can load the tables from the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.
 
@@ -22,7 +22,7 @@ library(tidyverse)
 
 ```
 
-### Does DwCA v2 solve community measurements issue?
+### Does DwC-DP solve community measurements issue?
 
 Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAbundance` table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the `Material` table.
 
@@ -30,7 +30,7 @@ Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAb
 
 ```
 
-### How is relationship between Materials expressed in DwCA v2?
+### How is relationship between Materials expressed in DwC-DP?
 
 Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657>
 
@@ -47,10 +47,10 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 **eMoF table**
 
 | occurrenceID | measurementType | measurementValue | measurementUnit | measurementRemarks |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | 12.28 | relative percentage of dry mass | tegument |
 
-#### DwCA v2
+#### DwC-DP
 
 Yes! Relationship between Materials can be specified through the `Material` table. Example of a krill eaten by a fish can be modeled within a single `Material` table
 
@@ -58,6 +58,6 @@ Yes! Relationship between Materials can be specified through the `Material` tabl
 #material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) 
 ```
 
-### How non-detections are represented in DwCA v2?
+### How non-detections are represented in DwC-DP?
 
-### Trade off between expressiveness of DwCA v2 and simplicity of DwCA?
+### Trade off between expressiveness of DwC-DP and simplicity of DwCA?

@@ -93,6 +93,7 @@ cleaned_fish <- cleaned_fish %>%
 # preview distinct verbatimIdentification and matched scientificName and scientificNameID from WoRMS
 cleaned_fish %>% distinct(verbatimIdentification, scientificName, scientificNameID, kingdom)
 ```
+
 ## Main tables
 
 ### Agent
@@ -203,6 +204,7 @@ material <- material_join_identification %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material.json")
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
 ```
+
 ### Identification
 
 Identification terms are mostly part of Material table.
@@ -274,7 +276,7 @@ protocol
 
 After extensive discussions on what `target` is, we decided to create survey-target table retrospectively. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID. SurveyTargetAbundance points to the Survey through the SurveyTarget record.
 
-Challenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica. 
+Challenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica.
 
 ```{r survey target and occurrence}
 #| warning: false
@@ -386,7 +388,6 @@ head(survey_target)
 head(occurrence)
 ```
 
-
 ## Common tables
 
 ### Agent role
@@ -417,7 +418,7 @@ Not needed because it can be represented by `samplingPerformedBy` and `samplingP
 
 Placing environmental measurements under Event Assertion instead of Survey Assertion because it is for both RMT1 and RMT8. Putting this at the level of station Event and not net Event.
 
-```
+```         
 Expedition
 |__ Sampling station
     |__ RMT1
@@ -499,7 +500,6 @@ agent_identifier <- tibble(
 ) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-identifier.json")
 agent_identifier
 ```
-
 
 ```{r write files}
 #| warning: false

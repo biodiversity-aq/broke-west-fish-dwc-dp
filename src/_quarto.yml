@@ -28,10 +28,10 @@ website:
         contents: 
           - href: dataset-background.qmd
             text: Dataset background
-      - section: DwCA v2
+      - section: Darwin Core Data Package
         contents:
-          - href: generate-dwcav2.qmd
-            text: Generate tables for DwCA_v2
-          - href: explore-dwcav2.qmd
-            text: Exploring DwCA v2
+          - href: generate-dwc-dp.qmd
+            text: Generate tables for DwC-DP
+          - href: explore-dwc-dp.qmd
+            text: Exploring DwC-DP
 
