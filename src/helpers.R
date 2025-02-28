@@ -8,13 +8,20 @@ save_and_write <- function(data_list, output_dir = here("data", "output")) {
   
   # Iterate over each dataset in the list
   for (name in names(data_list)) {
-    data <- data_list[[name]]
+    # Get the current dataset
+    current_data <- data_list[[name]]
     
-    # Save as .rda
-    save(data, file = here(output_dir, "rda", paste0(name, ".rda")))
+    # Save as .rda with the correct name
+    # Create a temporary environment
+    temp_env <- new.env()
+    # Assign the data to the environment with the desired name
+    assign(name, current_data, envir = temp_env)
+    # Save the object from the environment
+    save(list = name, file = here(output_dir, "rda", paste0(name, ".rda")), 
+         envir = temp_env)
     
     # Save as .tsv
-    write_tsv(data, here(output_dir, "tsv", paste0(name, ".txt")), na = "")
+    write_tsv(current_data, here(output_dir, "tsv", paste0(name, ".txt")), na = "")
   }
 }
 
