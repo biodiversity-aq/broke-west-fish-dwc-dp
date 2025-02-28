@@ -14,6 +14,7 @@ editor: visual
 library(here)
 library(readxl)
 library(tidyverse)
+source("helpers.R")
 
 # Tables from Humboldt Extension mapping exercise 2024-12-13_brokewest-fish_DwCAv2
 event_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1995801942&single=true&output=tsv", delim = "\t", show_col_types = FALSE) 
@@ -100,12 +101,10 @@ There is only Anton here because this version of dataset does not contain squid 
 
 ```{r agent}
 agent <- tibble(
-  agentID = c("AVdP_collector", "AVdP_specimen_identifier"),
-  agentType = c("person", "person"),
-  preferredAgentName = c("Anton Van de Putte", "Anton Van de Putte")
-)
-
-agent
+  agentID = "https://orcid.org/0000-0003-1336-5554",
+  agentType = "person",
+  preferredAgentName = "Anton Van de Putte"
+) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent.json")
 ```
 
 ### Event
@@ -125,7 +124,9 @@ subevents <- event_google %>%
   select(-suffix) # Remove the suffix column
 
 # Combine original and subevents
-event <- bind_rows(event_google, subevents)
+event <- bind_rows(event_google, subevents) %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event.json")
+  
 event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, parentEventID, eventType)
 ```
 
@@ -186,7 +187,7 @@ stomach <- raw_stomach %>%
   ) %>% 
   left_join(individual_fish, by = c("derivedFromMaterialEntityID" = "materialEntityID")) %>%
   # because left_join renamed the following columns since it is present in both individual_fish and stomach table
-  mutate(materialEntityType = materialEntityType.x,
+  rename(materialEntityType = materialEntityType.x,
          verbatimIdentification = verbatimIdentification.x,
          materialEntityRemarks = materialEntityRemarks.x,
          identificationRemarks = identificationRemarks.x,
@@ -195,9 +196,11 @@ stomach <- raw_stomach %>%
   select(materialEntityID, eventID, materialEntityType, identifiedBy, identifiedByID, verbatimIdentification, identificationRemarks, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialEntityRemarks)
 
 # combine both tables into a Material table
-material <- bind_rows(individual_fish, stomach) 
+material_join_identification <- bind_rows(individual_fish, stomach) 
 
 # preview example of a full fish + its stomach content in Material table
+material <- material_join_identification %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material.json")
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00025"))
 ```
 ### Identification
@@ -209,7 +212,7 @@ Question: I am expecting OBIS to ask about why `taxonID` and not `scientificName
 ```{r identification}
 fish_id_guide <- "https://archive.org/details/fishesofsouthern00gono | Kellermann, A. (1990): Identification Key and Catalogue of Larval Antarctic Fishes , Berichte zur Polarforschung (Reports on Polar Research), Bremerhaven, Alfred Wegener Institute for Polar and Marine Research, 67 , 136 p. . doi: 10.2312/BzP_0067_1990 | https://archive.org/details/cybium-7-002-003-074"
 
-identification <- material %>%
+identification <- material_join_identification %>%
   mutate(
     identificationID = paste(materialEntityID, "ID", sep = "_"),
     identificationBasedOnMaterialEntityID = materialEntityID,
@@ -218,7 +221,7 @@ identification <- material %>%
     identifiedBy = "Anton Van de Putte",
     identifiedByID = "https://orcid.org/0000-0003-1336-5554",
     identificationReferences = fish_id_guide) %>%
-  select(identificationID, identificationBasedOnMaterialEntityID, identificationType, identificationTypeIRI, verbatimIdentification, identifiedBy, identifiedByID, identificationReferences, identificationRemarks, taxonID, kingdom, scientificName, taxonRank)
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/identification.json")
 head(identification)
 ```
 
@@ -228,36 +231,42 @@ head(identification)
 #| warning: false
 #| message: false
 
-media <- media_google %>% 
+media_material <- media_google %>% 
+  # also needed to construct Material Media table later
   left_join(material, by = "materialEntityID") %>% 
   # remove these media records because there is no data associated with these pictures -> we don't know what these are
   filter(!is.na(eventID)) %>%
   mutate(mediaDescription = str_c("Photo of ", scientificName, " with its label and a grid.")) 
+
+media <- filter_dataframe_by_json(media_material, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/media.json")
 head(media)
 ```
 
-### Survey 
+### Survey
 
 Survey table is a table that contains current Humboldt Extension terms.
 
 ```{r survey}
 suffixes <- c("_RMT1","_RMT8")
 
-survey <- humboldt %>%
+survey_w_protocol <- humboldt %>%
   filter(eventID != "BROKE_WEST") %>% # remove the expedition event, only link humboldt to the lowest level of Survey Events
   expand_grid(suffix = suffixes) %>%
   mutate(eventID = paste0(eventID, suffix),
          # need to cast netSize to string so that it can be joined later (so that it is not a double)
          netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA),
-         surveyID = eventID) %>%
-  # remove fields that were empty or need to be amended based on new understanding of survey target
-  select(-`ecoiri:targetTaxonomicScope`, -verbatimSiteDescriptions, -suffix)
+         surveyID = eventID,
+         isLeastSpecificTargetCategoryQuantityInclusive = "true") 
+
+survey <- survey_w_protocol %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey.json")
 head(survey)
 ```
 
 ### Protocol
 
 ```{r protocol}
+protocol <- filter_dataframe_by_json(protocol, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol.json")
 protocol
 ```
 
@@ -366,10 +375,11 @@ return(list(survey_target = survey_target, occurrence = occurrence))
 routine_trawl <- transform_rmt_count_to_long(raw_count_routine)
 target_trawl <- transform_rmt_count_to_long(raw_count_target)
 
-survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target)
+survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey-target.json")
 occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
   mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_")) %>%
-  select(occurrenceID, eventID, recordedBy, recordedByID, identifiedBy, identifiedByID, verbatimIdentification, scientificName, taxonID, taxonRank, kingdom,lifeStage, organismQuantityType, organismQuantity)
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/occurrence.json")
 
 # preview example tables
 head(survey_target)
@@ -385,38 +395,21 @@ head(occurrence)
 
 ```{r agent agent role}
 agent_agent_role <- tibble(
-  agentID = "AVdP_collector",
+  agentID = "https://orcid.org/0000-0003-1336-5554",
   agentRole = "collector",
-)
+) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-agent-role.json")
 agent_agent_role
 ```
 
-#### Event Agent role
+#### Table not needed: Event Agent role
 
-```{r event agent role}
-event_agent_role <- event %>% 
-  select(eventID) %>% filter(eventID != "BROKE_WEST") %>%
-  mutate(agentID = "AVdP_collector", agentRole = "collector")
-event_agent_role %>% filter(eventID == "BROKE_WEST_RMT_001")
-```
+#### Table not needed: Identification Agent role
 
-#### Identification Agent role
+The `event_agent_roles` and `identification_agent_roles` aren't actually necessary because those roles are hard-wired elsewhere in the schema in a simpler way. Specifically, identification has `identifiedBy` and `identifiedByID`, which can be populated directly with the name and the ORCID. Similarly with `collectedBy` and `collectorID` in the `material` table.
 
-```{r identification agent role}
-identification_agent_role <- identification %>% 
-  select(identificationID) %>%
-  mutate(agentID = "AVdP_specimen_identifier", agentRole = "specimen identifier")
-head(identification_agent_role)
-```
-#### Survey Agent role
+#### Table not needed: Survey Agent role
 
-```{r survey agent role}
-survey_agent_role <- survey %>% 
-  select(surveyID) %>%
-  mutate(agentID = "AVdP_collector", agentRole = "collector")
-head(survey_agent_role)
-```
-
+Not needed because it can be represented by `samplingPerformedBy` and `samplingPerformedByID`.
 
 ### Assertion
 
@@ -454,8 +447,7 @@ event_assertion <- assertion %>%
       TRUE ~ ""),
     assertionUnitVocabulary = "http://vocab.nerc.ac.uk/collection/P06/current/" 
     ) %>%
-  select(assertionID, eventID, assertionType, assertionTypeIRI, assertionTypeVocabulary, assertionValue,
-         assertionValueNumeric, assertionValueIRI, assertionUnit, assertionUnitIRI, assertionUnitVocabulary, assertionProtocol, assertionProtocolID)
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event-assertion.json")
 event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
 ```
 
@@ -465,7 +457,7 @@ event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
 material_assertion <- assertion %>% 
   filter(!is.na(occurrenceID)) %>%
   rename(materialEntityID = occurrenceID) %>%
-  select(-"assertionValueIRI", -"eventID")
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material-assertion.json")
 material_assertion %>% filter(materialEntityID == "AAV3FF_00001")
 ```
 
@@ -474,9 +466,9 @@ material_assertion %>% filter(materialEntityID == "AAV3FF_00001")
 #### Material Media
 
 ```{r material media}
-material_media <- media %>%
-  select(mediaID, materialEntityID) %>%
-  mutate(mediaSubjectCategory = "specimen photo")
+material_media <- media_material %>%
+  mutate(mediaSubjectCategory = "specimen photo") %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material-media.json")
 head(material_media)
 ```
 
@@ -487,15 +479,12 @@ head(material_media)
 As Event is also a Survey, I use Survey Protocol table instead of Event Protocol table.
 
 ```{r survey protocol}
-survey_protocol <- survey %>% 
+survey_protocol <- survey_w_protocol %>% 
   select(surveyID, samplingProtocol) %>% 
   rename(protocolID = samplingProtocol) %>%
   filter(!is.na(protocolID))
 survey_protocol %>% filter(surveyID == "BROKE_WEST_RMT_001_RMT8")
 ```
-
-
-
 
 ### Identifier
 
@@ -503,39 +492,19 @@ survey_protocol %>% filter(surveyID == "BROKE_WEST_RMT_001_RMT8")
 
 ```{r identifier}
 agent_identifier <- tibble(
-  identifier = c("https://orcid.org/0000-0003-1336-5554", "https://orcid.org/0000-0003-1336-5554"),
-  agentID = c("AVdP_collector", "AVdP_specimen_identifier"),
-  identifierType = c("ORCID", "ORCID"),
-  identifierLanguage = c("eng", "eng")
-)
+  identifier = "https://orcid.org/0000-0003-1336-5554",
+  agentID = "https://orcid.org/0000-0003-1336-5554",
+  identifierType = "ORCID",
+  identifierLanguage = "eng"
+) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-identifier.json")
 agent_identifier
 ```
-
-
-
 
 
 ```{r write files}
 #| warning: false
 #| message: false
 #| echo: false
-
-save_and_write <- function(data_list, output_dir = here("data", "output")) {
-  # Ensure the output directories exist
-  dir.create(here(output_dir, "rda"), recursive = TRUE, showWarnings = FALSE)
-  dir.create(here(output_dir, "tsv"), recursive = TRUE, showWarnings = FALSE)
-  
-  # Iterate over each dataset in the list
-  for (name in names(data_list)) {
-    data <- data_list[[name]]
-    
-    # Save as .rda
-    save(data, file = here(output_dir, "rda", paste0(name, ".rda")))
-    
-    # Save as .tsv
-    write_tsv(data, here(output_dir, "tsv", paste0(name, ".txt")), na = "")
-  }
-}
 
 # Example usage
 data_list <- list(
@@ -551,9 +520,6 @@ data_list <- list(
   occurrence = occurrence,
   # common tables
   agent_agent_role = agent_agent_role,
-  event_agent_role = event_agent_role,
-  identification_agent_role = identification_agent_role,
-  survey_agent_role = survey_agent_role,
   event_assertion = event_assertion,
   material_assertion = material_assertion,
   material_media = material_media,
