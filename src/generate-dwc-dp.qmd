@@ -283,6 +283,7 @@ routine_trawl <- transform_rmt_count_to_long(raw_count_routine)
 target_trawl <- transform_rmt_count_to_long(raw_count_target)
 
 survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) %>%
+  mutate(includeOrExclude = "include", isSurveyTargetFullyReported = "true") %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey-target.json")
 occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
   mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_")) %>%
