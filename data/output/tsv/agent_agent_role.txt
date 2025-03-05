@@ -1,2 +1,0 @@
-agentID	agentRole
-https://orcid.org/0000-0003-1336-5554	collector

@@ -11,22 +11,28 @@ editor: visual
 
 ### How can I explore the tables for DwC-DP from this mapping exercise?
 
-You can load the tables from the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.
+You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.
 
 ```{r load rda}
 #| warning: false
 #| message: false
 library(here)
 library(tidyverse)
-
-
+# Get a list of all .rda files in the directory
+rda_files <- list.files(path = here("data", "output", "rda"), pattern = "\\.rda$", full.names = TRUE)
+lapply(rda_files, load, envir = .GlobalEnv)
 ```
 
 ### Does DwC-DP solve community measurements issue?
 
-Yes! Example: Total count of electrona antarctica is recorded in `SurveyTargetAbundance` table, only a subset was preserved and recorded in this dataset. The preserved fish is recorded in the `Material` table.
-
 ```{r community measurement}
+# electrona antarctica BROKE_WEST_RMT_037_RMT8
+
+# total catch of Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8
+occurrence %>% filter(eventID == "BROKE_WEST_RMT_037_RMT8" & taxonID == "urn:lsid:marinespecies.org:taxname:234721")
+
+# all preserved Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8
+material %>% filter(eventID == "BROKE_WEST_RMT_022_RMT8" & taxonID == "urn:lsid:marinespecies.org:taxname:234721")
 
 ```
 
@@ -47,7 +53,7 @@ Currently, I modeled it using eMoF pointing to the Occurrence with body part in 
 **eMoF table**
 
 | occurrenceID | measurementType | measurementValue | measurementUnit | measurementRemarks |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | 12.28 | relative percentage of dry mass | tegument |
 
 #### DwC-DP
