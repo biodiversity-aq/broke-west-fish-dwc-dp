@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-05">
+<meta name="dcterms.date" content="2025-03-06">
 
 <title>Explore DwC-DP – BROKE-West fish to DwC-DP</title>
 <style>
@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/biodiversity-aq/broke-west-fish-dwcav2"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/biodiversity-aq/broke-west-fish-dwc-dp"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -208,14 +208,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#questions" id="toc-questions" class="nav-link active" data-scroll-target="#questions">Questions</a>
+  <li><a href="#explore-the-dwc-dp-tables" id="toc-explore-the-dwc-dp-tables" class="nav-link active" data-scroll-target="#explore-the-dwc-dp-tables">Explore the DwC-DP tables</a></li>
+  <li><a href="#community-measurements" id="toc-community-measurements" class="nav-link" data-scroll-target="#community-measurements">Community measurements</a>
   <ul class="collapse">
-  <li><a href="#how-can-i-explore-the-tables-for-dwc-dp-from-this-mapping-exercise" id="toc-how-can-i-explore-the-tables-for-dwc-dp-from-this-mapping-exercise" class="nav-link" data-scroll-target="#how-can-i-explore-the-tables-for-dwc-dp-from-this-mapping-exercise">How can I explore the tables for DwC-DP from this mapping exercise?</a></li>
-  <li><a href="#does-dwc-dp-solve-community-measurements-issue" id="toc-does-dwc-dp-solve-community-measurements-issue" class="nav-link" data-scroll-target="#does-dwc-dp-solve-community-measurements-issue">Does DwC-DP solve community measurements issue?</a></li>
-  <li><a href="#how-is-relationship-between-materials-expressed-in-dwc-dp" id="toc-how-is-relationship-between-materials-expressed-in-dwc-dp" class="nav-link" data-scroll-target="#how-is-relationship-between-materials-expressed-in-dwc-dp">How is relationship between Materials expressed in DwC-DP?</a></li>
-  <li><a href="#how-non-detections-are-represented-in-dwc-dp" id="toc-how-non-detections-are-represented-in-dwc-dp" class="nav-link" data-scroll-target="#how-non-detections-are-represented-in-dwc-dp">How non-detections are represented in DwC-DP?</a></li>
-  <li><a href="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" id="toc-trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="nav-link" data-scroll-target="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</a></li>
+  <li><a href="#dwca" id="toc-dwca" class="nav-link" data-scroll-target="#dwca">DwCA</a></li>
+  <li><a href="#dwc-dp" id="toc-dwc-dp" class="nav-link" data-scroll-target="#dwc-dp">DwC-DP</a></li>
   </ul></li>
+  <li><a href="#body-part-measurements" id="toc-body-part-measurements" class="nav-link" data-scroll-target="#body-part-measurements">Body part measurements</a>
+  <ul class="collapse">
+  <li><a href="#dwca-1" id="toc-dwca-1" class="nav-link" data-scroll-target="#dwca-1">DwCA</a></li>
+  <li><a href="#dwc-dp-1" id="toc-dwc-dp-1" class="nav-link" data-scroll-target="#dwc-dp-1">DwC-DP</a></li>
+  </ul></li>
+  <li><a href="#non-detections" id="toc-non-detections" class="nav-link" data-scroll-target="#non-detections">Non-detections</a></li>
+  <li><a href="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" id="toc-trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="nav-link" data-scroll-target="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</a></li>
   </ul>
 </nav>
     </div>
@@ -235,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 5, 2025</p>
+      <p class="date">March 6, 2025</p>
     </div>
   </div>
   
@@ -247,98 +252,188 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="how-can-i-explore-the-tables-for-dwc-dp-from-this-mapping-exercise" class="level3">
-<h3 class="anchored" data-anchor-id="how-can-i-explore-the-tables-for-dwc-dp-from-this-mapping-exercise">How can I explore the tables for DwC-DP from this mapping exercise?</h3>
+<section id="explore-the-dwc-dp-tables" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-dwc-dp-tables">Explore the DwC-DP tables</h2>
 <p>You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a list of all .rda files in the directory</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>rda_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>), <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.rda$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(rda_files, load, <span class="at">envir =</span> .GlobalEnv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1]]
-[1] "agent_agent_role"
-
-[[2]]
-[1] "agent_identifier"
-
-[[3]]
-[1] "agent"
-
-[[4]]
-[1] "event_assertion"
-
-[[5]]
-[1] "event"
-
-[[6]]
-[1] "identification"
-
-[[7]]
-[1] "material_assertion"
-
-[[8]]
-[1] "material_media"
-
-[[9]]
-[1] "material"
-
-[[10]]
-[1] "media"
-
-[[11]]
-[1] "occurrence"
-
-[[12]]
-[1] "protocol"
-
-[[13]]
-[1] "survey_protocol"
-
-[[14]]
-[1] "survey_target"
-
-[[15]]
-[1] "survey"</code></pre>
-</div>
+</section>
+<section id="community-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="community-measurements">Community measurements</h2>
+<p>Does DwC-DP handles community measurements better than DwCA?</p>
+<section id="dwca" class="level3">
+<h3 class="anchored" data-anchor-id="dwca">DwCA</h3>
+<p>In DwCA, we will have to have all these as Occurrence records so that measurements like “Standard Length” and “Total Length” of each individual in emof has an Occurrence record to point to. However, this does not warrant user to add the organismQuantity of all individuals together.</p>
+<div class="table-responsive">
+<table class="table-striped table-bordered caption-top table">
+<caption>Occurrence table in DwCA</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>occurrenceID</th>
+<th>eventID</th>
+<th>scientificName</th>
+<th>lifeStage</th>
+<th>organismQuantity</th>
+<th>organismQuantityType</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BROKE_WEST_RMT_051_RMT8_217697</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>28</td>
+<td>individuals</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00231</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="odd">
+<td>AAV3FF_00232</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00233</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="odd">
+<td>AAV3FF_00234</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00235</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="odd">
+<td>AAV3FF_00236</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00237</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="odd">
+<td>AAV3FF_00238</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00239</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="odd">
+<td>AAV3FF_00240</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+<tr class="even">
+<td>AAV3FF_00241</td>
+<td>BROKE_WEST_RMT_051_RMT8</td>
+<td>Electrona antarctica</td>
+<td>larvae</td>
+<td>1</td>
+<td>individual</td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
-<section id="does-dwc-dp-solve-community-measurements-issue" class="level3">
-<h3 class="anchored" data-anchor-id="does-dwc-dp-solve-community-measurements-issue">Does DwC-DP solve community measurements issue?</h3>
+<section id="dwc-dp" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-dp">DwC-DP</h3>
+<p>The Occurrence and Material are separate concepts now. We do not need to have a separate Occurrence just to indicate the total catch of a taxon. We can have a single Occurrence (total catch) with multiple Materials (individual) to indicate the total catch and preserved individuals. The measurements of the individuals (Assertions) can be directly linked to the Materials via the Material Assertion table.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># electrona antarctica BROKE_WEST_RMT_037_RMT8</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># total catch of Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>occurrence <span class="sc">%&gt;%</span> <span class="fu">filter</span>(eventID <span class="sc">==</span> <span class="st">"BROKE_WEST_RMT_037_RMT8"</span> <span class="sc">&amp;</span> taxonID <span class="sc">==</span> <span class="st">"urn:lsid:marinespecies.org:taxname:234721"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>event_id <span class="ot">&lt;-</span> <span class="st">"BROKE_WEST_RMT_051_RMT8"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>taxon_id <span class="ot">&lt;-</span> <span class="st">"urn:lsid:marinespecies.org:taxname:217697"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># total catch of electrona antarctica from BROKE_WEST_RMT_051_RMT8</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>occurrence <span class="sc">%&gt;%</span> <span class="fu">filter</span>(eventID <span class="sc">==</span> event_id <span class="sc">&amp;</span> taxonID <span class="sc">==</span> taxon_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(eventID, occurrenceID, scientificName, lifeStage, organismQuantity, organismQuantityType)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["occurrenceID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["verbatimIdentification"],"name":[2],"type":["chr"],"align":["left"]},{"label":["organismQuantity"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["organismQuantityType"],"name":[4],"type":["chr"],"align":["left"]},{"label":["lifeStage"],"name":[5],"type":["chr"],"align":["left"]},{"label":["eventID"],"name":[6],"type":["chr"],"align":["left"]},{"label":["taxonID"],"name":[7],"type":["chr"],"align":["left"]},{"label":["taxonRank"],"name":[8],"type":["chr"],"align":["left"]},{"label":["kingdom"],"name":[9],"type":["chr"],"align":["left"]},{"label":["surveyTargetID"],"name":[10],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[11],"type":["chr"],"align":["left"]},{"label":["occurrenceStatus"],"name":[12],"type":["chr"],"align":["left"]},{"label":["recordedBy"],"name":[13],"type":["chr"],"align":["left"]},{"label":["recordedByID"],"name":[14],"type":["chr"],"align":["left"]},{"label":["identifiedBy"],"name":[15],"type":["chr"],"align":["left"]},{"label":["identifiedByID"],"name":[16],"type":["chr"],"align":["left"]}],"data":[],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["eventID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["occurrenceID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lifeStage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["organismQuantity"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["organismQuantityType"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_217697","3":"Electrona antarctica","4":"","5":"28","6":"individuals"},{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_217697_Larvae","3":"Electrona antarctica","4":"Larvae","5":"28","6":"individuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># all preserved Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>material <span class="sc">%&gt;%</span> <span class="fu">filter</span>(eventID <span class="sc">==</span> <span class="st">"BROKE_WEST_RMT_022_RMT8"</span> <span class="sc">&amp;</span> taxonID <span class="sc">==</span> <span class="st">"urn:lsid:marinespecies.org:taxname:234721"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># all preserved electrona antarctica from BROKE_WEST_RMT_051_RMT8</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">&lt;-</span> material <span class="sc">%&gt;%</span> <span class="fu">filter</span>(eventID <span class="sc">==</span> event_id <span class="sc">&amp;</span> taxonID <span class="sc">==</span> taxon_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, eventID, materialEntityType, scientificName, preparations)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["eventID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["materialEntityType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["collectedBy"],"name":[4],"type":["chr"],"align":["left"]},{"label":["collectedByID"],"name":[5],"type":["chr"],"align":["left"]},{"label":["preparations"],"name":[6],"type":["chr"],"align":["left"]},{"label":["disposition"],"name":[7],"type":["chr"],"align":["left"]},{"label":["materialEntityRemarks"],"name":[8],"type":["chr"],"align":["left"]},{"label":["derivedFromMaterialEntityID"],"name":[9],"type":["chr"],"align":["left"]},{"label":["derivationType"],"name":[10],"type":["chr"],"align":["left"]},{"label":["partOfMaterialEntityID"],"name":[11],"type":["chr"],"align":["left"]},{"label":["verbatimIdentification"],"name":[12],"type":["chr"],"align":["left"]},{"label":["identifiedBy"],"name":[13],"type":["chr"],"align":["left"]},{"label":["identifiedByID"],"name":[14],"type":["chr"],"align":["left"]},{"label":["identificationRemarks"],"name":[15],"type":["chr"],"align":["left"]},{"label":["taxonID"],"name":[16],"type":["chr"],"align":["left"]},{"label":["kingdom"],"name":[17],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[18],"type":["chr"],"align":["left"]},{"label":["taxonRank"],"name":[19],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00014","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00015","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00016","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00017","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00018","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00019","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00020","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00021","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00022","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00023","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00024","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00025","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00026","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00027","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00028","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00029","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00030","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00031","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00032","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00033","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00034","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00035","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00036","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00037","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00038","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00039","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00040","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00041","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00042","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00043","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00044","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00045","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"formalin","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00046","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00047","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00048","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00049","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00050","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00051","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00052","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00053","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00054","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00055","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00056","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00057","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00058","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00059","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00060","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00061","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00062","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00063","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00064","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00065","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00066","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00067","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00068","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00069","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00070","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00071","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00072","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00073","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00074","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00075","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00076","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Frozen","7":"Megan","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00077","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00078","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00079","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00080","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00081","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00082","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00083","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00084","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00085","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00086","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00087","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00088","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00089","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00090","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00091","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00092","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00093","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00094","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00095","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00096","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00097","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00098","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00099","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00100","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00101","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00102","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00103","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00104","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00105","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00106","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"},{"1":"AAV3FF_00107","2":"BROKE_WEST_RMT_022_RMT8","3":"whole organism","4":"Anton Van de Putte","5":"https://orcid.org/0000-0003-1336-5554","6":"Ethanol","7":"Anton","8":"","9":"NA","10":"NA","11":"NA","12":"Pleuragramma antarcticum","13":"Anton Van de Putte","14":"https://orcid.org/0000-0003-1336-5554","15":"","16":"urn:lsid:marinespecies.org:taxname:234721","17":"Animalia","18":"Pleuragramma antarcticum","19":"Species"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["eventID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["materialEntityType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[4],"type":["chr"],"align":["left"]},{"label":["preparations"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00231","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Ethanol"},{"1":"AAV3FF_00232","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Ethanol"},{"1":"AAV3FF_00233","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Ethanol"},{"1":"AAV3FF_00234","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Ethanol"},{"1":"AAV3FF_00235","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00236","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00237","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00238","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00239","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00240","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FF_00241","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"Frozen"},{"1":"AAV3FP_00015","2":"BROKE_WEST_RMT_051_RMT8","3":"whole organism","4":"Electrona antarctica","5":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># all measurements of individual electrona antarctica from BROKE_WEST_RMT_051_RMT8</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mat <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(material_assertion, <span class="at">by =</span> <span class="st">"materialEntityID"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, assertionType, assertionValueNumeric, assertionValue, assertionUnit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["assertionType"],"name":[2],"type":["chr"],"align":["left"]},{"label":["assertionValueNumeric"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["assertionValue"],"name":[4],"type":["chr"],"align":["left"]},{"label":["assertionUnit"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00231","2":"Standard Length","3":"16.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00231","2":"Total Length","3":"19.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00231","2":"Preservation Method","3":"NA","4":"Ethanol","5":"NA"},{"1":"AAV3FF_00231","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00232","2":"Standard Length","3":"15.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00232","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00232","2":"Preservation Method","3":"NA","4":"Ethanol","5":"NA"},{"1":"AAV3FF_00232","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00233","2":"Standard Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00233","2":"Total Length","3":"20.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00233","2":"Preservation Method","3":"NA","4":"Ethanol","5":"NA"},{"1":"AAV3FF_00233","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00234","2":"Standard Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00234","2":"Total Length","3":"20.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00234","2":"Preservation Method","3":"NA","4":"Ethanol","5":"NA"},{"1":"AAV3FF_00234","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00235","2":"Standard Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00235","2":"Total Length","3":"20.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00235","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00235","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00236","2":"Standard Length","3":"15.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00236","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00236","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00236","2":"Wet Weight","3":"0.031000","4":"NA","5":"g"},{"1":"AAV3FF_00236","2":"Dry Weight","3":"0.006700","4":"NA","5":"g"},{"1":"AAV3FF_00236","2":"Percentage Dry Weight","3":"21.612903","4":"NA","5":"%"},{"1":"AAV3FF_00236","2":"Percentage Water Content","3":"78.387097","4":"NA","5":"%"},{"1":"AAV3FF_00236","2":"Energy Content Dry Weight","3":"24.718973","4":"NA","5":"KJ/g"},{"1":"AAV3FF_00236","2":"Energy Content Wet Weight","3":"5.342488","4":"NA","5":"KJ/g"},{"1":"AAV3FF_00236","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00237","2":"Standard Length","3":"15.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00237","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00237","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00237","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00238","2":"Standard Length","3":"15.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00238","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00238","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00238","2":"Wet Weight","3":"0.033000","4":"NA","5":"g"},{"1":"AAV3FF_00238","2":"Dry Weight","3":"0.006750","4":"NA","5":"g"},{"1":"AAV3FF_00238","2":"Percentage Dry Weight","3":"20.454545","4":"NA","5":"%"},{"1":"AAV3FF_00238","2":"Percentage Water Content","3":"79.545455","4":"NA","5":"%"},{"1":"AAV3FF_00238","2":"Energy Content Dry Weight","3":"22.036534","4":"NA","5":"KJ/g"},{"1":"AAV3FF_00238","2":"Energy Content Wet Weight","3":"4.507473","4":"NA","5":"KJ/g"},{"1":"AAV3FF_00238","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00239","2":"Standard Length","3":"14.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00239","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00239","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00239","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00240","2":"Standard Length","3":"16.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00240","2":"Total Length","3":"17.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00240","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00240","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FF_00241","2":"Standard Length","3":"12.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00241","2":"Total Length","3":"14.000000","4":"NA","5":"mm"},{"1":"AAV3FF_00241","2":"Preservation Method","3":"NA","4":"Frozen","5":"NA"},{"1":"AAV3FF_00241","2":"life stage","3":"NA","4":"Larvae","5":"NA"},{"1":"AAV3FP_00015","2":"life stage","3":"NA","4":"Larvae","5":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
 </div>
 </section>
-<section id="how-is-relationship-between-materials-expressed-in-dwc-dp" class="level3">
-<h3 class="anchored" data-anchor-id="how-is-relationship-between-materials-expressed-in-dwc-dp">How is relationship between Materials expressed in DwC-DP?</h3>
+</section>
+<section id="body-part-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="body-part-measurements">Body part measurements</h2>
 <p>Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <a href="https://www.gbif.org/occurrence/3344249657" class="uri">https://www.gbif.org/occurrence/3344249657</a></p>
-<section id="dwca" class="level4">
-<h4 class="anchored" data-anchor-id="dwca">DwCA</h4>
-<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.</p>
-<p><strong>Occurrence table</strong></p>
-<table class="caption-top table">
+<section id="dwca-1" class="level3">
+<h3 class="anchored" data-anchor-id="dwca-1">DwCA</h3>
+<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in <code>measurementRemarks</code>. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.</p>
+<div class="table-responsive">
+<table class="table-striped table-bordered caption-top table">
+<caption>Occurrence table in DwCA</caption>
 <thead>
 <tr class="header">
 <th>occurrenceID</th>
@@ -352,8 +447,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><strong>eMoF table</strong></p>
-<table class="caption-top table">
+</div>
+<div class="table-responsive">
+<table class="table-striped table-bordered caption-top table">
+<caption>eMoF table in DwCA</caption>
 <colgroup>
 <col style="width: 20%">
 <col style="width: 20%">
@@ -380,23 +477,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="dwc-dp" class="level4">
-<h4 class="anchored" data-anchor-id="dwc-dp">DwC-DP</h4>
-<p>Yes! Relationship between Materials can be specified through the <code>Material</code> table. Example of a krill eaten by a fish can be modeled within a single <code>Material</code> table</p>
+<section id="dwc-dp-1" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-dp-1">DwC-DP</h3>
+<p>Relationship between Materials can be specified through the <code>derivedFromMaterialEntityID</code> field. Example of a krill eaten by a fish can be modeled within a single <code>Material</code> table.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#material %&gt;% filter(str_starts(materialEntityID, "AAV3FF_00025")) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>material <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_starts</span>(materialEntityID, <span class="st">"AAV3FF_00025"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, derivedFromMaterialEntityID, materialEntityType, scientificName, materialEntityRemarks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["derivedFromMaterialEntityID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["materialEntityType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[4],"type":["chr"],"align":["left"]},{"label":["materialEntityRemarks"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00025","2":"NA","3":"whole organism","4":"Pleuragramma antarcticum","5":""},{"1":"AAV3FF_00025_stomach_018_Copepod","2":"AAV3FF_00025","3":"stomach content","4":"NA","5":"NA"},{"1":"AAV3FF_00025_stomach_019_Crustecean","2":"AAV3FF_00025","3":"stomach content","4":"NA","5":"rear part; long tail spine"},{"1":"AAV3FF_00025_stomach_020_Mucus","2":"AAV3FF_00025","3":"stomach content - mucus","4":"NA","5":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
 </div>
 </section>
 </section>
-<section id="how-non-detections-are-represented-in-dwc-dp" class="level3">
-<h3 class="anchored" data-anchor-id="how-non-detections-are-represented-in-dwc-dp">How non-detections are represented in DwC-DP?</h3>
+<section id="non-detections" class="level2">
+<h2 class="anchored" data-anchor-id="non-detections">Non-detections</h2>
 </section>
-<section id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="level3">
-<h3 class="anchored" data-anchor-id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</h3>
+<section id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="level2">
+<h2 class="anchored" data-anchor-id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

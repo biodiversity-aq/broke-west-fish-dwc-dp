@@ -4,66 +4,105 @@ date: today
 format: 
   html: 
     df-print: paged
-editor: visual
+    toc: true
+editor: source
 ---
 
-## Questions
-
-### How can I explore the tables for DwC-DP from this mapping exercise?
+## Explore the DwC-DP tables
 
 You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.
 
 ```{r load rda}
 #| warning: false
-#| message: false
+#| echo: false
+#| results: hide
+
 library(here)
 library(tidyverse)
-# Get a list of all .rda files in the directory
+
+# Load all the RDA files
 rda_files <- list.files(path = here("data", "output", "rda"), pattern = "\\.rda$", full.names = TRUE)
 lapply(rda_files, load, envir = .GlobalEnv)
 ```
 
-### Does DwC-DP solve community measurements issue?
+## Community measurements 
+
+Does DwC-DP handles community measurements better than DwCA?
+
+### DwCA
+
+In DwCA, we will have to have all these as Occurrence records so that measurements like "Standard Length" and "Total Length" of each individual in emof has an Occurrence record to point to. However, this does not warrant user to add the organismQuantity of all individuals together.
+
+occurrenceID | eventID | scientificName | lifeStage | organismQuantity | organismQuantityType
+---|---|---|---|---|---
+BROKE_WEST_RMT_051_RMT8_217697 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 28 | individuals
+AAV3FF_00231 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00232 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00233 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00234 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00235 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00236 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00237 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00238 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00239 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00240 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+AAV3FF_00241 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
+
+: Occurrence table in DwCA {.responsive .striped .bordered}
+
+### DwC-DP
+
+The Occurrence and Material are separate concepts now. We do not need to have a separate Occurrence just to indicate the total catch of a taxon. We can have a single Occurrence (total catch) with multiple Materials (individual) to indicate the total catch and preserved individuals. The measurements of the individuals (Assertions) can be directly linked to the Materials via the Material Assertion table.
 
 ```{r community measurement}
-# electrona antarctica BROKE_WEST_RMT_037_RMT8
+event_id <- "BROKE_WEST_RMT_051_RMT8"
+taxon_id <- "urn:lsid:marinespecies.org:taxname:217697"
 
-# total catch of Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8
-occurrence %>% filter(eventID == "BROKE_WEST_RMT_037_RMT8" & taxonID == "urn:lsid:marinespecies.org:taxname:234721")
+# total catch of electrona antarctica from BROKE_WEST_RMT_051_RMT8
+occurrence %>% filter(eventID == event_id & taxonID == taxon_id) %>% 
+  select(eventID, occurrenceID, scientificName, lifeStage, organismQuantity, organismQuantityType)
 
-# all preserved Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8
-material %>% filter(eventID == "BROKE_WEST_RMT_022_RMT8" & taxonID == "urn:lsid:marinespecies.org:taxname:234721")
+# all preserved electrona antarctica from BROKE_WEST_RMT_051_RMT8
+mat <- material %>% filter(eventID == event_id & taxonID == taxon_id) %>% 
+  select(materialEntityID, eventID, materialEntityType, scientificName, preparations)
+mat
 
+# all measurements of individual electrona antarctica from BROKE_WEST_RMT_051_RMT8
+mat %>% left_join(material_assertion, by = "materialEntityID") %>% 
+  select(materialEntityID, assertionType, assertionValueNumeric, assertionValue, assertionUnit)
 ```
 
-### How is relationship between Materials expressed in DwC-DP?
+
+## Body part measurements
 
 Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657>
 
-#### DwCA
+### DwCA
 
-Currently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.
-
-**Occurrence table**
+Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.
 
 | occurrenceID              | scientificName                          |
 |---------------------------|-----------------------------------------|
 | SO_Isotope_1985_2017_1013 | Glabraster antarctica (E.A.Smith, 1876) |
 
-**eMoF table**
+: Occurrence table in DwCA {.responsive .striped .bordered}
+
 
 | occurrenceID | measurementType | measurementValue | measurementUnit | measurementRemarks |
 |---------------|---------------|---------------|---------------|---------------|
 | SO_Isotope_1985_2017_1013 | The carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass | 12.28 | relative percentage of dry mass | tegument |
 
-#### DwC-DP
+: eMoF table in DwCA {.responsive .striped .bordered}
 
-Yes! Relationship between Materials can be specified through the `Material` table. Example of a krill eaten by a fish can be modeled within a single `Material` table
+### DwC-DP
+
+Relationship between Materials can be specified through the `derivedFromMaterialEntityID` field. Example of a krill eaten by a fish can be modeled within a single `Material` table.
 
 ```{r material relationship}
-#material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) 
+material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) %>% 
+  select(materialEntityID, derivedFromMaterialEntityID, materialEntityType, scientificName, materialEntityRemarks)
 ```
 
-### How non-detections are represented in DwC-DP?
+## Non-detections 
 
-### Trade off between expressiveness of DwC-DP and simplicity of DwCA?
+## Trade off between expressiveness of DwC-DP and simplicity of DwCA?

@@ -25,7 +25,7 @@
     "href": "explore-dwc-dp.html",
     "title": "Explore DwC-DP",
     "section": "",
-    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n# Get a list of all .rda files in the directory\nrda_files &lt;- list.files(path = here(\"data\", \"output\", \"rda\"), pattern = \"\\\\.rda$\", full.names = TRUE)\nlapply(rda_files, load, envir = .GlobalEnv)\n\n[[1]]\n[1] \"agent_agent_role\"\n\n[[2]]\n[1] \"agent_identifier\"\n\n[[3]]\n[1] \"agent\"\n\n[[4]]\n[1] \"event_assertion\"\n\n[[5]]\n[1] \"event\"\n\n[[6]]\n[1] \"identification\"\n\n[[7]]\n[1] \"material_assertion\"\n\n[[8]]\n[1] \"material_media\"\n\n[[9]]\n[1] \"material\"\n\n[[10]]\n[1] \"media\"\n\n[[11]]\n[1] \"occurrence\"\n\n[[12]]\n[1] \"protocol\"\n\n[[13]]\n[1] \"survey_protocol\"\n\n[[14]]\n[1] \"survey_target\"\n\n[[15]]\n[1] \"survey\"\n\n\n\n\n\n\n# electrona antarctica BROKE_WEST_RMT_037_RMT8\n\n# total catch of Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8\noccurrence %&gt;% filter(eventID == \"BROKE_WEST_RMT_037_RMT8\" & taxonID == \"urn:lsid:marinespecies.org:taxname:234721\")\n\n\n  \n\n\n# all preserved Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8\nmaterial %&gt;% filter(eventID == \"BROKE_WEST_RMT_022_RMT8\" & taxonID == \"urn:lsid:marinespecies.org:taxname:234721\")\n\n\n  \n\n\n\n\n\n\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\n\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\nOccurrence table\n\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\neMoF table\n\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\nmeasurementRemarks\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\n12.28\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nYes! Relationship between Materials can be specified through the Material table. Example of a krill eaten by a fish can be modeled within a single Material table\n\n#material %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
+    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.",
     "crumbs": [
       "Home",
       "Darwin Core Data Package",
@@ -37,7 +37,7 @@
     "href": "explore-dwc-dp.html#questions",
     "title": "Explore DwC-DP",
     "section": "",
-    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n# Get a list of all .rda files in the directory\nrda_files &lt;- list.files(path = here(\"data\", \"output\", \"rda\"), pattern = \"\\\\.rda$\", full.names = TRUE)\nlapply(rda_files, load, envir = .GlobalEnv)\n\n[[1]]\n[1] \"agent_agent_role\"\n\n[[2]]\n[1] \"agent_identifier\"\n\n[[3]]\n[1] \"agent\"\n\n[[4]]\n[1] \"event_assertion\"\n\n[[5]]\n[1] \"event\"\n\n[[6]]\n[1] \"identification\"\n\n[[7]]\n[1] \"material_assertion\"\n\n[[8]]\n[1] \"material_media\"\n\n[[9]]\n[1] \"material\"\n\n[[10]]\n[1] \"media\"\n\n[[11]]\n[1] \"occurrence\"\n\n[[12]]\n[1] \"protocol\"\n\n[[13]]\n[1] \"survey_protocol\"\n\n[[14]]\n[1] \"survey_target\"\n\n[[15]]\n[1] \"survey\"\n\n\n\n\n\n\n# electrona antarctica BROKE_WEST_RMT_037_RMT8\n\n# total catch of Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8\noccurrence %&gt;% filter(eventID == \"BROKE_WEST_RMT_037_RMT8\" & taxonID == \"urn:lsid:marinespecies.org:taxname:234721\")\n\n\n  \n\n\n# all preserved Pleuragramma antarcticum from BROKE_WEST_RMT_022_RMT8\nmaterial %&gt;% filter(eventID == \"BROKE_WEST_RMT_022_RMT8\" & taxonID == \"urn:lsid:marinespecies.org:taxname:234721\")\n\n\n  \n\n\n\n\n\n\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\n\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\nOccurrence table\n\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\neMoF table\n\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\nmeasurementRemarks\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\n12.28\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nYes! Relationship between Materials can be specified through the Material table. Example of a krill eaten by a fish can be modeled within a single Material table\n\n#material %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
+    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\n\n\nDoes DwC-DP handles community measurements better than DwCA?\n\n\nIn DwCA, we will have to have all these as Occurrence records so that measurements like “Standard Length” and “Total Length” of each individual in emof has an Occurrence record to point to. However, this does not warrant user to add the organismQuantity of all individuals together.\n\n\n\n\n\n\n\n\n\n\n\noccurrenceID\neventID\nscientificName\nlifeStage\norganismQuantity\norganismQuantityType\n\n\n\n\nBROKE_WEST_RMT_051_RMT8_217697\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n28\nindividuals\n\n\nAAV3FF_00231\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00232\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00233\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00234\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00235\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00236\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00237\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00238\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00239\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00240\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00241\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\n\n\n\n\nThe Occurrence and Material are separate concepts now. We do not need to have a separate Occurrence just to indicate the total catch of a taxon. We can have a single Occurrence (total catch) with multiple Materials (individual) to indicate the total catch and preserved individuals. The measurements of the individuals (Assertions) can be directly linked to the Materials via the Material Assertion table.\n\nevent_id &lt;- \"BROKE_WEST_RMT_051_RMT8\"\ntaxon_id &lt;- \"urn:lsid:marinespecies.org:taxname:217697\"\n\n# total catch of electrona antarctica from BROKE_WEST_RMT_051_RMT8\noccurrence %&gt;% filter(eventID == event_id & taxonID == taxon_id) %&gt;% \n  select(eventID, occurrenceID, scientificName, lifeStage, organismQuantity, organismQuantityType)\n\n\n  \n\n\n# all preserved electrona antarctica from BROKE_WEST_RMT_051_RMT8\nmat &lt;- material %&gt;% filter(eventID == event_id & taxonID == taxon_id) %&gt;% \n  select(materialEntityID, eventID, materialEntityType, scientificName, preparations)\nmat\n\n\n  \n\n\n# all measurements of individual electrona antarctica from BROKE_WEST_RMT_051_RMT8\nmat %&gt;% left_join(material_assertion, by = \"materialEntityID\") %&gt;% \n  select(materialEntityID, assertionType, assertionValueNumeric, assertionValue, assertionUnit)\n\n\n  \n\n\n\n\n\n\n\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\n\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\nOccurrence table\n\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\neMoF table\n\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\nmeasurementRemarks\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\n12.28\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nYes! Relationship between Materials can be specified through the Material table. Example of a krill eaten by a fish can be modeled within a single Material table\n\n#material %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\"))",
     "crumbs": [
       "Home",
       "Darwin Core Data Package",
@@ -102,6 +102,66 @@
       "Home",
       "Darwin Core Data Package",
       "Generate tables for DwC-DP"
+    ]
+  },
+  {
+    "objectID": "explore-dwc-dp.html#explore-the-dwc-dp-tables",
+    "href": "explore-dwc-dp.html#explore-the-dwc-dp-tables",
+    "title": "Explore DwC-DP",
+    "section": "",
+    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.",
+    "crumbs": [
+      "Home",
+      "Darwin Core Data Package",
+      "Exploring DwC-DP"
+    ]
+  },
+  {
+    "objectID": "explore-dwc-dp.html#community-measurements",
+    "href": "explore-dwc-dp.html#community-measurements",
+    "title": "Explore DwC-DP",
+    "section": "Community measurements",
+    "text": "Community measurements\nDoes DwC-DP handles community measurements better than DwCA?\n\nDwCA\nIn DwCA, we will have to have all these as Occurrence records so that measurements like “Standard Length” and “Total Length” of each individual in emof has an Occurrence record to point to. However, this does not warrant user to add the organismQuantity of all individuals together.\n\n\nOccurrence table in DwCA\n\n\n\n\n\n\n\n\n\n\noccurrenceID\neventID\nscientificName\nlifeStage\norganismQuantity\norganismQuantityType\n\n\n\n\nBROKE_WEST_RMT_051_RMT8_217697\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n28\nindividuals\n\n\nAAV3FF_00231\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00232\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00233\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00234\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00235\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00236\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00237\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00238\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00239\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00240\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\nAAV3FF_00241\nBROKE_WEST_RMT_051_RMT8\nElectrona antarctica\nlarvae\n1\nindividual\n\n\n\n\n\n\nDwC-DP\nThe Occurrence and Material are separate concepts now. We do not need to have a separate Occurrence just to indicate the total catch of a taxon. We can have a single Occurrence (total catch) with multiple Materials (individual) to indicate the total catch and preserved individuals. The measurements of the individuals (Assertions) can be directly linked to the Materials via the Material Assertion table.\n\nevent_id &lt;- \"BROKE_WEST_RMT_051_RMT8\"\ntaxon_id &lt;- \"urn:lsid:marinespecies.org:taxname:217697\"\n\n# total catch of electrona antarctica from BROKE_WEST_RMT_051_RMT8\noccurrence %&gt;% filter(eventID == event_id & taxonID == taxon_id) %&gt;% \n  select(eventID, occurrenceID, scientificName, lifeStage, organismQuantity, organismQuantityType)\n\n\n  \n\n\n# all preserved electrona antarctica from BROKE_WEST_RMT_051_RMT8\nmat &lt;- material %&gt;% filter(eventID == event_id & taxonID == taxon_id) %&gt;% \n  select(materialEntityID, eventID, materialEntityType, scientificName, preparations)\nmat\n\n\n  \n\n\n# all measurements of individual electrona antarctica from BROKE_WEST_RMT_051_RMT8\nmat %&gt;% left_join(material_assertion, by = \"materialEntityID\") %&gt;% \n  select(materialEntityID, assertionType, assertionValueNumeric, assertionValue, assertionUnit)",
+    "crumbs": [
+      "Home",
+      "Darwin Core Data Package",
+      "Exploring DwC-DP"
+    ]
+  },
+  {
+    "objectID": "explore-dwc-dp.html#body-part-measurements",
+    "href": "explore-dwc-dp.html#body-part-measurements",
+    "title": "Explore DwC-DP",
+    "section": "Body part measurements",
+    "text": "Body part measurements\nVery often, we received dataset with measurements performed on a specific body part of an organism. Example: https://www.gbif.org/occurrence/3344249657\n\nDwCA\nCurrently, I modeled it using eMoF pointing to the Occurrence with body part in measurementRemarks. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.\n\n\nOccurrence table in DwCA\n\n\noccurrenceID\nscientificName\n\n\n\n\nSO_Isotope_1985_2017_1013\nGlabraster antarctica (E.A.Smith, 1876)\n\n\n\n\n\n\neMoF table in DwCA\n\n\n\n\n\n\n\n\n\noccurrenceID\nmeasurementType\nmeasurementValue\nmeasurementUnit\nmeasurementRemarks\n\n\n\n\nSO_Isotope_1985_2017_1013\nThe carbon elemental content measured in the tegument of the considered sea star specimen, expressed in relative percentage of dry mass\n12.28\nrelative percentage of dry mass\ntegument\n\n\n\n\n\n\nDwC-DP\nRelationship between Materials can be specified through the derivedFromMaterialEntityID field. Example of a krill eaten by a fish can be modeled within a single Material table.\n\nmaterial %&gt;% filter(str_starts(materialEntityID, \"AAV3FF_00025\")) %&gt;% \n  select(materialEntityID, derivedFromMaterialEntityID, materialEntityType, scientificName, materialEntityRemarks)",
+    "crumbs": [
+      "Home",
+      "Darwin Core Data Package",
+      "Exploring DwC-DP"
+    ]
+  },
+  {
+    "objectID": "explore-dwc-dp.html#non-detections",
+    "href": "explore-dwc-dp.html#non-detections",
+    "title": "Explore DwC-DP",
+    "section": "Non-detections",
+    "text": "Non-detections",
+    "crumbs": [
+      "Home",
+      "Darwin Core Data Package",
+      "Exploring DwC-DP"
+    ]
+  },
+  {
+    "objectID": "explore-dwc-dp.html#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca",
+    "href": "explore-dwc-dp.html#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca",
+    "title": "Explore DwC-DP",
+    "section": "Trade off between expressiveness of DwC-DP and simplicity of DwCA?",
+    "text": "Trade off between expressiveness of DwC-DP and simplicity of DwCA?",
+    "crumbs": [
+      "Home",
+      "Darwin Core Data Package",
+      "Exploring DwC-DP"
     ]
   }
 ]

@@ -7,10 +7,10 @@ project:
 format:
   html:
     theme: cosmo
-    css: styles.css
     toc: true
+    css: "styles.css"
 
-editor: visual
+editor: source
 
 website:
   title: "BROKE-West fish to DwC-DP"
@@ -19,7 +19,7 @@ website:
       - href: index.qmd
         text: Home
       - icon: github
-        href: https://github.com/biodiversity-aq/broke-west-fish-dwcav2
+        href: https://github.com/biodiversity-aq/broke-west-fish-dwc-dp
   page-navigation: true
   sidebar: 
     style: "docked"

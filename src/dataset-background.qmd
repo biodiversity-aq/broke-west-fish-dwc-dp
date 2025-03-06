@@ -11,4 +11,4 @@ editor: visual
 
 ## Dataset as DwCA
 
-## Dataset as DwCA v2
+## Dataset as DwC DP
