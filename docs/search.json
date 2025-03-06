@@ -25,7 +25,7 @@
     "href": "explore-dwc-dp.html",
     "title": "Explore DwC-DP",
     "section": "",
-    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.",
+    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n\n# Load all the RDA files\nrda_files &lt;- list.files(path = here(\"data\", \"output\", \"rda\"), pattern = \"\\\\.rda$\", full.names = TRUE)\nlapply(rda_files, load, envir = .GlobalEnv)",
     "crumbs": [
       "Home",
       "Darwin Core Data Package",
@@ -109,7 +109,7 @@
     "href": "explore-dwc-dp.html#explore-the-dwc-dp-tables",
     "title": "Explore DwC-DP",
     "section": "",
-    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.",
+    "text": "You can load all the RDA files like below and play around with the tables as demonstrated in this page. Any pull request is also welcomed.\n\nlibrary(here)\nlibrary(tidyverse)\n\n# Load all the RDA files\nrda_files &lt;- list.files(path = here(\"data\", \"output\", \"rda\"), pattern = \"\\\\.rda$\", full.names = TRUE)\nlapply(rda_files, load, envir = .GlobalEnv)",
     "crumbs": [
       "Home",
       "Darwin Core Data Package",

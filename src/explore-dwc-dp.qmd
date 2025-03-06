@@ -14,7 +14,6 @@ You can load all the RDA files like below and play around with the tables as dem
 
 ```{r load rda}
 #| warning: false
-#| echo: false
 #| results: hide
 
 library(here)
