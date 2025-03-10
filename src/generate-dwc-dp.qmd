@@ -52,7 +52,6 @@ cleaned_fish <- raw_fish_data %>%
   rename(
     family = Family,
     preparations = presrvation,
-    disposition = Location,
     lifeStage = C1,
     materialEntityID = `Sample number`,
     netSize = `Net Size`
@@ -60,6 +59,10 @@ cleaned_fish <- raw_fish_data %>%
   mutate(
     station_number_cleaned = str_remove_all(`Station number`, "\\s*"), # Remove white spaces
     eventID = str_c("BROKE_WEST_RMT_", station_number_cleaned, "_RMT", `netSize`), 
+    disposition = case_when(
+      Location == "Anton" ~ "pending accession into Institue of Natural Sciences' collection",
+      # not sure where the samples of Evgeny and Megan go
+      TRUE ~ ""),
     verbatimIdentification = case_when(
       Species == "Unidentified" ~ "", 
       Species == "/" ~ "",
