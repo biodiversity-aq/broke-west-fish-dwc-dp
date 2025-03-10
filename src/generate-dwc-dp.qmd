@@ -4,7 +4,6 @@ date: today
 format: 
   html: 
     df-print: paged
-editor: visual
 ---
 
 ```{r load libraries read table}
@@ -123,9 +122,18 @@ subevents <- event_google %>%
     parentEventID = eventID %>% sub("_RMT[18]$", "", .) # Assign correct parent
   ) %>%
   select(-suffix) # Remove the suffix column
-
+  
 # Combine original and subevents
 event <- bind_rows(event_google, subevents) %>%
+  mutate(
+    sampleSizeValue = case_when(
+      str_detect(eventID, "_RMT8") ~ sampleSizeValue,
+      TRUE ~ NA
+      ),
+    sampleSizeUnit = case_when(
+    str_detect(eventID, "_RMT8") ~ sampleSizeUnit,
+    TRUE ~ NA)
+  ) %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event.json")
   
 event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, parentEventID, eventType)
@@ -199,6 +207,7 @@ material_join_identification <- bind_rows(individual_fish, stomach)
 
 # preview example of a full fish + its stomach content in Material table
 material <- material_join_identification %>%
+  mutate(materialCategory = "preserved") %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material.json")
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00337"))
 ```
@@ -326,6 +335,15 @@ assertion <- emof %>%
 event_assertion <- assertion %>% 
   filter(is.na(occurrenceID)) %>%
   mutate(
+    eventID = case_when(
+      # because sampled volume is only available for RMT8
+      assertionType == "Sampled volume" ~ str_c(eventID, "_RMT8"),
+      TRUE ~ eventID
+    ),
+    assertionID = case_when(
+      assertionType == "Sampled volume" ~ str_c(eventID, "_RMT8_", assertionType),
+      TRUE ~ assertionID
+    ),
     assertionTypeVocabulary = "http://vocab.nerc.ac.uk/collection/P01/current/",
     assertionProtocol = case_when(
       assertionType %in% c("Average temperature", "Maximum Pressure", "Average Salinity", "Average Conductivity", "Average fluoresence") ~ "CTD",

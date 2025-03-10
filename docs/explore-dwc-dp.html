@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-06">
+<meta name="dcterms.date" content="2025-03-07">
 
 <title>Explore DwC-DP – BROKE-West fish to DwC-DP</title>
 <style>
@@ -219,7 +219,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dwca-1" id="toc-dwca-1" class="nav-link" data-scroll-target="#dwca-1">DwCA</a></li>
   <li><a href="#dwc-dp-1" id="toc-dwc-dp-1" class="nav-link" data-scroll-target="#dwc-dp-1">DwC-DP</a></li>
   </ul></li>
-  <li><a href="#non-detections" id="toc-non-detections" class="nav-link" data-scroll-target="#non-detections">Non-detections</a></li>
+  <li><a href="#non-detections" id="toc-non-detections" class="nav-link" data-scroll-target="#non-detections">Non-detections</a>
+  <ul class="collapse">
+  <li><a href="#dwca-2" id="toc-dwca-2" class="nav-link" data-scroll-target="#dwca-2">DwCA</a></li>
+  <li><a href="#dwc-dp-2" id="toc-dwc-dp-2" class="nav-link" data-scroll-target="#dwc-dp-2">DwC-DP</a></li>
+  </ul></li>
   <li><a href="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" id="toc-trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="nav-link" data-scroll-target="#trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</a></li>
   </ul>
 </nav>
@@ -240,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 6, 2025</p>
+      <p class="date">March 7, 2025</p>
     </div>
   </div>
   
@@ -435,10 +439,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="body-part-measurements" class="level2">
 <h2 class="anchored" data-anchor-id="body-part-measurements">Body part measurements</h2>
-<p>Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <a href="https://www.gbif.org/occurrence/3344249657" class="uri">https://www.gbif.org/occurrence/3344249657</a></p>
+<p>Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <a href="https://www.gbif.org/occurrence/3344249657" class="uri">https://www.gbif.org/occurrence/3344249657</a> A specific body part/sample of an organism is not an Occurrence nor an Event, so it is difficult to model with DwCA.</p>
 <section id="dwca-1" class="level3">
 <h3 class="anchored" data-anchor-id="dwca-1">DwCA</h3>
-<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in <code>measurementRemarks</code>. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.</p>
+<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in <code>measurementRemarks</code>. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. We also want to consider the different</p>
 <div class="table-responsive">
 <table class="table-striped table-bordered caption-top table">
 <caption>Occurrence table in DwCA</caption>
@@ -505,6 +509,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="non-detections" class="level2">
 <h2 class="anchored" data-anchor-id="non-detections">Non-detections</h2>
+<section id="dwca-2" class="level3">
+<h3 class="anchored" data-anchor-id="dwca-2">DwCA</h3>
+<p>Before <a href="https://eco.tdwg.org/">Humboldt Extension</a> was developed, non-detections are represented as an <a href="https://www.gbif.org/occurrence/search?occurrence_status=absent">Occurrence record with occurrenceStatus = absent</a> in DwCA.</p>
+<p>When Humboldt Extension comes along, <a href="https://raw.githack.com/biodiversity-aq/humboldt-for-eco-survey-data/main/src/mapping.html">non-detections can be inferred by looking at the target scopes that do not have an Occurrence record</a> if the target scope was fully reported.</p>
+</section>
+<section id="dwc-dp-2" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-dp-2">DwC-DP</h3>
+<p>In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record.</p>
+</section>
 </section>
 <section id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca" class="level2">
 <h2 class="anchored" data-anchor-id="trade-off-between-expressiveness-of-dwc-dp-and-simplicity-of-dwca">Trade off between expressiveness of DwC-DP and simplicity of DwCA?</h2>

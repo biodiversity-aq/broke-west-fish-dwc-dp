@@ -74,11 +74,11 @@ mat %>% left_join(material_assertion, by = "materialEntityID") %>%
 
 ## Body part measurements
 
-Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657>
+Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657> A specific body part/sample of an organism is not an Occurrence nor an Event, so it is difficult to model with DwCA.
 
 ### DwCA
 
-Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be done through NERC vocabulary. However, it is a hassle to mint NERC for every body part and body part is specific to a taxon.
+Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. We also want to consider the different 
 
 | occurrenceID              | scientificName                          |
 |---------------------------|-----------------------------------------|
@@ -103,5 +103,20 @@ material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) %>%
 ```
 
 ## Non-detections 
+
+### DwCA
+
+Before [Humboldt Extension](https://eco.tdwg.org/) was developed, non-detections are represented as an [Occurrence record with occurrenceStatus = absent](https://www.gbif.org/occurrence/search?occurrence_status=absent) in DwCA.
+
+When Humboldt Extension comes along, [non-detections can be inferred by looking at the target scopes that do not have an Occurrence record](https://raw.githack.com/biodiversity-aq/humboldt-for-eco-survey-data/main/src/mapping.html) if the target scope was fully reported.
+
+### DwC-DP
+
+In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record.
+
+```{r non-detections}
+
+```
+
 
 ## Trade off between expressiveness of DwC-DP and simplicity of DwCA?
