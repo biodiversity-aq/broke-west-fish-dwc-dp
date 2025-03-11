@@ -34,7 +34,7 @@ In DwCA, we will have to have all these as Occurrence records so that measuremen
 
 occurrenceID | eventID | scientificName | lifeStage | organismQuantity | organismQuantityType
 ---|---|---|---|---|---
-BROKE_WEST_RMT_051_RMT8_217697 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 28 | individuals
+BROKE_WEST_RMT_051_RMT8_217697 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica |  | 28 | individuals
 AAV3FF_00231 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
 AAV3FF_00232 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
 AAV3FF_00233 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | individual
@@ -49,6 +49,8 @@ AAV3FF_00241 | BROKE_WEST_RMT_051_RMT8 | Electrona antarctica | larvae | 1 | ind
 
 : Occurrence table in DwCA {.responsive .striped .bordered}
 
+This has improved with the term [eco:isLeastSpecificTargetCategoryQuantityInclusive](http://rs.tdwg.org/dwc/doc/inclusive/) from the [Humboldt Extension](https://eco.tdwg.org/). If the event has isLeastSpecificTargetCategoryQuantityInclusive = true, the count in organismQuantity of the Occurrence includes all of the larvae individuals.
+
 ### DwC-DP
 
 The Occurrence and Material are separate concepts now. We do not need to have a separate Occurrence just to indicate the total catch of a taxon. We can have a single Occurrence (total catch) with multiple Materials (individual) to indicate the total catch and preserved individuals. The measurements of the individuals (Assertions) can be directly linked to the Materials via the Material Assertion table.
@@ -57,7 +59,11 @@ The Occurrence and Material are separate concepts now. We do not need to have a 
 event_id <- "BROKE_WEST_RMT_051_RMT8"
 taxon_id <- "urn:lsid:marinespecies.org:taxname:217697"
 
+# isLeastSpecificTargetCategoryQuantityInclusive for the Event?
+survey %>% filter(eventID == event_id) %>% select(eventID, isLeastSpecificTargetCategoryQuantityInclusive)
+
 # total catch of electrona antarctica from BROKE_WEST_RMT_051_RMT8
+# because isLeastSpecificTargetCategoryQuantityInclusive = true, the count in organismQuantity of occurrenceID BROKE_WEST_RMT_051_RMT8_217697 includes the larvae from BROKE_WEST_RMT_051_RMT8_217697_Larvae
 occurrence %>% filter(eventID == event_id & taxonID == taxon_id) %>% 
   select(eventID, occurrenceID, scientificName, lifeStage, organismQuantity, organismQuantityType)
 
@@ -71,14 +77,19 @@ mat %>% left_join(material_assertion, by = "materialEntityID") %>%
   select(materialEntityID, assertionType, assertionValueNumeric, assertionValue, assertionUnit)
 ```
 
-
 ## Body part measurements
 
-Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657> A specific body part/sample of an organism is not an Occurrence nor an Event, so it is difficult to model with DwCA.
+Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657> 
 
 ### DwCA
 
-Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. We also want to consider the different 
+It is difficult to model with DwCA because:
+
+- a specific body part/sample of an organism is not an Occurrence nor an Event
+- it is difficult to express relationship between a Material (e.g. body part) and the Organism
+- it is difficult to distinguish measurements performed on a Material of an dwc:Organism and to express that the Organism was preserved and located in certain collection from an institution.
+
+Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. 
 
 | occurrenceID              | scientificName                          |
 |---------------------------|-----------------------------------------|
@@ -115,8 +126,48 @@ When Humboldt Extension comes along, [non-detections can be inferred by looking 
 In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record.
 
 ```{r non-detections}
+#| fig.height: 20
+#| fig.width: 8
+#| out.height: "80%"
+#| fig.align: "center"
 
+target_taxa <- survey_target %>% 
+  filter(surveyTargetType == "taxon") %>%
+  select(surveyID, surveyTargetID, surveyTargetValue) %>%
+  rename(scientificName = surveyTargetValue) %>%
+  distinct()
+
+occurrence_taxa <- occurrence %>% 
+  select(surveyTargetID, eventID, scientificName, eventID) %>%
+  rename(surveyID = eventID) %>%
+  distinct()
+
+detections_and_non_detections <- occurrence_taxa %>% 
+  full_join(target_taxa, by = c("surveyID", "surveyTargetID")) %>%
+  rename(targetTaxon = scientificName.y, occurrenceTaxon = scientificName.x) %>%
+  mutate(occurrenceStatus = case_when(is.na(occurrenceTaxon) ~ "non-detection", TRUE ~ "detection"))
+
+library(ggplot2)
+
+# Swap the axes so survey IDs are on the y-axis
+ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = occurrenceStatus)) +
+  geom_tile(color = "white", linewidth = 0.5) +
+  scale_fill_manual(values = c("detection" = "#1e88e5", "non-detection" = "#ffcdd2")) +
+  labs(
+    title = "Detection Status by Target Taxon and Survey",
+    y = "Survey ID",  # Now on y-axis
+    x = "Target Taxon",  # Now on x-axis
+    fill = "occurrenceStatus"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_text(size = 8),  # Small text for survey IDs
+    axis.text.x = element_text(angle = 90, hjust = 1),  # Angled species names
+    panel.grid = element_blank(),
+    legend.position = "bottom"
+  )
 ```
 
 
 ## Trade off between expressiveness of DwC-DP and simplicity of DwCA?
+
