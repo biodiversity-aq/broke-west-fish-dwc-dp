@@ -123,13 +123,15 @@ When Humboldt Extension comes along, [non-detections can be inferred by looking 
 
 ### DwC-DP
 
-In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record.
+In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.
 
 ```{r non-detections}
 #| fig.height: 20
 #| fig.width: 8
 #| out.height: "80%"
 #| fig.align: "center"
+
+library(ggplot2)
 
 target_taxa <- survey_target %>% 
   filter(surveyTargetType == "taxon") %>%
@@ -147,14 +149,12 @@ detections_and_non_detections <- occurrence_taxa %>%
   rename(targetTaxon = scientificName.y, occurrenceTaxon = scientificName.x) %>%
   mutate(occurrenceStatus = case_when(is.na(occurrenceTaxon) ~ "non-detection", TRUE ~ "detection"))
 
-library(ggplot2)
-
 # Swap the axes so survey IDs are on the y-axis
 ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = occurrenceStatus)) +
   geom_tile(color = "white", linewidth = 0.5) +
   scale_fill_manual(values = c("detection" = "#1e88e5", "non-detection" = "#ffcdd2")) +
   labs(
-    title = "Detection Status by Target Taxon and Survey",
+    title = "Occurrence Status by Target Taxon and Survey",
     y = "Survey ID",  # Now on y-axis
     x = "Target Taxon",  # Now on x-axis
     fill = "occurrenceStatus"

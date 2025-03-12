@@ -39,8 +39,8 @@ transform_rmt_count_to_long <- function(df){
   trawl_count <- trawl %>% 
     left_join(trawl_taxa, by = "taxon") %>%
     mutate(surveyTargetID = case_when(
-      lifeStage != "" ~ str_c(AphiaID, lifeStage, sep = "_"),
-      TRUE ~ as.character(AphiaID)))
+      lifeStage != "" ~ str_c(surveyID, AphiaID, lifeStage, sep = "_"),
+      TRUE ~ str_c(surveyID, AphiaID, sep = "_")))
   
   trawl_long <- trawl_count %>%
     pivot_longer(
