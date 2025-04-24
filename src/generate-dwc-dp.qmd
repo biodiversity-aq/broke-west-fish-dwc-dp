@@ -228,9 +228,8 @@ fish_id_guide <- "https://archive.org/details/fishesofsouthern00gono | Kellerman
 identification <- material_join_identification %>%
   mutate(
     identificationID = paste(materialEntityID, "ID", sep = "_"),
-    identificationBasedOnMaterialEntityID = materialEntityID,
+    basedOnMaterialEntityID = materialEntityID,
     identificationType = "MaterialEntity",
-    identificationTypeIRI = "http://rs.tdwg.org/dwc/terms/MaterialEntity",
     identifiedBy = "Anton Van de Putte",
     identifiedByID = "https://orcid.org/0000-0003-1336-5554",
     identificationReferences = fish_id_guide) %>%
