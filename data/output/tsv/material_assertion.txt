@@ -1432,3 +1432,249 @@ AAV3FF_00001_lifeStage	AAV3FF_00001	life stage	http://rs.tdwg.org/dwc/terms/life
 AAV3FF_00002_lifeStage	AAV3FF_00002	life stage	http://rs.tdwg.org/dwc/terms/lifeStage	Postmeta				
 AAV3FF_00003_lifeStage	AAV3FF_00003	life stage	http://rs.tdwg.org/dwc/terms/lifeStage	Larvae	https://vocab.nerc.ac.uk/collection/S11/current/S1128/			
 AAV3FF_00004_lifeStage	AAV3FF_00004	life stage	http://rs.tdwg.org/dwc/terms/lifeStage	Postmeta				
+AAV3FF_00338_stomach_001_Tyhsanoessa macrura_digestion	AAV3FF_00338_stomach_001_Tyhsanoessa macrura	degree of digestion				3		
+AAV3FF_00338_stomach_001_Tyhsanoessa macrura_count	AAV3FF_00338_stomach_001_Tyhsanoessa macrura	individual count				1		
+AAV3FF_00337_stomach_002_Euphausiid_digestion	AAV3FF_00337_stomach_002_Euphausiid	degree of digestion				4		
+AAV3FF_00337_stomach_003_larval euphausiid_digestion	AAV3FF_00337_stomach_003_larval euphausiid	degree of digestion				4		
+AAV3FF_00337_stomach_003_larval euphausiid_count	AAV3FF_00337_stomach_003_larval euphausiid	individual count				1		
+AAV3FF_00337_stomach_004_Crustecean_digestion	AAV3FF_00337_stomach_004_Crustecean	degree of digestion				4		
+AAV3FF_00337_stomach_004_Crustecean_count	AAV3FF_00337_stomach_004_Crustecean	individual count				1		
+AAV3FF_00337_stomach_005_Copepod_digestion	AAV3FF_00337_stomach_005_Copepod	degree of digestion				4		
+AAV3FF_00337_stomach_005_Copepod_count	AAV3FF_00337_stomach_005_Copepod	individual count				1		
+AAV3FF_00337_stomach_006_Copepod_digestion	AAV3FF_00337_stomach_006_Copepod	degree of digestion				4		
+AAV3FF_00337_stomach_006_Copepod_count	AAV3FF_00337_stomach_006_Copepod	individual count				3		
+AAV3FF_00337_stomach_008_Crustecean_digestion	AAV3FF_00337_stomach_008_Crustecean	degree of digestion				4		
+AAV3FF_00337_stomach_008_Crustecean_count	AAV3FF_00337_stomach_008_Crustecean	individual count				1		
+AAV3FF_00374_stomach_009_St wall_digestion	AAV3FF_00374_stomach_009_St wall	degree of digestion				4		
+AAV3FF_00374_stomach_010_Mucus_digestion	AAV3FF_00374_stomach_010_Mucus	degree of digestion				4		
+AAV3FF_00377_stomach_011_Euphausia superba_digestion	AAV3FF_00377_stomach_011_Euphausia superba	degree of digestion				0		
+AAV3FF_00377_stomach_011_Euphausia superba_count	AAV3FF_00377_stomach_011_Euphausia superba	individual count				7		
+AAV3FF_00378_stomach_012_Euphausia superba_digestion	AAV3FF_00378_stomach_012_Euphausia superba	degree of digestion				0		
+AAV3FF_00378_stomach_012_Euphausia superba_count	AAV3FF_00378_stomach_012_Euphausia superba	individual count				8		
+AAV3FF_00022_stomach_013_Copepod_digestion	AAV3FF_00022_stomach_013_Copepod	degree of digestion				3		
+AAV3FF_00022_stomach_013_Copepod_count	AAV3FF_00022_stomach_013_Copepod	individual count				2		
+AAV3FF_00022_stomach_014_Oithona similis_digestion	AAV3FF_00022_stomach_014_Oithona similis	degree of digestion				2		
+AAV3FF_00022_stomach_014_Oithona similis_count	AAV3FF_00022_stomach_014_Oithona similis	individual count				2		
+AAV3FF_00022_stomach_015_Oithona similis_digestion	AAV3FF_00022_stomach_015_Oithona similis	degree of digestion				3		
+AAV3FF_00022_stomach_015_Oithona similis_count	AAV3FF_00022_stomach_015_Oithona similis	individual count				1		
+AAV3FF_00022_stomach_016_Oithona similis_digestion	AAV3FF_00022_stomach_016_Oithona similis	degree of digestion				1		
+AAV3FF_00022_stomach_016_Oithona similis_count	AAV3FF_00022_stomach_016_Oithona similis	individual count				1		
+AAV3FF_00025_stomach_018_Copepod_digestion	AAV3FF_00025_stomach_018_Copepod	degree of digestion				4		
+AAV3FF_00025_stomach_018_Copepod_count	AAV3FF_00025_stomach_018_Copepod	individual count				2		
+AAV3FF_00025_stomach_019_Crustecean_digestion	AAV3FF_00025_stomach_019_Crustecean	degree of digestion				4		
+AAV3FF_00025_stomach_019_Crustecean_count	AAV3FF_00025_stomach_019_Crustecean	individual count				1		
+AAV3FF_00025_stomach_020_Mucus_digestion	AAV3FF_00025_stomach_020_Mucus	degree of digestion				4		
+AAV3FF_00040_stomach_021_Oithona similis_digestion	AAV3FF_00040_stomach_021_Oithona similis	degree of digestion				1		
+AAV3FF_00040_stomach_021_Oithona similis_count	AAV3FF_00040_stomach_021_Oithona similis	individual count				1		
+AAV3FF_00040_stomach_022_Oithona similis_digestion	AAV3FF_00040_stomach_022_Oithona similis	degree of digestion				3		
+AAV3FF_00040_stomach_022_Oithona similis_count	AAV3FF_00040_stomach_022_Oithona similis	individual count				1		
+AAV3FF_00040_stomach_023_Oithona similis_digestion	AAV3FF_00040_stomach_023_Oithona similis	degree of digestion				2		
+AAV3FF_00040_stomach_023_Oithona similis_count	AAV3FF_00040_stomach_023_Oithona similis	individual count				1		
+AAV3FF_00040_stomach_024_Oithona similis_digestion	AAV3FF_00040_stomach_024_Oithona similis	degree of digestion				2		
+AAV3FF_00040_stomach_024_Oithona similis_count	AAV3FF_00040_stomach_024_Oithona similis	individual count				3		
+AAV3FF_00040_stomach_025_Copepod_digestion	AAV3FF_00040_stomach_025_Copepod	degree of digestion				3		
+AAV3FF_00040_stomach_026_Copepod_digestion	AAV3FF_00040_stomach_026_Copepod	degree of digestion				3		
+AAV3FF_00040_stomach_026_Copepod_count	AAV3FF_00040_stomach_026_Copepod	individual count				1		
+AAV3FF_00040_stomach_027_Copepod_digestion	AAV3FF_00040_stomach_027_Copepod	degree of digestion				3		
+AAV3FF_00040_stomach_027_Copepod_count	AAV3FF_00040_stomach_027_Copepod	individual count				1		
+AAV3FF_00040_stomach_028_Copepod_digestion	AAV3FF_00040_stomach_028_Copepod	degree of digestion				4		
+AAV3FF_00040_stomach_028_Copepod_count	AAV3FF_00040_stomach_028_Copepod	individual count				2		
+AAV3FF_00040_stomach_029_Other_digestion	AAV3FF_00040_stomach_029_Other	degree of digestion				4		
+AAV3FF_00041_stomach_031_Furcilia_digestion	AAV3FF_00041_stomach_031_Furcilia	degree of digestion				3		
+AAV3FF_00041_stomach_031_Furcilia_count	AAV3FF_00041_stomach_031_Furcilia	individual count				1		
+AAV3FF_00041_stomach_032_Calyptotis_digestion	AAV3FF_00041_stomach_032_Calyptotis	degree of digestion				3		
+AAV3FF_00041_stomach_032_Calyptotis_count	AAV3FF_00041_stomach_032_Calyptotis	individual count				1		
+AAV3FF_00041_stomach_033_Facet eye_digestion	AAV3FF_00041_stomach_033_Facet eye	degree of digestion				4		
+AAV3FF_00041_stomach_034_Copepod_digestion	AAV3FF_00041_stomach_034_Copepod	degree of digestion				3		
+AAV3FF_00041_stomach_034_Copepod_count	AAV3FF_00041_stomach_034_Copepod	individual count				1		
+AAV3FF_00041_stomach_035_Calanoid copepod_digestion	AAV3FF_00041_stomach_035_Calanoid copepod	degree of digestion				4		
+AAV3FF_00041_stomach_035_Calanoid copepod_count	AAV3FF_00041_stomach_035_Calanoid copepod	individual count				1		
+AAV3FF_00041_stomach_036_Oithona similis_digestion	AAV3FF_00041_stomach_036_Oithona similis	degree of digestion				2		
+AAV3FF_00041_stomach_036_Oithona similis_count	AAV3FF_00041_stomach_036_Oithona similis	individual count				2		
+AAV3FF_00041_stomach_037_Oithona similis_digestion	AAV3FF_00041_stomach_037_Oithona similis	degree of digestion				3		
+AAV3FF_00041_stomach_037_Oithona similis_count	AAV3FF_00041_stomach_037_Oithona similis	individual count				1		
+AAV3FF_00041_stomach_038_Oithona similis_digestion	AAV3FF_00041_stomach_038_Oithona similis	degree of digestion				3		
+AAV3FF_00041_stomach_038_Oithona similis_count	AAV3FF_00041_stomach_038_Oithona similis	individual count				2		
+AAV3FF_00041_stomach_039_Copepod_digestion	AAV3FF_00041_stomach_039_Copepod	degree of digestion				4		
+AAV3FF_00041_stomach_039_Copepod_count	AAV3FF_00041_stomach_039_Copepod	individual count				1		
+AAV3FF_00041_stomach_040_Harpacticoid copepod_digestion	AAV3FF_00041_stomach_040_Harpacticoid copepod	degree of digestion				1		
+AAV3FF_00041_stomach_040_Harpacticoid copepod_count	AAV3FF_00041_stomach_040_Harpacticoid copepod	individual count				1		
+AAV3FF_00041_stomach_041_Mucus_digestion	AAV3FF_00041_stomach_041_Mucus	degree of digestion				4		
+AAV3FF_00028_stomach_042_Amphipod_digestion	AAV3FF_00028_stomach_042_Amphipod	degree of digestion				3		
+AAV3FF_00028_stomach_043_Primno macropa_digestion	AAV3FF_00028_stomach_043_Primno macropa	degree of digestion				3		
+AAV3FF_00028_stomach_043_Primno macropa_count	AAV3FF_00028_stomach_043_Primno macropa	individual count				1		
+AAV3FF_00028_stomach_044_Oithona similis_digestion	AAV3FF_00028_stomach_044_Oithona similis	degree of digestion				3		
+AAV3FF_00028_stomach_045_Oithona similis_digestion	AAV3FF_00028_stomach_045_Oithona similis	degree of digestion				3		
+AAV3FF_00028_stomach_045_Oithona similis_count	AAV3FF_00028_stomach_045_Oithona similis	individual count				2		
+AAV3FF_00028_stomach_046_Oithona similis_digestion	AAV3FF_00028_stomach_046_Oithona similis	degree of digestion				3		
+AAV3FF_00028_stomach_046_Oithona similis_count	AAV3FF_00028_stomach_046_Oithona similis	individual count				1		
+AAV3FF_00028_stomach_047_Oithona similis_digestion	AAV3FF_00028_stomach_047_Oithona similis	degree of digestion				2		
+AAV3FF_00028_stomach_047_Oithona similis_count	AAV3FF_00028_stomach_047_Oithona similis	individual count				1		
+AAV3FF_00028_stomach_048_Nauplius_digestion	AAV3FF_00028_stomach_048_Nauplius	degree of digestion				3		
+AAV3FF_00028_stomach_048_Nauplius_count	AAV3FF_00028_stomach_048_Nauplius	individual count				1		
+AAV3FF_00028_stomach_049_Calyptotis_digestion	AAV3FF_00028_stomach_049_Calyptotis	degree of digestion				2		
+AAV3FF_00028_stomach_049_Calyptotis_count	AAV3FF_00028_stomach_049_Calyptotis	individual count				1		
+AAV3FF_00028_stomach_050_Euphausia superba_digestion	AAV3FF_00028_stomach_050_Euphausia superba	degree of digestion				2		
+AAV3FF_00028_stomach_050_Euphausia superba_count	AAV3FF_00028_stomach_050_Euphausia superba	individual count				1		
+AAV3FF_00028_stomach_051_Copepod_digestion	AAV3FF_00028_stomach_051_Copepod	degree of digestion				4		
+AAV3FF_00028_stomach_051_Copepod_count	AAV3FF_00028_stomach_051_Copepod	individual count				1		
+AAV3FF_00028_stomach_052_Copepod_digestion	AAV3FF_00028_stomach_052_Copepod	degree of digestion				3		
+AAV3FF_00028_stomach_052_Copepod_count	AAV3FF_00028_stomach_052_Copepod	individual count				1		
+AAV3FF_00028_stomach_053_Copepod_digestion	AAV3FF_00028_stomach_053_Copepod	degree of digestion				4		
+AAV3FF_00028_stomach_053_Copepod_count	AAV3FF_00028_stomach_053_Copepod	individual count				1		
+AAV3FF_00028_stomach_054_Copepod_digestion	AAV3FF_00028_stomach_054_Copepod	degree of digestion				3		
+AAV3FF_00028_stomach_054_Copepod_count	AAV3FF_00028_stomach_054_Copepod	individual count				1		
+AAV3FF_00028_stomach_055_Copepod_digestion	AAV3FF_00028_stomach_055_Copepod	degree of digestion				4		
+AAV3FF_00028_stomach_055_Copepod_count	AAV3FF_00028_stomach_055_Copepod	individual count				1		
+AAV3FF_00029_stomach_056_Oithona similis_digestion	AAV3FF_00029_stomach_056_Oithona similis	degree of digestion				2		
+AAV3FF_00029_stomach_056_Oithona similis_count	AAV3FF_00029_stomach_056_Oithona similis	individual count				5		
+AAV3FF_00029_stomach_057_Oithona similis_digestion	AAV3FF_00029_stomach_057_Oithona similis	degree of digestion				3		
+AAV3FF_00029_stomach_057_Oithona similis_count	AAV3FF_00029_stomach_057_Oithona similis	individual count				4		
+AAV3FF_00029_stomach_058_Oithona similis_digestion	AAV3FF_00029_stomach_058_Oithona similis	degree of digestion				1		
+AAV3FF_00029_stomach_058_Oithona similis_count	AAV3FF_00029_stomach_058_Oithona similis	individual count				1		
+AAV3FF_00029_stomach_059_Oithona similis_digestion	AAV3FF_00029_stomach_059_Oithona similis	degree of digestion				3		
+AAV3FF_00029_stomach_059_Oithona similis_count	AAV3FF_00029_stomach_059_Oithona similis	individual count				1		
+AAV3FF_00029_stomach_060_Oithona similis_digestion	AAV3FF_00029_stomach_060_Oithona similis	degree of digestion				3		
+AAV3FF_00029_stomach_060_Oithona similis_count	AAV3FF_00029_stomach_060_Oithona similis	individual count				1		
+AAV3FF_00029_stomach_061_Scaphocalanus vervoorti_digestion	AAV3FF_00029_stomach_061_Scaphocalanus vervoorti	degree of digestion				1		
+AAV3FF_00029_stomach_061_Scaphocalanus vervoorti_count	AAV3FF_00029_stomach_061_Scaphocalanus vervoorti	individual count				1		
+AAV3FF_00029_stomach_062_Calanoid copepod_digestion	AAV3FF_00029_stomach_062_Calanoid copepod	degree of digestion				3		
+AAV3FF_00029_stomach_062_Calanoid copepod_count	AAV3FF_00029_stomach_062_Calanoid copepod	individual count				3		
+AAV3FF_00029_stomach_063_Scaphocalanus vervoorti_digestion	AAV3FF_00029_stomach_063_Scaphocalanus vervoorti	degree of digestion				2		
+AAV3FF_00029_stomach_063_Scaphocalanus vervoorti_count	AAV3FF_00029_stomach_063_Scaphocalanus vervoorti	individual count				1		
+AAV3FF_00029_stomach_064_Calanoid copepod_digestion	AAV3FF_00029_stomach_064_Calanoid copepod	degree of digestion				3		
+AAV3FF_00029_stomach_064_Calanoid copepod_count	AAV3FF_00029_stomach_064_Calanoid copepod	individual count				1		
+AAV3FF_00029_stomach_065_Calanoid copepod_digestion	AAV3FF_00029_stomach_065_Calanoid copepod	degree of digestion				3		
+AAV3FF_00029_stomach_065_Calanoid copepod_count	AAV3FF_00029_stomach_065_Calanoid copepod	individual count				1		
+AAV3FF_00029_stomach_066_Crustecean_digestion	AAV3FF_00029_stomach_066_Crustecean	degree of digestion				4		
+AAV3FF_00029_stomach_067_Copepod_digestion	AAV3FF_00029_stomach_067_Copepod	degree of digestion				4		
+AAV3FF_00029_stomach_068_Copepod_digestion	AAV3FF_00029_stomach_068_Copepod	degree of digestion				4		
+AAV3FF_00029_stomach_068_Copepod_count	AAV3FF_00029_stomach_068_Copepod	individual count				1		
+AAV3FF_00029_stomach_069_Copepod_digestion	AAV3FF_00029_stomach_069_Copepod	degree of digestion				4		
+AAV3FF_00029_stomach_069_Copepod_count	AAV3FF_00029_stomach_069_Copepod	individual count				3		
+AAV3FF_00029_stomach_070_Calanoid copepod_digestion	AAV3FF_00029_stomach_070_Calanoid copepod	degree of digestion				3		
+AAV3FF_00029_stomach_070_Calanoid copepod_count	AAV3FF_00029_stomach_070_Calanoid copepod	individual count				1		
+AAV3FF_00029_stomach_071_Calanoid copepod_digestion	AAV3FF_00029_stomach_071_Calanoid copepod	degree of digestion				2		
+AAV3FF_00029_stomach_071_Calanoid copepod_count	AAV3FF_00029_stomach_071_Calanoid copepod	individual count				1		
+AAV3FF_00029_stomach_072_Calanoid copepod_digestion	AAV3FF_00029_stomach_072_Calanoid copepod	degree of digestion				3		
+AAV3FF_00029_stomach_072_Calanoid copepod_count	AAV3FF_00029_stomach_072_Calanoid copepod	individual count				2		
+AAV3FF_00029_stomach_073_Oithona similis_digestion	AAV3FF_00029_stomach_073_Oithona similis	degree of digestion				3		
+AAV3FF_00029_stomach_073_Oithona similis_count	AAV3FF_00029_stomach_073_Oithona similis	individual count				1		
+AAV3FF_00029_stomach_074_Oithona similis_digestion	AAV3FF_00029_stomach_074_Oithona similis	degree of digestion				4		
+AAV3FF_00029_stomach_074_Oithona similis_count	AAV3FF_00029_stomach_074_Oithona similis	individual count				2		
+AAV3FF_00037_stomach_075_Oithona similis_digestion	AAV3FF_00037_stomach_075_Oithona similis	degree of digestion				1		
+AAV3FF_00037_stomach_075_Oithona similis_count	AAV3FF_00037_stomach_075_Oithona similis	individual count				2		
+AAV3FF_00037_stomach_076_Oithona similis_digestion	AAV3FF_00037_stomach_076_Oithona similis	degree of digestion				2		
+AAV3FF_00037_stomach_076_Oithona similis_count	AAV3FF_00037_stomach_076_Oithona similis	individual count				1		
+AAV3FF_00037_stomach_077_Oithona similis_digestion	AAV3FF_00037_stomach_077_Oithona similis	degree of digestion				3		
+AAV3FF_00037_stomach_077_Oithona similis_count	AAV3FF_00037_stomach_077_Oithona similis	individual count				1		
+AAV3FF_00037_stomach_078_Oithona similis_digestion	AAV3FF_00037_stomach_078_Oithona similis	degree of digestion				2		
+AAV3FF_00037_stomach_078_Oithona similis_count	AAV3FF_00037_stomach_078_Oithona similis	individual count				1		
+AAV3FF_00037_stomach_079_Copepod_digestion	AAV3FF_00037_stomach_079_Copepod	degree of digestion				3		
+AAV3FF_00037_stomach_079_Copepod_count	AAV3FF_00037_stomach_079_Copepod	individual count				1		
+AAV3FF_00037_stomach_080_Copepod_digestion	AAV3FF_00037_stomach_080_Copepod	degree of digestion				4		
+AAV3FF_00037_stomach_080_Copepod_count	AAV3FF_00037_stomach_080_Copepod	individual count				1		
+AAV3FF_00037_stomach_081_Calanoid copepod_digestion	AAV3FF_00037_stomach_081_Calanoid copepod	degree of digestion				3		
+AAV3FF_00037_stomach_081_Calanoid copepod_count	AAV3FF_00037_stomach_081_Calanoid copepod	individual count				1		
+AAV3FF_00037_stomach_082_Aetidius armatus_digestion	AAV3FF_00037_stomach_082_Aetidius armatus	degree of digestion				3		
+AAV3FF_00037_stomach_082_Aetidius armatus_count	AAV3FF_00037_stomach_082_Aetidius armatus	individual count				1		
+AAV3FF_00037_stomach_083_Calanoid copepod_digestion	AAV3FF_00037_stomach_083_Calanoid copepod	degree of digestion				3		
+AAV3FF_00037_stomach_083_Calanoid copepod_count	AAV3FF_00037_stomach_083_Calanoid copepod	individual count				1		
+AAV3FF_00039_stomach_084_Oithona similis_digestion	AAV3FF_00039_stomach_084_Oithona similis	degree of digestion				4		
+AAV3FF_00039_stomach_084_Oithona similis_count	AAV3FF_00039_stomach_084_Oithona similis	individual count				2		
+AAV3FF_00039_stomach_085_Oithona similis_digestion	AAV3FF_00039_stomach_085_Oithona similis	degree of digestion				2		
+AAV3FF_00039_stomach_085_Oithona similis_count	AAV3FF_00039_stomach_085_Oithona similis	individual count				3		
+AAV3FF_00039_stomach_086_Oithona similis_digestion	AAV3FF_00039_stomach_086_Oithona similis	degree of digestion				3		
+AAV3FF_00039_stomach_086_Oithona similis_count	AAV3FF_00039_stomach_086_Oithona similis	individual count				3		
+AAV3FF_00039_stomach_087_Other_digestion	AAV3FF_00039_stomach_087_Other	degree of digestion				2		
+AAV3FF_00039_stomach_087_Other_count	AAV3FF_00039_stomach_087_Other	individual count				1		
+AAV3FF_00039_stomach_088_Euphausia superba_digestion	AAV3FF_00039_stomach_088_Euphausia superba	degree of digestion				2		
+AAV3FF_00039_stomach_089_Copepod_digestion	AAV3FF_00039_stomach_089_Copepod	degree of digestion				3		
+AAV3FF_00039_stomach_089_Copepod_count	AAV3FF_00039_stomach_089_Copepod	individual count				1		
+AAV3FF_00039_stomach_090_Mucus_digestion	AAV3FF_00039_stomach_090_Mucus	degree of digestion				4		
+AAV3FF_00039_stomach_091_Crustecean_digestion	AAV3FF_00039_stomach_091_Crustecean	degree of digestion				4		
+AAV3FF_00039_stomach_092_Scaphocalanus vervoorti_digestion	AAV3FF_00039_stomach_092_Scaphocalanus vervoorti	degree of digestion				2		
+AAV3FF_00039_stomach_092_Scaphocalanus vervoorti_count	AAV3FF_00039_stomach_092_Scaphocalanus vervoorti	individual count				1		
+AAV3FF_00039_stomach_093_Amphipod_digestion	AAV3FF_00039_stomach_093_Amphipod	degree of digestion				3		
+AAV3FF_00039_stomach_093_Amphipod_count	AAV3FF_00039_stomach_093_Amphipod	individual count				1		
+AAV3FF_00036_stomach_095_Oithona similis_digestion	AAV3FF_00036_stomach_095_Oithona similis	degree of digestion				2		
+AAV3FF_00036_stomach_095_Oithona similis_count	AAV3FF_00036_stomach_095_Oithona similis	individual count				10		
+AAV3FF_00036_stomach_096_Oithona similis_digestion	AAV3FF_00036_stomach_096_Oithona similis	degree of digestion				3		
+AAV3FF_00036_stomach_097_Oithona similis_digestion	AAV3FF_00036_stomach_097_Oithona similis	degree of digestion				4		
+AAV3FF_00036_stomach_098_Oithona similis_digestion	AAV3FF_00036_stomach_098_Oithona similis	degree of digestion				3		
+AAV3FF_00036_stomach_098_Oithona similis_count	AAV3FF_00036_stomach_098_Oithona similis	individual count				1		
+AAV3FF_00036_stomach_099_Oithona similis_digestion	AAV3FF_00036_stomach_099_Oithona similis	degree of digestion				4		
+AAV3FF_00036_stomach_099_Oithona similis_count	AAV3FF_00036_stomach_099_Oithona similis	individual count				1		
+AAV3FF_00036_stomach_100_Oithona similis_digestion	AAV3FF_00036_stomach_100_Oithona similis	degree of digestion				1		
+AAV3FF_00036_stomach_100_Oithona similis_count	AAV3FF_00036_stomach_100_Oithona similis	individual count				1		
+AAV3FF_00036_stomach_101_Copepod_digestion	AAV3FF_00036_stomach_101_Copepod	degree of digestion				4		
+AAV3FF_00036_stomach_101_Copepod_count	AAV3FF_00036_stomach_101_Copepod	individual count				1		
+AAV3FF_00036_stomach_102_other_digestion	AAV3FF_00036_stomach_102_other	degree of digestion				3		
+AAV3FF_00036_stomach_103_Crustecean_digestion	AAV3FF_00036_stomach_103_Crustecean	degree of digestion				4		
+AAV3FF_00036_stomach_104_Other_digestion	AAV3FF_00036_stomach_104_Other	degree of digestion				3		
+AAV3FF_00036_stomach_104_Other_count	AAV3FF_00036_stomach_104_Other	individual count				1		
+AAV3FF_00036_stomach_105_Primno macropa_digestion	AAV3FF_00036_stomach_105_Primno macropa	degree of digestion				2		
+AAV3FF_00036_stomach_105_Primno macropa_count	AAV3FF_00036_stomach_105_Primno macropa	individual count				1		
+AAV3FF_00036_stomach_106_Euphausia superba_digestion	AAV3FF_00036_stomach_106_Euphausia superba	degree of digestion				4		
+AAV3FF_00036_stomach_106_Euphausia superba_count	AAV3FF_00036_stomach_106_Euphausia superba	individual count				1		
+AAV3FF_00036_stomach_107_Euphausia superba_digestion	AAV3FF_00036_stomach_107_Euphausia superba	degree of digestion				3		
+AAV3FF_00036_stomach_107_Euphausia superba_count	AAV3FF_00036_stomach_107_Euphausia superba	individual count				1		
+AAV3FF_00036_stomach_108_larval euphausiid_digestion	AAV3FF_00036_stomach_108_larval euphausiid	degree of digestion				3		
+AAV3FF_00036_stomach_108_larval euphausiid_count	AAV3FF_00036_stomach_108_larval euphausiid	individual count				1		
+AAV3FF_00036_stomach_109_Calanoid copepod_digestion	AAV3FF_00036_stomach_109_Calanoid copepod	degree of digestion				3		
+AAV3FF_00036_stomach_109_Calanoid copepod_count	AAV3FF_00036_stomach_109_Calanoid copepod	individual count				1		
+AAV3FF_00036_stomach_110_Undinella sp._digestion	AAV3FF_00036_stomach_110_Undinella sp.	degree of digestion				2		
+AAV3FF_00036_stomach_110_Undinella sp._count	AAV3FF_00036_stomach_110_Undinella sp.	individual count				1		
+AAV3FF_00036_stomach_111_Mucus_digestion	AAV3FF_00036_stomach_111_Mucus	degree of digestion				4		
+AAV3FF_00036_stomach_112_Copepod_digestion	AAV3FF_00036_stomach_112_Copepod	degree of digestion				4		
+AAV3FF_00024_stomach_113_Primno macropa_digestion	AAV3FF_00024_stomach_113_Primno macropa	degree of digestion				1		
+AAV3FF_00024_stomach_113_Primno macropa_count	AAV3FF_00024_stomach_113_Primno macropa	individual count				2		
+AAV3FF_00024_stomach_114_Calanoid copepod_digestion	AAV3FF_00024_stomach_114_Calanoid copepod	degree of digestion				2		
+AAV3FF_00024_stomach_114_Calanoid copepod_count	AAV3FF_00024_stomach_114_Calanoid copepod	individual count				1		
+AAV3FF_00024_stomach_115_Calanoid copepod_digestion	AAV3FF_00024_stomach_115_Calanoid copepod	degree of digestion				3		
+AAV3FF_00024_stomach_115_Calanoid copepod_count	AAV3FF_00024_stomach_115_Calanoid copepod	individual count				1		
+AAV3FF_00024_stomach_116_Calanoid copepod_digestion	AAV3FF_00024_stomach_116_Calanoid copepod	degree of digestion				3		
+AAV3FF_00024_stomach_116_Calanoid copepod_count	AAV3FF_00024_stomach_116_Calanoid copepod	individual count				1		
+AAV3FF_00024_stomach_117_Stephos longipes_digestion	AAV3FF_00024_stomach_117_Stephos longipes	degree of digestion				1		
+AAV3FF_00024_stomach_117_Stephos longipes_count	AAV3FF_00024_stomach_117_Stephos longipes	individual count				1		
+AAV3FF_00024_stomach_118_Oithona similis_count	AAV3FF_00024_stomach_118_Oithona similis	individual count				1		
+AAV3FF_00024_stomach_119_Oithona similis_digestion	AAV3FF_00024_stomach_119_Oithona similis	degree of digestion				2		
+AAV3FF_00024_stomach_119_Oithona similis_count	AAV3FF_00024_stomach_119_Oithona similis	individual count				1		
+AAV3FF_00024_stomach_120_Hyperiid_digestion	AAV3FF_00024_stomach_120_Hyperiid	degree of digestion				3		
+AAV3FF_00024_stomach_120_Hyperiid_count	AAV3FF_00024_stomach_120_Hyperiid	individual count				1		
+AAV3FF_00024_stomach_121_Oithona similis_digestion	AAV3FF_00024_stomach_121_Oithona similis	degree of digestion				3		
+AAV3FF_00024_stomach_121_Oithona similis_count	AAV3FF_00024_stomach_121_Oithona similis	individual count				1		
+AAV3FF_00024_stomach_122_Primno macropa_digestion	AAV3FF_00024_stomach_122_Primno macropa	degree of digestion				2		
+AAV3FF_00024_stomach_122_Primno macropa_count	AAV3FF_00024_stomach_122_Primno macropa	individual count				1		
+AAV3FF_00024_stomach_123_Ctenocalanus vanus_digestion	AAV3FF_00024_stomach_123_Ctenocalanus vanus	degree of digestion				1		
+AAV3FF_00024_stomach_123_Ctenocalanus vanus_count	AAV3FF_00024_stomach_123_Ctenocalanus vanus	individual count				1		
+AAV3FF_00024_stomach_124_Ctenocalanus vanus_digestion	AAV3FF_00024_stomach_124_Ctenocalanus vanus	degree of digestion				3		
+AAV3FF_00024_stomach_124_Ctenocalanus vanus_count	AAV3FF_00024_stomach_124_Ctenocalanus vanus	individual count				1		
+AAV3FF_00024_stomach_125_Ctenocalanus vanus_digestion	AAV3FF_00024_stomach_125_Ctenocalanus vanus	degree of digestion				1		
+AAV3FF_00024_stomach_125_Ctenocalanus vanus_count	AAV3FF_00024_stomach_125_Ctenocalanus vanus	individual count				1		
+AAV3FF_00024_stomach_126_Oithona similis_digestion	AAV3FF_00024_stomach_126_Oithona similis	degree of digestion				3		
+AAV3FF_00024_stomach_126_Oithona similis_count	AAV3FF_00024_stomach_126_Oithona similis	individual count				1		
+AAV3FF_00024_stomach_127_Copepod_digestion	AAV3FF_00024_stomach_127_Copepod	degree of digestion				4		
+AAV3FF_00024_stomach_127_Copepod_count	AAV3FF_00024_stomach_127_Copepod	individual count				1		
+AAV3FF_00024_stomach_128_Calanoid copepod_digestion	AAV3FF_00024_stomach_128_Calanoid copepod	degree of digestion				4		
+AAV3FF_00024_stomach_128_Calanoid copepod_count	AAV3FF_00024_stomach_128_Calanoid copepod	individual count				1		
+AAV3FF_00024_stomach_129_Copepod_digestion	AAV3FF_00024_stomach_129_Copepod	degree of digestion				4		
+AAV3FF_00024_stomach_129_Copepod_count	AAV3FF_00024_stomach_129_Copepod	individual count				1		
+AAV3FF_00328_stomach_130_Paraeuchaeta antarctica_digestion	AAV3FF_00328_stomach_130_Paraeuchaeta antarctica	degree of digestion				1		
+AAV3FF_00328_stomach_130_Paraeuchaeta antarctica_count	AAV3FF_00328_stomach_130_Paraeuchaeta antarctica	individual count				1		
+AAV3FF_00328_stomach_131_Cyllopus magellanicus_digestion	AAV3FF_00328_stomach_131_Cyllopus magellanicus	degree of digestion				3		
+AAV3FF_00328_stomach_131_Cyllopus magellanicus_count	AAV3FF_00328_stomach_131_Cyllopus magellanicus	individual count				1		
+AAV3FF_00331_stomach_132_Calanus propinquus_digestion	AAV3FF_00331_stomach_132_Calanus propinquus	degree of digestion				1		
+AAV3FF_00331_stomach_132_Calanus propinquus_count	AAV3FF_00331_stomach_132_Calanus propinquus	individual count				1		
+AAV3FF_00331_stomach_133_Hyperiella spp._digestion	AAV3FF_00331_stomach_133_Hyperiella spp.	degree of digestion				4		
+AAV3FF_00331_stomach_133_Hyperiella spp._count	AAV3FF_00331_stomach_133_Hyperiella spp.	individual count				1		
+AAV3FF_00404_stomach_134_Thysanoessa macrura_digestion	AAV3FF_00404_stomach_134_Thysanoessa macrura	degree of digestion				3		
+AAV3FF_00404_stomach_134_Thysanoessa macrura_count	AAV3FF_00404_stomach_134_Thysanoessa macrura	individual count				1		
+AAV3FF_00248_stomach_136_Rhincalanus gigas_digestion	AAV3FF_00248_stomach_136_Rhincalanus gigas	degree of digestion				3		
+AAV3FF_00248_stomach_136_Rhincalanus gigas_count	AAV3FF_00248_stomach_136_Rhincalanus gigas	individual count				1		
+AAV3FF_00248_stomach_137_Siphonophora nectophore_digestion	AAV3FF_00248_stomach_137_Siphonophora nectophore	degree of digestion				2		
+AAV3FF_00248_stomach_137_Siphonophora nectophore_count	AAV3FF_00248_stomach_137_Siphonophora nectophore	individual count				1		
+AAV3FF_00248_stomach_138_Paraeuchaeta antarctica_digestion	AAV3FF_00248_stomach_138_Paraeuchaeta antarctica	degree of digestion				1		
+AAV3FF_00248_stomach_138_Paraeuchaeta antarctica_count	AAV3FF_00248_stomach_138_Paraeuchaeta antarctica	individual count				1		
+AAV3FF_00249_stomach_139_Rhincalanus gigas_digestion	AAV3FF_00249_stomach_139_Rhincalanus gigas	degree of digestion				3		
+AAV3FF_00249_stomach_139_Rhincalanus gigas_count	AAV3FF_00249_stomach_139_Rhincalanus gigas	individual count				1		

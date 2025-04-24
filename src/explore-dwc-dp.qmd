@@ -126,7 +126,7 @@ When Humboldt Extension comes along, [non-detections can be inferred by looking 
 In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.
 
 ```{r non-detections}
-#| fig.height: 20
+#| fig.height: 15
 #| fig.width: 8
 #| out.height: "80%"
 #| fig.align: "center"
@@ -147,12 +147,12 @@ occurrence_taxa <- occurrence %>%
 detections_and_non_detections <- occurrence_taxa %>% 
   full_join(target_taxa, by = c("surveyID", "surveyTargetID")) %>%
   rename(targetTaxon = scientificName.y, occurrenceTaxon = scientificName.x) %>%
-  mutate(occurrenceStatus = case_when(is.na(occurrenceTaxon) ~ "non-detection", TRUE ~ "detection"))
+  mutate(occurrenceStatus = case_when(is.na(occurrenceTaxon) ~ "notDetected", TRUE ~ "detected"))
 
 # Swap the axes so survey IDs are on the y-axis
 ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = occurrenceStatus)) +
   geom_tile(color = "white", linewidth = 0.5) +
-  scale_fill_manual(values = c("detection" = "#1e88e5", "non-detection" = "#ffcdd2")) +
+  scale_fill_manual(values = c("detected" = "#1e88e5", "notDetected" = "#ffcdd2")) +
   labs(
     title = "Occurrence Status by Target Taxon and Survey",
     y = "Survey ID",  # Now on y-axis
@@ -161,13 +161,12 @@ ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = 
   ) +
   theme_minimal() +
   theme(
-    axis.text.y = element_text(size = 8),  # Small text for survey IDs
-    axis.text.x = element_text(angle = 90, hjust = 1),  # Angled species names
+    axis.text.y = element_text(size = 7.5),  # Small text for survey IDs
+    axis.text.x = element_text(size = 9, angle = 45, hjust = 1),  # Angled species names
     panel.grid = element_blank(),
     legend.position = "bottom"
   )
 ```
 
 
-## Trade off between expressiveness of DwC-DP and simplicity of DwCA?
 

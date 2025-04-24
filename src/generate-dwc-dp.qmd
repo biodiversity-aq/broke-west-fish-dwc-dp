@@ -202,8 +202,9 @@ stomach <- raw_stomach %>%
          materialEntityRemarks = materialEntityRemarks.x,
          identificationRemarks = identificationRemarks.x,
          identifiedBy = identifiedBy.x,
-         identifiedByID = identifiedByID.x) %>% 
-  select(materialEntityID, eventID, materialEntityType, identifiedBy, identifiedByID, verbatimIdentification, identificationRemarks, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialEntityRemarks)
+         identifiedByID = identifiedByID.x) 
+# %>% 
+#   select(materialEntityID, eventID, materialEntityType, identifiedBy, identifiedByID, verbatimIdentification, identificationRemarks, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialEntityRemarks)
 
 # combine both tables into a Material table
 material_join_identification <- bind_rows(individual_fish, stomach) 
@@ -298,9 +299,11 @@ survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) 
   mutate(includeOrExclude = "include", isSurveyTargetFullyReported = "true") %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey-target.json")
 occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
-  mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_")) %>%
-  # filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/occurrence.json") # comment this out because surveyTargetID is not in the schema
-  select(occurrenceID, verbatimIdentification, organismQuantity, organismQuantityType, lifeStage, eventID, taxonID, taxonRank, kingdom, surveyTargetID, scientificName, occurrenceStatus, recordedBy, recordedByID, identifiedBy, identifiedByID)
+  mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_"),
+         occurrenceStatus = "detected",
+         organismQuantityType = case_when(organismQuantity <= 1 ~ "individual",
+                                          organismQuantity > 1 ~ "individuals")) %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/occurrence.json")
 
 # preview example tables
 head(survey_target)
@@ -386,7 +389,29 @@ fish_lifestage_assertion <- cleaned_fish %>%
          assertionUnitIRI = NA,
          assertionValueNumeric = NA) 
 
-material_assertion <- rbind(fish_length_assertion, fish_lifestage_assertion) %>%
+stomach_assertion <- stomach %>%
+  select(materialEntityID, DoD, No) %>% 
+  pivot_longer(
+    cols = c(DoD, No),
+    names_to = "assertionType",
+    values_to = "assertionValueNumeric",
+    values_drop_na = TRUE
+  ) %>%
+  mutate(
+    assertionType = recode(assertionType,
+                           DoD = "degree of digestion",
+                           No = "individual count"),
+    assertionID = case_when(
+      assertionType == "degree of digestion" ~ str_c(materialEntityID, "_digestion"),
+      assertionType == "individual count" ~ str_c(materialEntityID, "_count")),
+    assertionTypeIRI = "",
+    assertionValueIRI = "",
+    assertionUnit = "",
+    assertionUnitIRI = "",
+    assertionValue = ""
+  )
+
+material_assertion <- rbind(fish_length_assertion, fish_lifestage_assertion, stomach_assertion) %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material-assertion.json")
 material_assertion %>% filter(materialEntityID == "AAV3FF_00337")
 ```
