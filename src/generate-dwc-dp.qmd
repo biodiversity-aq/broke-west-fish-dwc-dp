@@ -30,9 +30,7 @@ raw_count_target <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1
 # stomach content data
 raw_stomach <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "StomachcontentforAADdatacentre.xls"), sheet = "Data")
 
-
-## exclude squid data right now because of different versions of dataset received.
-# raw_squid_data <- read_excel(here("data", "original_data", "DatatforAADdatacentre", "FishandsquidforAADdatacentre.xls"), sheet = "Squid")
+# exclude squid data because station number is different than the fish's and cannot determine if they are from the same events. Net number is also not provided in squid data.
 ```
 
 ## Darwin Core Data Package
@@ -118,15 +116,16 @@ How do we determine what `eventType` to use? e.g. an Event can be both `Survey` 
 # Create subevents with net because it is the lowest event with organisms
 subevents <- event_google %>%
   filter(eventID != "BROKE_WEST") %>% # Exclude the main event
-  mutate(eventType = "Survey - net type") %>% # Set eventType for subevents
-  expand_grid(suffix = c("_RMT1", "_RMT8")) %>% # Create subevent suffixes with net size
+  mutate(
+    eventType = "Survey - device subunit") %>% # Set eventType for subevents
+  expand_grid(suffix = c("_RMT1", "_RMT8")) %>% # Create subevent suffixes with net opening
   mutate(
     eventID = paste0(eventID, suffix), # Append suffix to eventID
     parentEventID = eventID %>% sub("_RMT[18]$", "", .) # Assign correct parent
   ) %>%
   select(-suffix) # Remove the suffix column
   
-# Combine original and subevents
+# Combine original and subevents, the sampleSizeValue and sampleSizeUnit are only available for RMT8
 event <- bind_rows(event_google, subevents) %>%
   mutate(
     sampleSizeValue = case_when(
@@ -136,10 +135,11 @@ event <- bind_rows(event_google, subevents) %>%
     sampleSizeUnit = case_when(
     str_detect(eventID, "_RMT8") ~ sampleSizeUnit,
     TRUE ~ NA)
-  ) %>%
-  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event.json")
-  
+  )
+
 event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, parentEventID, eventType)
+
+# will only filter for event fields based on DwC-DP schema later since we still need to join Survey table as sampleSizeValue and sampleSizeUnit are now under Survey class.
 ```
 
 ### Material
@@ -185,7 +185,6 @@ stomach <- raw_stomach %>%
       TRUE ~ "stomach content"),
     derivedFromMaterialEntityID = `Fish ID`,
     derivationType = "stomach content of",
-    partOfMaterialEntityID = `Fish ID`,
     identifiedBy = "Anton Van de Putte",
     identifiedByID = "https://orcid.org/0000-0003-1336-5554",
     verbatimIdentification = case_when(
@@ -203,8 +202,6 @@ stomach <- raw_stomach %>%
          identificationRemarks = identificationRemarks.x,
          identifiedBy = identifiedBy.x,
          identifiedByID = identifiedByID.x) 
-# %>% 
-#   select(materialEntityID, eventID, materialEntityType, identifiedBy, identifiedByID, verbatimIdentification, identificationRemarks, derivedFromMaterialEntityID, derivationType, partOfMaterialEntityID, materialEntityRemarks)
 
 # combine both tables into a Material table
 material_join_identification <- bind_rows(individual_fish, stomach) 
@@ -232,7 +229,9 @@ identification <- material_join_identification %>%
     identificationType = "MaterialEntity",
     identifiedBy = "Anton Van de Putte",
     identifiedByID = "https://orcid.org/0000-0003-1336-5554",
-    identificationReferences = fish_id_guide) %>%
+    identificationReferences = fish_id_guide,
+    higherClassificationName = if_else(!is.na(kingdom) & kingdom != "", kingdom, NA_character_),
+    higherClassificationRank = if_else(!is.na(kingdom) & kingdom != "", "kingdom", NA_character_)) %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/identification.json")
 head(identification)
 ```
@@ -248,7 +247,8 @@ media_material <- media_google %>%
   left_join(material, by = "materialEntityID") %>% 
   # remove these media records because there is no data associated with these pictures -> we don't know what these are
   filter(!is.na(eventID)) %>%
-  mutate(mediaDescription = str_c("Photo of ", scientificName, " with its label and a grid.")) 
+  mutate(
+    mediaDescription = str_c("Photo of ", scientificName, " with its label and a grid."))
 
 media <- filter_dataframe_by_json(media_material, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/media.json")
 head(media)
@@ -270,7 +270,12 @@ survey_w_protocol <- humboldt %>%
          surveyID = eventID,
          isLeastSpecificTargetCategoryQuantityInclusive = "true") 
 
-survey <- survey_w_protocol %>%
+# join survey_w_protocol with event table to get sampleSizeValue and sampleSizeUnit
+survey_w_protocol_sample_size <- event %>%
+  select(eventID, sampleSizeValue, sampleSizeUnit) %>%
+  right_join(survey_w_protocol, by = "eventID") 
+
+survey <- survey_w_protocol_sample_size %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey.json")
 head(survey)
 ```
@@ -350,13 +355,13 @@ event_assertion <- assertion %>%
       TRUE ~ assertionID
     ),
     assertionTypeVocabulary = "http://vocab.nerc.ac.uk/collection/P01/current/",
-    assertionProtocol = case_when(
+    assertionProtocols = case_when(
       assertionType %in% c("Average temperature", "Maximum Pressure", "Average Salinity", "Average Conductivity", "Average fluoresence") ~ "CTD",
       assertionType %in% c("Solar Azimuth", "Solar elevation", "daylength") ~ "solar azimuth, elevation and day length",
       TRUE ~ ""),
     assertionProtocolID = case_when(
-      assertionProtocol == "CTD" ~ "ctd",
-      assertionProtocol == "solar azimuth, elevation and day length" ~ "light_conditions",
+      assertionProtocols == "CTD" ~ "ctd",
+      assertionProtocols == "solar azimuth, elevation and day length" ~ "light_conditions",
       TRUE ~ ""),
     assertionUnitVocabulary = "http://vocab.nerc.ac.uk/collection/P06/current/" 
     ) %>%
@@ -459,7 +464,9 @@ agent_identifier
 #| message: false
 #| echo: false
 
-# Example usage
+event <- event %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event.json")
+
 data_list <- list(
   # main tables
   event = event,
