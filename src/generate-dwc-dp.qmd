@@ -248,7 +248,7 @@ media_material <- media_google %>%
   # remove these media records because there is no data associated with these pictures -> we don't know what these are
   filter(!is.na(eventID)) %>%
   mutate(
-    mediaDescription = str_c("Photo of ", scientificName, " with its label and a grid."))
+    description = str_c("Photo of ", scientificName, " with its label and a grid."))
 
 media <- filter_dataframe_by_json(media_material, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/media.json")
 head(media)
