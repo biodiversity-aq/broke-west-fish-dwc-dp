@@ -588,7 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_c</span>(eventID, AphiaID, <span class="at">sep =</span> <span class="st">"_"</span>)  <span class="co"># rebuild without lifeStage</span></span>
 <span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>    ),</span>
 <span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>    <span class="at">evidenceForOccurrenceID =</span> <span class="fu">if_else</span>(</span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(eventID, <span class="st">"RMT_1"</span>), </span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(eventID, <span class="st">"RMT_1"</span>), <span class="co"># because there is no occurrence record for RMT1</span></span>
 <span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>      <span class="st">""</span>, </span>
 <span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>      evidenceForOccurrenceID</span>
 <span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>    )</span>

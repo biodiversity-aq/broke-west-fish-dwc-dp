@@ -38,6 +38,8 @@ raw_stomach <- read_excel(here("data", "original_data", "DatatforAADdatacentre",
 # exclude squid data because station number is different than the fish's and cannot determine if they are from the same events. Net number is also not provided in squid data.
 ```
 
+
+
 ## Darwin Core Data Package
 
 The mapping is based on schema from <https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/>
@@ -45,6 +47,8 @@ The mapping is based on schema from <https://rs.gbif.org/sandbox/experimental/da
 ## Clean fish data
 
 Clean the fish data so that the fields are ready for use for further manipulation.
+
+
 
 ```{r clean fish data}
 library(worrms)
@@ -99,30 +103,46 @@ cleaned_fish <- cleaned_fish %>%
 cleaned_fish %>% distinct(verbatimIdentification, scientificName, scientificNameID, kingdom)
 ```
 
+
+
 ## Main tables
 
 ### Agent
+
+
 
 ```{r agent}
 agent <- agent %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent.json")
 ```
 
+
+
 ### Agent agent role
+
+
 
 ```{r agent agent role}
 agent_agent_role <- agent_agent_role %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-agent-role.json")
 ```
 
 
+
+
 ### Bibliographic Resource
+
+
 
 ```{r bibliographic resource}
 bibliographic_resource <- bibliographic_resource %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/bibliographic-resource.json")
 ```
 
+
+
 ### Protocol Reference
 
 Needs to come first before Protocol because otherwise `filter_dataframe_by_json` will remove `referenceID` from Protocol table.
+
+
 
 ```{r protocol reference}
 protocol_reference <- protocol %>%
@@ -130,20 +150,32 @@ protocol_reference <- protocol %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol-reference.json")
 ```
 
+
+
 ### Protocol
+
+
 
 ```{r protocol}
 protocol <- filter_dataframe_by_json(protocol, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol.json")
 protocol
 ```
 
+
+
 ### Provenance
+
+
 
 ```{r provenance}
 provenance <- filter_dataframe_by_json(provenance, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/provenance.json")
 ```
 
+
+
 ### Usage Policy
+
+
 
 ```{r usage policy}
 usage_policy <- tibble(
@@ -155,9 +187,13 @@ usage_policy <- tibble(
 ) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/usage-policy.json")
 ```
 
+
+
 ### Event
 
 How do we determine what `eventType` to use? e.g. an Event can be both `Survey` and `MaterialGathering`.
+
+
 
 ```{r event}
 # Create subevents with net because it is the lowest event with organisms
@@ -188,9 +224,13 @@ event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, 
 
 # will only filter for event fields based on DwC-DP schema later since we still need to join Survey table as sampleSizeValue and sampleSizeUnit are now under Survey class.
 ```
+
+
 ### Survey
 
 Survey table is a table that contains current Humboldt Extension terms.
+
+
 
 ```{r survey}
 suffixes <- c("_RMT1","_RMT8")
@@ -215,11 +255,15 @@ head(survey)
 ```
 
 
+
+
 ### Survey Target 
 
 After extensive discussions on what `target` is, we decided to create survey-target table retrospectively because the objective of the survey is to quantify the biodiversity at the sites surveyed. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID.
 
 > Limitation: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica.
+
+
 
 ```{r survey target and occurrence}
 #| warning: false
@@ -235,7 +279,11 @@ survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) 
 head(survey_target)
 ```
 
+
+
 ### Occurrence
+
+
 
 ```{r occ}
 occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
@@ -246,12 +294,16 @@ occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
 head(occurrence)
 ```
 
+
+
 ### Material
 
 Material includes:
 
 -   preserved individual fish
 -   stomach content of individual fish
+
+
 
 ```{r material}
 individual_fish <- cleaned_fish %>% 
@@ -336,7 +388,11 @@ material <- material_join_identification %>%
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00337"))
 ```
 
+
+
 ### Identification
+
+
 
 ```{r identification}
 fish_id_guide <- "https://archive.org/details/fishesofsouthern00gono | Kellermann, A. (1990): Identification Key and Catalogue of Larval Antarctic Fishes , Berichte zur Polarforschung (Reports on Polar Research), Bremerhaven, Alfred Wegener Institute for Polar and Marine Research, 67 , 136 p. . doi: 10.2312/BzP_0067_1990 | https://archive.org/details/cybium-7-002-003-074"
@@ -355,7 +411,11 @@ identification <- material_join_identification %>%
 head(identification)
 ```
 
+
+
 ### Media
+
+
 
 ```{r media}
 #| warning: false
@@ -372,6 +432,8 @@ media_material <- media_google %>%
 media <- filter_dataframe_by_json(media_material, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/media.json")
 head(media)
 ```
+
+
 
 
 
@@ -393,6 +455,8 @@ Expedition
     |__ RMT1
     |__ RMT8
 ```
+
+
 
 ```{r event assertion}
 #| warning: false
@@ -430,7 +494,11 @@ event_assertion <- assertion %>%
 event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
 ```
 
+
+
 #### Material Assertion
+
+
 
 ```{r material assertion}
 fish_length_assertion <- assertion %>% 
@@ -480,9 +548,13 @@ material_assertion <- rbind(fish_length_assertion, fish_lifestage_assertion, sto
 material_assertion %>% filter(materialEntityID == "AAV3FF_00337")
 ```
 
+
+
 ### Provenance
 
 #### Event Provenance
+
+
 
 ```{r event provenance}
 event_provenance <- crossing(
@@ -493,7 +565,11 @@ head(event_provenance)
 ```
 
 
+
+
 #### Material Provenance
+
+
 
 ```{r material provenance}
 material_provenance <- crossing(
@@ -503,7 +579,11 @@ material_provenance <- crossing(
 head(material_provenance)
 ```
 
+
+
 #### Media Provenance
+
+
 
 ```{r media provenance}
 media_provenance <- crossing(
@@ -513,9 +593,13 @@ media_provenance <- crossing(
 head(media_provenance)
 ```
 
+
+
 ### Usage Policy
 
 #### Media Usage Policy
+
+
 
 ```{r media usage policy}
 media_usage_policy <- crossing(
@@ -526,9 +610,13 @@ head(media_usage_policy)
 ```
 
 
+
+
 ### Media
 
 #### Material Media
+
+
 
 ```{r material media}
 material_media <- media_material %>%
@@ -537,11 +625,15 @@ material_media <- media_material %>%
 head(material_media)
 ```
 
+
+
 ### Protocol
 
 #### Survey Protocol
 
 As Event is also a Survey, I use Survey Protocol table instead of Event Protocol table.
+
+
 
 ```{r survey protocol}
 survey_protocol <- survey_w_protocol %>% 
@@ -551,9 +643,13 @@ survey_protocol <- survey_w_protocol %>%
 survey_protocol %>% filter(surveyID == "BROKE_WEST_RMT_001_RMT8")
 ```
 
+
+
 ### Identifier
 
 #### Agent Identifier
+
+
 
 ```{r identifier}
 agent_identifier <- agent_identifier %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-identifier.json")
@@ -598,3 +694,4 @@ data_list <- list(
 
 save_and_write(data_list)
 ```
+
