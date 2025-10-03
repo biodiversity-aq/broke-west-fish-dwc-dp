@@ -28,7 +28,7 @@ bibliographic_resource <- read_delim("https://docs.google.com/spreadsheets/d/e/2
 agent_identifier <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1983140051&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 
 # Using Sheet 1 of Fish_data_BROKE_west[14711] but this excluded all the squids
-# This version is used instead of the Occurrence used in Humboldt Extension mapping because that version only contains fish and squid from RMT8. It also lacks abundance data and only contain individual fish data. Abundance data is crucial to demonstrate community measurement use case.
+# This version is used instead of the Occurrence used in Humboldt Extension mapping because that version only contains fish and squid from RMT8. It also lacks abundance data and only contain individual fish data. Abundance data is crucial to demonstrate community measurement use case. This does not contain RMT1 data
 raw_fish_data <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1033332446&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 raw_count_routine <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1682750433&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 raw_count_target <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vR5-TuzLc5GKmAMeYEGHeByaFDQChTD-XtTPVMmstcTYgBmlgel9f2FertLozhgog/pub?gid=1626893517&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
@@ -321,6 +321,11 @@ material_join_identification <- bind_rows(individual_fish, stomach) %>%
       evidenceForOccurrenceID %in% occurrence$occurrenceID,
       evidenceForOccurrenceID,
       str_c(eventID, AphiaID, sep = "_")  # rebuild without lifeStage
+    ),
+    evidenceForOccurrenceID = if_else(
+      str_detect(eventID, "RMT_1"), 
+      "", 
+      evidenceForOccurrenceID
     )
   )
 
