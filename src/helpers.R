@@ -68,16 +68,24 @@ transform_rmt_count_to_long <- function(df){
         TRUE ~ NA
       ),
       surveyTargetType = case_when(
-        surveyTargetType == "life_stage" ~ "life stage",
-        surveyTargetType == "taxon_rank" ~ "taxon rank",
+        surveyTargetType == "life_stage" ~ "lifeStage",
+        surveyTargetType == "taxon_rank" ~ "taxonRank",
         TRUE ~ surveyTargetType
+      ),
+      surveyTargetTypeIRI = case_when(
+        surveyTargetType == "taxon" ~ "http://rs.tdwg.org/dwc/terms/taxon",
+        surveyTargetType == "lifeStage" ~ "http://rs.tdwg.org/dwc/terms/lifeStage",
+        surveyTargetType == "taxonRank" ~ "http://rs.tdwg.org/dwc/terms/taxonRank",
+        surveyTargetType == "maximum body size" ~ "http://vocab.nerc.ac.uk/collection/P01/current/OBSMAXLX/",
+        surveyTargetType == "minimum body size" ~ "http://vocab.nerc.ac.uk/collection/P01/current/OBSMINLX/",
+        TRUE ~ NA
       ),
       includeOrExclude = "include",
       isSurveyTargetFullyReported = "true"
-    ) %>% filter(!(surveyTargetType == "life stage" & surveyTargetValue == "")) # remove empty lifeStage row
+    ) %>% filter(!(surveyTargetType == "lifeStage" & surveyTargetValue == "")) # remove empty lifeStage row
   
   survey_target <- trawl_long %>%
-    select(surveyTargetID, surveyID, surveyTargetType, surveyTargetValue, surveyTargetValueIRI, surveyTargetUnit, surveyTargetUnitIRI)
+    select(surveyTargetID, surveyID, surveyTargetType, surveyTargetTypeIRI, surveyTargetValue, surveyTargetValueIRI, surveyTargetUnit, surveyTargetUnitIRI)
   
   occurrence <- trawl_long %>%
     filter(surveyTargetType == "taxon" & organismQuantity != 0) %>%
@@ -85,7 +93,7 @@ transform_rmt_count_to_long <- function(df){
       scientificName = surveyTargetValue, 
       eventID = surveyID) %>%
     mutate(
-      occurrenceStatus = "present",
+      occurrenceStatus = "detected",
       recordedBy = "Anton Van de Putte",
       recordedByID = "https://orcid.org/0000-0003-1336-5554",
       identifiedBy = "Anton Van de Putte",

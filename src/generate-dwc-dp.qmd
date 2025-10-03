@@ -21,6 +21,11 @@ humboldt <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8RE
 emof <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1747744771&single=true&output=tsv", delim = "\t", col_types = cols(measurementValueID = col_character()), show_col_types = FALSE)
 media_google <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1514323106&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 protocol <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1759980170&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+provenance <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1361277885&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+agent <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1895126491&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+agent_agent_role <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=95145925&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+bibliographic_resource <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=164150178&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
+agent_identifier <- read_delim("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaTV8REg1n04OmKB9t3q1qblSBjcrLNcbEjshwvVfEG-f-fCuNY6CDamNN7oaZ9A/pub?gid=1983140051&single=true&output=tsv", delim = "\t", show_col_types = FALSE)
 
 # Using Sheet 1 of Fish_data_BROKE_west[14711] but this excluded all the squids
 # This version is used instead of the Occurrence used in Humboldt Extension mapping because that version only contains fish and squid from RMT8. It also lacks abundance data and only contain individual fish data. Abundance data is crucial to demonstrate community measurement use case.
@@ -98,14 +103,56 @@ cleaned_fish %>% distinct(verbatimIdentification, scientificName, scientificName
 
 ### Agent
 
-There is only Anton here because this version of dataset does not contain squid records (from the catch).
-
 ```{r agent}
-agent <- tibble(
-  agentID = "https://orcid.org/0000-0003-1336-5554",
-  agentType = "person",
-  preferredAgentName = "Anton Van de Putte"
-) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent.json")
+agent <- agent %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent.json")
+```
+
+### Agent agent role
+
+```{r agent agent role}
+agent_agent_role <- agent_agent_role %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-agent-role.json")
+```
+
+
+### Bibliographic Resource
+
+```{r bibliographic resource}
+bibliographic_resource <- bibliographic_resource %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/bibliographic-resource.json")
+```
+
+### Protocol Reference
+
+Needs to come first before Protocol because otherwise `filter_dataframe_by_json` will remove `referenceID` from Protocol table.
+
+```{r protocol reference}
+protocol_reference <- protocol %>%
+  select(protocolID, referenceID) %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol-reference.json")
+```
+
+### Protocol
+
+```{r protocol}
+protocol <- filter_dataframe_by_json(protocol, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol.json")
+protocol
+```
+
+### Provenance
+
+```{r provenance}
+provenance <- filter_dataframe_by_json(provenance, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/provenance.json")
+```
+
+### Usage Policy
+
+```{r usage policy}
+usage_policy <- tibble(
+  usagePolicyID = "CC0",
+  rights = "Public Domain",
+  rightsIRI = "https://creativecommons.org/public-domain/cc0/",
+  license = "https://creativecommons.org/public-domain/cc0/",
+  credit = "Photo taken by Anton Van de Putte (CC0)",
+) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/usage-policy.json")
 ```
 
 ### Event
@@ -141,6 +188,63 @@ event %>% filter(str_starts(eventID, "BROKE_WEST_RMT_001")) %>% select(eventID, 
 
 # will only filter for event fields based on DwC-DP schema later since we still need to join Survey table as sampleSizeValue and sampleSizeUnit are now under Survey class.
 ```
+### Survey
+
+Survey table is a table that contains current Humboldt Extension terms.
+
+```{r survey}
+suffixes <- c("_RMT1","_RMT8")
+
+survey_w_protocol <- humboldt %>%
+  filter(eventID != "BROKE_WEST") %>% # remove the expedition event, only link humboldt to the lowest level of Survey Events
+  expand_grid(suffix = suffixes) %>%
+  mutate(eventID = paste0(eventID, suffix),
+         # need to cast netSize to string so that it can be joined later (so that it is not a double)
+         netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA),
+         surveyID = eventID,
+         isLeastSpecificTargetCategoryQuantityInclusive = "true") 
+
+# join survey_w_protocol with event table to get sampleSizeValue and sampleSizeUnit
+survey_w_protocol_sample_size <- event %>%
+  select(eventID, sampleSizeValue, sampleSizeUnit) %>%
+  right_join(survey_w_protocol, by = "eventID") 
+
+survey <- survey_w_protocol_sample_size %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey.json")
+head(survey)
+```
+
+
+### Survey Target 
+
+After extensive discussions on what `target` is, we decided to create survey-target table retrospectively because the objective of the survey is to quantify the biodiversity at the sites surveyed. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID.
+
+> Limitation: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica.
+
+```{r survey target and occurrence}
+#| warning: false
+
+routine_trawl <- transform_rmt_count_to_long(raw_count_routine)
+target_trawl <- transform_rmt_count_to_long(raw_count_target)
+
+survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) %>%
+  mutate(includeOrExclude = "include", isSurveyTargetFullyReported = "true") %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey-target.json")
+
+# preview example tables
+head(survey_target)
+```
+
+### Occurrence
+
+```{r occ}
+occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
+  mutate(occurrenceID = surveyTargetID,
+         organismQuantityType = case_when(organismQuantity <= 1 ~ "individual",
+                                          organismQuantity > 1 ~ "individuals")) %>%
+  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/occurrence.json")
+head(occurrence)
+```
 
 ### Material
 
@@ -152,7 +256,8 @@ Material includes:
 ```{r material}
 individual_fish <- cleaned_fish %>% 
   mutate(
-    materialEntityType = "whole organism",  
+    materialEntityType = "whole organism",
+    materialCategory = "preserved",
     collectedBy = "Anton Van de Putte",
     collectedByID = "https://orcid.org/0000-0003-1336-5554",
     identifiedBy = "Anton Van de Putte",
@@ -168,8 +273,9 @@ individual_fish <- cleaned_fish %>%
     )
     ) %>% 
   select(
-    materialEntityID, eventID, materialEntityType, preparations, disposition, collectedBy, collectedByID, identifiedBy, identifiedByID, verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank, identificationRemarks, materialEntityRemarks
-  ) %>% rename(taxonID = scientificNameID) # keep verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank to construct Identification table
+    materialEntityID, eventID, materialCategory, materialEntityType, preparations, disposition, collectedBy, collectedByID, identifiedBy, identifiedByID, verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank, identificationRemarks, materialEntityRemarks, AphiaID, lifeStage
+  ) %>% 
+  rename(taxonID = scientificNameID) # keep verbatimIdentification, scientificName, scientificNameID, kingdom, taxonRank to construct Identification table
 
 stomach <- raw_stomach %>%
   rename(stomachItem = `Stomach Item`) %>%
@@ -177,13 +283,14 @@ stomach <- raw_stomach %>%
     seqNum = sprintf("%03d", row_number()), # zero-padded sequential number
     materialEntityID = str_c(`Fish ID`, "_stomach_", seqNum, "_", stomachItem),
     materialEntityType = case_when(
-      stomachItem == "St wall" ~ "stomach content - st wall",
-      stomachItem == "Mucus" ~ "stomach content - mucus",
-      stomachItem == "Other" ~ "stomach content - other",
-      stomachItem == "Facet eye" ~ "stomach content - facet eye",
-      stomachItem == "/" ~ "stomach content - empty",
-      TRUE ~ "stomach content"),
+      stomachItem == "St wall" ~ "stomachContent - st wall",
+      stomachItem == "Mucus" ~ "stomachContent - mucus",
+      stomachItem == "Other" ~ "stomachContent - other",
+      stomachItem == "Facet eye" ~ "stomachContent - facet eye",
+      stomachItem == "/" ~ "stomachContent - empty",
+      TRUE ~ "stomachContent"),
     derivedFromMaterialEntityID = `Fish ID`,
+    materialCategory = "biological",
     derivationType = "stomach content of",
     identifiedBy = "Anton Van de Putte",
     identifiedByID = "https://orcid.org/0000-0003-1336-5554",
@@ -204,20 +311,27 @@ stomach <- raw_stomach %>%
          identifiedByID = identifiedByID.x) 
 
 # combine both tables into a Material table
-material_join_identification <- bind_rows(individual_fish, stomach) 
+# material_join_identification is needed for Identification table later
+material_join_identification <- bind_rows(individual_fish, stomach) %>%
+  mutate(evidenceForOccurrenceID = case_when(
+      lifeStage != "" ~ str_c(eventID, AphiaID, lifeStage, sep = "_"),
+      TRUE ~ str_c(eventID, AphiaID, sep = "_"))) %>%
+  mutate(
+    evidenceForOccurrenceID = if_else(
+      evidenceForOccurrenceID %in% occurrence$occurrenceID,
+      evidenceForOccurrenceID,
+      str_c(eventID, AphiaID, sep = "_")  # rebuild without lifeStage
+    )
+  )
 
-# preview example of a full fish + its stomach content in Material table
 material <- material_join_identification %>%
-  mutate(materialCategory = "preserved") %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/material.json")
+
+# preview record
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00337"))
 ```
 
 ### Identification
-
-Identification terms are mostly part of Material table.
-
-Question: I am expecting OBIS to ask about why `taxonID` and not `scientificNameID`.
 
 ```{r identification}
 fish_id_guide <- "https://archive.org/details/fishesofsouthern00gono | Kellermann, A. (1990): Identification Key and Catalogue of Larval Antarctic Fishes , Berichte zur Polarforschung (Reports on Polar Research), Bremerhaven, Alfred Wegener Institute for Polar and Marine Research, 67 , 136 p. . doi: 10.2312/BzP_0067_1990 | https://archive.org/details/cybium-7-002-003-074"
@@ -254,67 +368,9 @@ media <- filter_dataframe_by_json(media_material, "https://rs.gbif.org/sandbox/e
 head(media)
 ```
 
-### Survey
 
-Survey table is a table that contains current Humboldt Extension terms.
 
-```{r survey}
-suffixes <- c("_RMT1","_RMT8")
-
-survey_w_protocol <- humboldt %>%
-  filter(eventID != "BROKE_WEST") %>% # remove the expedition event, only link humboldt to the lowest level of Survey Events
-  expand_grid(suffix = suffixes) %>%
-  mutate(eventID = paste0(eventID, suffix),
-         # need to cast netSize to string so that it can be joined later (so that it is not a double)
-         netSize = case_when(suffix == "_RMT1" ~ "1", suffix == "_RMT8" ~ "8", TRUE ~ NA),
-         surveyID = eventID,
-         isLeastSpecificTargetCategoryQuantityInclusive = "true") 
-
-# join survey_w_protocol with event table to get sampleSizeValue and sampleSizeUnit
-survey_w_protocol_sample_size <- event %>%
-  select(eventID, sampleSizeValue, sampleSizeUnit) %>%
-  right_join(survey_w_protocol, by = "eventID") 
-
-survey <- survey_w_protocol_sample_size %>%
-  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey.json")
-head(survey)
-```
-
-### Protocol
-
-```{r protocol}
-protocol <- filter_dataframe_by_json(protocol, "https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol.json")
-protocol
-```
-
-### Survey Target & Occurrence
-
-After extensive discussions on what `target` is, we decided to create survey-target table retrospectively. SurveyTarget needs to be created per net size because it is linked to a Survey (lowest level of Survey is per net size) via SurveyID. SurveyTargetAbundance points to the Survey through the SurveyTarget record.
-
-Challenge: There is only total count for fish from RMT8 and not RMT1. The total count also does not contain any `sex` and `lifeStage` for all the taxa except Electrona antarctica.
-
-```{r survey target and occurrence}
-#| warning: false
-
-routine_trawl <- transform_rmt_count_to_long(raw_count_routine)
-target_trawl <- transform_rmt_count_to_long(raw_count_target)
-
-survey_target <- rbind(routine_trawl$survey_target, target_trawl$survey_target) %>%
-  mutate(includeOrExclude = "include", isSurveyTargetFullyReported = "true") %>%
-  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/survey-target.json")
-occurrence <- rbind(routine_trawl$occurrence, target_trawl$occurrence) %>%
-  mutate(occurrenceID = str_c(eventID, surveyTargetID, sep = "_"),
-         occurrenceStatus = "detected",
-         organismQuantityType = case_when(organismQuantity <= 1 ~ "individual",
-                                          organismQuantity > 1 ~ "individuals")) %>%
-  filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/occurrence.json")
-
-# preview example tables
-head(survey_target)
-head(occurrence)
-```
-
-## Common tables
+## Joined tables
 
 ### Tables not needed: Agent related tables
 
@@ -367,7 +423,6 @@ event_assertion <- assertion %>%
     ) %>%
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/event-assertion.json")
 event_assertion %>% filter(assertionID == "BROKE_WEST_RMT_028_temp")
-
 ```
 
 #### Material Assertion
@@ -420,6 +475,52 @@ material_assertion <- rbind(fish_length_assertion, fish_lifestage_assertion, sto
 material_assertion %>% filter(materialEntityID == "AAV3FF_00337")
 ```
 
+### Provenance
+
+#### Event Provenance
+
+```{r event provenance}
+event_provenance <- crossing(
+  provenance %>% select(provenanceID),
+  event %>% select(eventID)
+)
+head(event_provenance)
+```
+
+
+#### Material Provenance
+
+```{r material provenance}
+material_provenance <- crossing(
+  provenance %>% select(provenanceID),
+  material %>% select(materialEntityID)
+)
+head(material_provenance)
+```
+
+#### Media Provenance
+
+```{r media provenance}
+media_provenance <- crossing(
+  provenance %>% select(provenanceID),
+  media %>% select(mediaID)
+)
+head(media_provenance)
+```
+
+### Usage Policy
+
+#### Media Usage Policy
+
+```{r media usage policy}
+media_usage_policy <- crossing(
+  usage_policy %>% select(usagePolicyID),
+  media %>% select(mediaID)
+)
+head(media_usage_policy)
+```
+
+
 ### Media
 
 #### Material Media
@@ -450,12 +551,7 @@ survey_protocol %>% filter(surveyID == "BROKE_WEST_RMT_001_RMT8")
 #### Agent Identifier
 
 ```{r identifier}
-agent_identifier <- tibble(
-  identifier = "https://orcid.org/0000-0003-1336-5554",
-  agentID = "https://orcid.org/0000-0003-1336-5554",
-  identifierType = "ORCID",
-  identifierLanguage = "eng"
-) %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-identifier.json")
+agent_identifier <- agent_identifier %>% filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/agent-identifier.json")
 agent_identifier
 ```
 
@@ -471,15 +567,24 @@ data_list <- list(
   # main tables
   event = event,
   agent = agent,
+  agent_agent_role = agent_agent_role,
+  bibliographic_resource = bibliographic_resource,
   material = material,
   identification = identification,
   media = media,
   survey = survey,
   protocol = protocol,
+  provenance = provenance,
+  usage_policy = usage_policy,
   survey_target = survey_target,
   occurrence = occurrence,
-  # common tables
+  # joined tables
   event_assertion = event_assertion,
+  event_provenance = event_provenance,
+  material_provenance = material_provenance,
+  media_provenance = media_provenance,
+  protocol_reference = protocol_reference,
+  media_usage_policy = media_usage_policy,
   material_assertion = material_assertion,
   material_media = material_media,
   survey_protocol = survey_protocol,
