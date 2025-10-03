@@ -323,7 +323,7 @@ material_join_identification <- bind_rows(individual_fish, stomach) %>%
       str_c(eventID, AphiaID, sep = "_")  # rebuild without lifeStage
     ),
     evidenceForOccurrenceID = if_else(
-      str_detect(eventID, "RMT_1"), # because there is no occurrence record for RMT1
+      str_detect(eventID, "RMT1"), # because there is no occurrence record for RMT1
       "", 
       evidenceForOccurrenceID
     )
