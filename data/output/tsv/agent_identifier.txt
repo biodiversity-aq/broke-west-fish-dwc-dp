@@ -8,3 +8,4 @@ https://orcid.org/0000-0003-1336-5554	https://orcid.org/0000-0003-1336-5554	orci
 https://orcid.org/0000-0003-1617-5449	https://orcid.org/0000-0003-1617-5449	orcid	eng
 https://orcid.org/0000-0003-4342-4295	https://orcid.org/0000-0003-4342-4295	orcid	eng
 https://www.wikidata.org/entity/Q5765948	https://www.wikidata.org/entity/Q5765948	wikidata QID	eng
+https://ror.org/01fapfv42	https://ror.org/01fapfv42	ror	eng

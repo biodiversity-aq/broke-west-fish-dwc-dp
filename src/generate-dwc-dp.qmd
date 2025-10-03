@@ -127,6 +127,7 @@ Needs to come first before Protocol because otherwise `filter_dataframe_by_json`
 ```{r protocol reference}
 protocol_reference <- protocol %>%
   select(protocolID, referenceID) %>%
+  filter(!is.na(referenceID)) %>%  # remove rows without referenceID
   filter_dataframe_by_json("https://rs.gbif.org/sandbox/experimental/data-packages/dwc-dp/0.1/table-schemas/protocol-reference.json")
 ```
 
