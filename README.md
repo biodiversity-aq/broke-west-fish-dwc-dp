@@ -1,6 +1,8 @@
 # Exploring DwC-DP with marine community measurements dataset
 
-This is an attempt to map BROKE-West Fish dataset as a marine survey and community measurements use case of the new data model to DwC-DP and explore what information can be retrieve from DwCAv2.
+[![DOI](https://zenodo.org/badge/916529634.svg)](https://doi.org/10.5281/zenodo.17266065)
+
+This is an attempt to map a marine survey and community measurement dataset BROKE-West Fish to DwC-DP and explore what information can be retrieve from DwC-DP.
 
 ## Repo structure
 
@@ -25,7 +27,7 @@ This project uses [renv](https://rstudio.github.io/renv/) to manage the dependen
 ```
 renv::restore()
 ```
-R version 4.4.2 was used the scripts in this repository.
+The scripts in this repository were developed and tested using R version 4.5.1 (2025-06-13).
 
 ## Acknowledgement
 
