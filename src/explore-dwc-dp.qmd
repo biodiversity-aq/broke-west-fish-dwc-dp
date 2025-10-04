@@ -18,6 +18,7 @@ You can load all the RDA files like below and play around with the tables as dem
 
 library(here)
 library(tidyverse)
+library(RColorBrewer)
 
 # Load all the RDA files
 rda_files <- list.files(path = here("data", "output", "rda"), pattern = "\\.rda$", full.names = TRUE)
@@ -81,15 +82,15 @@ mat %>% left_join(material_assertion, by = "materialEntityID") %>%
 
 Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <https://www.gbif.org/occurrence/3344249657> 
 
-### DwCA
+### DwC-A
 
-It is difficult to model with DwCA because:
+It is difficult to model with DwC-A because:
 
 - a specific body part/sample of an organism is not an Occurrence nor an Event
 - it is difficult to express relationship between a Material (e.g. body part) and the Organism
-- it is difficult to distinguish measurements performed on a Material of an dwc:Organism and to express that the Organism was preserved and located in certain collection from an institution.
+- it is difficult to distinguish measurements performed on a Material or an dwc:Organism when pointing the measurement to an Occurrence record.
 
-Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. 
+Currently, I modeled it using eMoF pointing to the Occurrence with body part in `measurementRemarks`. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. Example: https://www.gbif.org/occurrence/3344249657
 
 | occurrenceID              | scientificName                          |
 |---------------------------|-----------------------------------------|
@@ -110,12 +111,12 @@ Relationship between Materials can be specified through the `derivedFromMaterial
 
 ```{r material relationship}
 material %>% filter(str_starts(materialEntityID, "AAV3FF_00025")) %>% 
-  select(materialEntityID, derivedFromMaterialEntityID, materialEntityType, scientificName, materialEntityRemarks)
+  select(materialEntityID, derivedFromMaterialEntityID, derivationType, materialEntityType, scientificName, materialEntityRemarks)
 ```
 
 ## Non-detections 
 
-### DwCA
+### DwC-A
 
 Before [Humboldt Extension](https://eco.tdwg.org/) was developed, non-detections are represented as an [Occurrence record with occurrenceStatus = absent](https://www.gbif.org/occurrence/search?occurrence_status=absent) in DwCA.
 
@@ -123,7 +124,7 @@ When Humboldt Extension comes along, [non-detections can be inferred by looking 
 
 ### DwC-DP
 
-In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.
+In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = notDetected, just like in DwC-A. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.
 
 ```{r non-detections}
 #| fig.height: 15
@@ -152,7 +153,7 @@ detections_and_non_detections <- occurrence_taxa %>%
 # Swap the axes so survey IDs are on the y-axis
 ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = occurrenceStatus)) +
   geom_tile(color = "white", linewidth = 0.5) +
-  scale_fill_manual(values = c("detected" = "#1e88e5", "notDetected" = "#ffcdd2")) +
+  scale_fill_manual(values = c("detected" = "#1F78B4", "notDetected" = "#A6CEE3")) +
   labs(
     title = "Occurrence Status by Target Taxon and Survey",
     y = "Survey ID",  # Now on y-axis
@@ -169,4 +170,145 @@ ggplot(detections_and_non_detections, aes(y = surveyID, x = targetTaxon, fill = 
 ```
 
 
+## Length frequency diagram
 
+### DwC-DP
+
+Can we plot length-frequency diagram of a fish species by trawl type (Target vs Routine) using the standard length measurements in DwC-DP?
+
+```{r length frequency}
+# 1) lengths for Pleuragramma antarcticum
+pleura_lengths <- material_assertion %>%
+  filter(str_to_lower(assertionType) == "standard length" | 
+           str_detect(assertionTypeIRI %||% "", "SL01XX01")) %>%  # NERC SL code
+  transmute(materialEntityID,
+            length_mm = suppressWarnings(as.numeric(assertionValueNumeric))) %>%
+  filter(!is.na(length_mm), length_mm > 0)
+
+pleura <- material %>%
+  filter(scientificName == "Pleuragramma antarcticum" |
+           str_detect(taxonID %||% "", "taxname:234721")) %>%
+  select(materialEntityID, eventID, scientificName)
+
+# 2) add trawl type from event.preferredEventName
+trawls <- event %>%
+  select(eventID, preferredEventName) %>%
+  mutate(trawl_type = case_when(
+    str_detect(preferredEventName %||% "", regex("^Target", ignore_case = TRUE))  ~ "Target trawl",
+    str_detect(preferredEventName %||% "", regex("^Routine", ignore_case = TRUE)) ~ "Routine trawl",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(trawl_type))
+
+# 3) join and plot
+df_plot <- pleura %>%
+  inner_join(pleura_lengths, by = "materialEntityID") %>%
+  inner_join(trawls, by = "eventID")
+
+# quick check
+dplyr::count(df_plot, trawl_type)
+
+# Bin size = 10 mm and convert counts to relative frequency (%)
+ggplot(df_plot, aes(x = length_mm, fill = trawl_type)) +
+  geom_histogram(
+    aes(y = after_stat(count / sum(count) * 100)),
+    binwidth = 2,
+    color = NA,
+    position = "dodge"
+  ) +
+  scale_fill_manual(
+    values = c("Routine trawl" = "#1F78B4",   # blue
+               "Target trawl"  = "#FF7F00")   # orange
+  ) +
+  scale_x_continuous(breaks = seq(0, 130, 10), limits = c(0, 130)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+  # scale_fill_manual(values = c("#0072B2", "#E69F00")) +
+  labs(
+    title = "Size-frequency histogram of Pleuragramma antarcticum",
+    x = "Size class (mm)",
+    y = "Frequency (%)",
+    fill = NULL
+  ) +
+  theme_bw(base_size = 12) +
+  theme(
+    legend.position = c(0.8, 0.8),
+    legend.background = element_blank(),
+    legend.key.size = unit(0.6, "lines")
+  )
+```
+## Stomach content
+
+### DwC-DP
+
+Can we evaluate the diet composition of a fish species by trawl type (Target vs Routine) using the stomach content records in DwC-DP?
+
+```{r stomach content}
+library(dplyr)
+library(tidyr)
+library(forcats)
+library(stringr)
+library(ggplot2)
+library(viridisLite)  # for viridis palettes
+
+# --- 1) Filter to stomach-content records and label prey ---
+stom <- material %>%
+  filter(materialEntityType %in% c("stomachContent")) %>%
+  mutate(prey = if_else(is.na(verbatimIdentification) | verbatimIdentification == "",
+                        "Unidentified", verbatimIdentification))
+
+# --- 2) Add trawl type from event table ---
+stom <- stom %>%
+  left_join(event %>% select(eventID, preferredEventName), by = "eventID") %>%
+  mutate(trawl_type = if_else(str_detect(preferredEventName, "Target"), "Target", "Routine"))
+
+# --- 3) Collapse long tail of prey to Top N per species for readability ---
+top_n <- 5
+
+stom <- stom %>%
+  group_by(scientificName, prey) %>%
+  summarize(n = n(), .groups = "drop") %>%
+  group_by(scientificName) %>%
+  mutate(prey_rank = rank(-n, ties.method = "first"),
+         prey_collapsed = if_else(prey_rank <= top_n, prey, "Other")) %>%
+  select(-prey_rank) %>%
+  right_join(stom, by = c("scientificName", "prey")) %>%
+  mutate(prey_group = if_else(is.na(prey_collapsed), prey, prey_collapsed))
+
+# --- 4) Compute proportional diet composition per species × trawl type ---
+comp <- stom %>%
+  count(scientificName, trawl_type, prey_group, name = "count") %>%
+  group_by(scientificName, trawl_type) %>%
+  mutate(prop = count / sum(count)) %>%
+  ungroup() %>%
+  group_by(scientificName) %>%
+  mutate(total_n = sum(count)) %>%
+  ungroup() %>%
+  mutate(scientificName = fct_reorder(scientificName, total_n, .desc = TRUE))
+
+# --- 5) Filter for Pleuragramma antarcticum ---
+comp_pa <- comp %>%
+  filter(scientificName == "Pleuragramma antarcticum")
+
+# --- 6) Plot proportional diet composition by trawl type (less misleading) ---
+ggplot(comp_pa, aes(x = trawl_type, y = prop, fill = prey_group)) +
+  geom_col(position = "fill", width = 0.7, colour = NA) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  scale_fill_viridis_d(option = "viridis") +
+  labs(
+    x = "Trawl type",
+    y = "Diet composition (%)",
+    fill = "Prey group",
+    title = "Diet composition of Pleuragramma antarcticum"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    legend.position = "right"
+  )
+
+# --- 7) (Optional) Check stomach sample sizes per trawl type ---
+stom %>%
+  filter(scientificName == "Pleuragramma antarcticum") %>%
+  count(trawl_type)
+
+```

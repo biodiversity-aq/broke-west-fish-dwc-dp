@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-24">
+<meta name="dcterms.date" content="2025-10-04">
 
 <title>Explore DwC-DP – BROKE-West fish to DwC-DP</title>
 <style>
@@ -216,13 +216,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#body-part-measurements" id="toc-body-part-measurements" class="nav-link" data-scroll-target="#body-part-measurements">Body part measurements</a>
   <ul class="collapse">
-  <li><a href="#dwca-1" id="toc-dwca-1" class="nav-link" data-scroll-target="#dwca-1">DwCA</a></li>
+  <li><a href="#dwc-a" id="toc-dwc-a" class="nav-link" data-scroll-target="#dwc-a">DwC-A</a></li>
   <li><a href="#dwc-dp-1" id="toc-dwc-dp-1" class="nav-link" data-scroll-target="#dwc-dp-1">DwC-DP</a></li>
   </ul></li>
   <li><a href="#non-detections" id="toc-non-detections" class="nav-link" data-scroll-target="#non-detections">Non-detections</a>
   <ul class="collapse">
-  <li><a href="#dwca-2" id="toc-dwca-2" class="nav-link" data-scroll-target="#dwca-2">DwCA</a></li>
+  <li><a href="#dwc-a-1" id="toc-dwc-a-1" class="nav-link" data-scroll-target="#dwc-a-1">DwC-A</a></li>
   <li><a href="#dwc-dp-2" id="toc-dwc-dp-2" class="nav-link" data-scroll-target="#dwc-dp-2">DwC-DP</a></li>
+  </ul></li>
+  <li><a href="#length-frequency-diagram" id="toc-length-frequency-diagram" class="nav-link" data-scroll-target="#length-frequency-diagram">Length frequency diagram</a>
+  <ul class="collapse">
+  <li><a href="#dwc-dp-3" id="toc-dwc-dp-3" class="nav-link" data-scroll-target="#dwc-dp-3">DwC-DP</a></li>
+  </ul></li>
+  <li><a href="#stomach-content" id="toc-stomach-content" class="nav-link" data-scroll-target="#stomach-content">Stomach content</a>
+  <ul class="collapse">
+  <li><a href="#dwc-dp-4" id="toc-dwc-dp-4" class="nav-link" data-scroll-target="#dwc-dp-4">DwC-DP</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -243,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 24, 2025</p>
+      <p class="date">October 4, 2025</p>
     </div>
   </div>
   
@@ -261,10 +269,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load all the RDA files</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rda_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>), <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.rda$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(rda_files, load, <span class="at">envir =</span> .GlobalEnv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load all the RDA files</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>rda_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"output"</span>, <span class="st">"rda"</span>), <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.rda$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(rda_files, load, <span class="at">envir =</span> .GlobalEnv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="community-measurements" class="level2">
@@ -419,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["eventID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["occurrenceID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lifeStage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["organismQuantity"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["organismQuantityType"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_BROKE_WEST_RMT_051_RMT8_217697","3":"Electrona antarctica","4":"","5":"28","6":"individuals"},{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_BROKE_WEST_RMT_051_RMT8_217697_Larvae","3":"Electrona antarctica","4":"Larvae","5":"28","6":"individuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["eventID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["occurrenceID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lifeStage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["organismQuantity"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["organismQuantityType"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_217697","3":"Electrona antarctica","4":"","5":"28","6":"individuals"},{"1":"BROKE_WEST_RMT_051_RMT8","2":"BROKE_WEST_RMT_051_RMT8_217697_Larvae","3":"Electrona antarctica","4":"Larvae","5":"28","6":"individuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -450,15 +459,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="body-part-measurements" class="level2">
 <h2 class="anchored" data-anchor-id="body-part-measurements">Body part measurements</h2>
 <p>Very often, we received dataset with measurements performed on a specific body part of an organism. Example: <a href="https://www.gbif.org/occurrence/3344249657" class="uri">https://www.gbif.org/occurrence/3344249657</a></p>
-<section id="dwca-1" class="level3">
-<h3 class="anchored" data-anchor-id="dwca-1">DwCA</h3>
-<p>It is difficult to model with DwCA because:</p>
+<section id="dwc-a" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-a">DwC-A</h3>
+<p>It is difficult to model with DwC-A because:</p>
 <ul>
 <li>a specific body part/sample of an organism is not an Occurrence nor an Event</li>
 <li>it is difficult to express relationship between a Material (e.g.&nbsp;body part) and the Organism</li>
-<li>it is difficult to distinguish measurements performed on a Material of an dwc:Organism and to express that the Organism was preserved and located in certain collection from an institution.</li>
+<li>it is difficult to distinguish measurements performed on a Material or an dwc:Organism when pointing the measurement to an Occurrence record.</li>
 </ul>
-<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in <code>measurementRemarks</code>. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon.</p>
+<p>Currently, I modeled it using eMoF pointing to the Occurrence with body part in <code>measurementRemarks</code>. Specifying the body part can be embedded in a matrix of a NERC vocabulary but it is not practical to mint NERC for every body part and body part is specific to a taxon. Example: https://www.gbif.org/occurrence/3344249657</p>
 <div class="table-responsive">
 <table class="table-striped table-bordered caption-top table">
 <caption>Occurrence table in DwCA</caption>
@@ -512,11 +521,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Relationship between Materials can be specified through the <code>derivedFromMaterialEntityID</code> field. Example of a krill eaten by a fish can be modeled within a single <code>Material</code> table.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>material <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_starts</span>(materialEntityID, <span class="st">"AAV3FF_00025"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, derivedFromMaterialEntityID, materialEntityType, scientificName, materialEntityRemarks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, derivedFromMaterialEntityID, derivationType, materialEntityType, scientificName, materialEntityRemarks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["derivedFromMaterialEntityID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["materialEntityType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[4],"type":["chr"],"align":["left"]},{"label":["materialEntityRemarks"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00025","2":"NA","3":"whole organism","4":"Pleuragramma antarcticum","5":""},{"1":"AAV3FF_00025_stomach_018_Copepod","2":"AAV3FF_00025","3":"stomach content","4":"Pleuragramma antarcticum","5":"NA"},{"1":"AAV3FF_00025_stomach_019_Crustecean","2":"AAV3FF_00025","3":"stomach content","4":"Pleuragramma antarcticum","5":"rear part; long tail spine"},{"1":"AAV3FF_00025_stomach_020_Mucus","2":"AAV3FF_00025","3":"stomach content - mucus","4":"Pleuragramma antarcticum","5":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["materialEntityID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["derivedFromMaterialEntityID"],"name":[2],"type":["chr"],"align":["left"]},{"label":["derivationType"],"name":[3],"type":["chr"],"align":["left"]},{"label":["materialEntityType"],"name":[4],"type":["chr"],"align":["left"]},{"label":["scientificName"],"name":[5],"type":["chr"],"align":["left"]},{"label":["materialEntityRemarks"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"AAV3FF_00025","2":"NA","3":"NA","4":"whole organism","5":"Pleuragramma antarcticum","6":""},{"1":"AAV3FF_00025_stomach_018_Copepod","2":"AAV3FF_00025","3":"stomach content of","4":"stomachContent","5":"Pleuragramma antarcticum","6":"NA"},{"1":"AAV3FF_00025_stomach_019_Crustecean","2":"AAV3FF_00025","3":"stomach content of","4":"stomachContent","5":"Pleuragramma antarcticum","6":"rear part; long tail spine"},{"1":"AAV3FF_00025_stomach_020_Mucus","2":"AAV3FF_00025","3":"stomach content of","4":"stomachContent - mucus","5":"Pleuragramma antarcticum","6":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -525,14 +534,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="non-detections" class="level2">
 <h2 class="anchored" data-anchor-id="non-detections">Non-detections</h2>
-<section id="dwca-2" class="level3">
-<h3 class="anchored" data-anchor-id="dwca-2">DwCA</h3>
+<section id="dwc-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-a-1">DwC-A</h3>
 <p>Before <a href="https://eco.tdwg.org/">Humboldt Extension</a> was developed, non-detections are represented as an <a href="https://www.gbif.org/occurrence/search?occurrence_status=absent">Occurrence record with occurrenceStatus = absent</a> in DwCA.</p>
 <p>When Humboldt Extension comes along, <a href="https://raw.githack.com/biodiversity-aq/humboldt-for-eco-survey-data/main/src/mapping.html">non-detections can be inferred by looking at the target scopes that do not have an Occurrence record</a> if the target scope was fully reported.</p>
 </section>
 <section id="dwc-dp-2" class="level3">
 <h3 class="anchored" data-anchor-id="dwc-dp-2">DwC-DP</h3>
-<p>In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = absent, just like in DwCA. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.</p>
+<p>In DwC-DP, non-detections can be represented as an Occurrence with occurrenceStatus = notDetected, just like in DwC-A. Similarly, non-detections can also be inferred by looking at the SurveyTarget that do not have an Occurrence record if only detections were reported.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -555,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Swap the axes so survey IDs are on the y-axis</span></span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(detections_and_non_detections, <span class="fu">aes</span>(<span class="at">y =</span> surveyID, <span class="at">x =</span> targetTaxon, <span class="at">fill =</span> occurrenceStatus)) <span class="sc">+</span></span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"detected"</span> <span class="ot">=</span> <span class="st">"#1e88e5"</span>, <span class="st">"notDetected"</span> <span class="ot">=</span> <span class="st">"#ffcdd2"</span>)) <span class="sc">+</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"detected"</span> <span class="ot">=</span> <span class="st">"#1F78B4"</span>, <span class="st">"notDetected"</span> <span class="ot">=</span> <span class="st">"#A6CEE3"</span>)) <span class="sc">+</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Occurrence Status by Target Taxon and Survey"</span>,</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Survey ID"</span>,  <span class="co"># Now on y-axis</span></span>
@@ -574,6 +583,184 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figure class="figure">
 <p><img src="explore-dwc-dp_files/figure-html/non-detections-1.png" class="quarto-figure quarto-figure-center figure-img" style="height:80.0%" width="768"></p>
 </figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="length-frequency-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="length-frequency-diagram">Length frequency diagram</h2>
+<section id="dwc-dp-3" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-dp-3">DwC-DP</h3>
+<p>Can we plot length-frequency diagram of a fish species by trawl type (Target vs Routine) using the standard length measurements in DwC-DP?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) lengths for Pleuragramma antarcticum</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>pleura_lengths <span class="ot">&lt;-</span> material_assertion <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_to_lower</span>(assertionType) <span class="sc">==</span> <span class="st">"standard length"</span> <span class="sc">|</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(assertionTypeIRI <span class="sc">%||%</span> <span class="st">""</span>, <span class="st">"SL01XX01"</span>)) <span class="sc">%&gt;%</span>  <span class="co"># NERC SL code</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(materialEntityID,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">length_mm =</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(assertionValueNumeric))) <span class="sc">%&gt;%</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(length_mm), length_mm <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>pleura <span class="ot">&lt;-</span> material <span class="sc">%&gt;%</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(scientificName <span class="sc">==</span> <span class="st">"Pleuragramma antarcticum"</span> <span class="sc">|</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>           <span class="fu">str_detect</span>(taxonID <span class="sc">%||%</span> <span class="st">""</span>, <span class="st">"taxname:234721"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(materialEntityID, eventID, scientificName)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) add trawl type from event.preferredEventName</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>trawls <span class="ot">&lt;-</span> event <span class="sc">%&gt;%</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(eventID, preferredEventName) <span class="sc">%&gt;%</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trawl_type =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_detect</span>(preferredEventName <span class="sc">%||%</span> <span class="st">""</span>, <span class="fu">regex</span>(<span class="st">"^Target"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))  <span class="sc">~</span> <span class="st">"Target trawl"</span>,</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_detect</span>(preferredEventName <span class="sc">%||%</span> <span class="st">""</span>, <span class="fu">regex</span>(<span class="st">"^Routine"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)) <span class="sc">~</span> <span class="st">"Routine trawl"</span>,</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(trawl_type))</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) join and plot</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>df_plot <span class="ot">&lt;-</span> pleura <span class="sc">%&gt;%</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(pleura_lengths, <span class="at">by =</span> <span class="st">"materialEntityID"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(trawls, <span class="at">by =</span> <span class="st">"eventID"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co"># quick check</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">count</span>(df_plot, trawl_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["trawl_type"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"Routine trawl","2":"12"},{"1":"Target trawl","2":"86"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bin size = 10 mm and convert counts to relative frequency (%)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_plot, <span class="fu">aes</span>(<span class="at">x =</span> length_mm, <span class="at">fill =</span> trawl_type)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(count <span class="sc">/</span> <span class="fu">sum</span>(count) <span class="sc">*</span> <span class="dv">100</span>)),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">binwidth =</span> <span class="dv">2</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="cn">NA</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"dodge"</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Routine trawl"</span> <span class="ot">=</span> <span class="st">"#1F78B4"</span>,   <span class="co"># blue</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Target trawl"</span>  <span class="ot">=</span> <span class="st">"#FF7F00"</span>)   <span class="co"># orange</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">130</span>, <span class="dv">10</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">130</span>)) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.05</span>))) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># scale_fill_manual(values = c("#0072B2", "#E69F00")) +</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Size-frequency histogram of Pleuragramma antarcticum"</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Size class (mm)"</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frequency (%)"</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NULL</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.8</span>, <span class="fl">0.8</span>),</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.key.size =</span> <span class="fu">unit</span>(<span class="fl">0.6</span>, <span class="st">"lines"</span>)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
+3.5.0.
+ℹ Please use the `legend.position.inside` argument of `theme()` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore-dwc-dp_files/figure-html/length frequency-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="stomach-content" class="level2">
+<h2 class="anchored" data-anchor-id="stomach-content">Stomach content</h2>
+<section id="dwc-dp-4" class="level3">
+<h3 class="anchored" data-anchor-id="dwc-dp-4">DwC-DP</h3>
+<p>Can we evaluate the diet composition of a fish species by trawl type (Target vs Routine) using the stomach content records in DwC-DP?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridisLite)  <span class="co"># for viridis palettes</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 1) Filter to stomach-content records and label prey ---</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>stom <span class="ot">&lt;-</span> material <span class="sc">%&gt;%</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(materialEntityType <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"stomachContent"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prey =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(verbatimIdentification) <span class="sc">|</span> verbatimIdentification <span class="sc">==</span> <span class="st">""</span>,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"Unidentified"</span>, verbatimIdentification))</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 2) Add trawl type from event table ---</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>stom <span class="ot">&lt;-</span> stom <span class="sc">%&gt;%</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(event <span class="sc">%&gt;%</span> <span class="fu">select</span>(eventID, preferredEventName), <span class="at">by =</span> <span class="st">"eventID"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">trawl_type =</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(preferredEventName, <span class="st">"Target"</span>), <span class="st">"Target"</span>, <span class="st">"Routine"</span>))</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 3) Collapse long tail of prey to Top N per species for readability ---</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>top_n <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>stom <span class="ot">&lt;-</span> stom <span class="sc">%&gt;%</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(scientificName, prey) <span class="sc">%&gt;%</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(scientificName) <span class="sc">%&gt;%</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prey_rank =</span> <span class="fu">rank</span>(<span class="sc">-</span>n, <span class="at">ties.method =</span> <span class="st">"first"</span>),</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">prey_collapsed =</span> <span class="fu">if_else</span>(prey_rank <span class="sc">&lt;=</span> top_n, prey, <span class="st">"Other"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>prey_rank) <span class="sc">%&gt;%</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(stom, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"scientificName"</span>, <span class="st">"prey"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prey_group =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(prey_collapsed), prey, prey_collapsed))</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 4) Compute proportional diet composition per species × trawl type ---</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>comp <span class="ot">&lt;-</span> stom <span class="sc">%&gt;%</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(scientificName, trawl_type, prey_group, <span class="at">name =</span> <span class="st">"count"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(scientificName, trawl_type) <span class="sc">%&gt;%</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> count <span class="sc">/</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(scientificName) <span class="sc">%&gt;%</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">total_n =</span> <span class="fu">sum</span>(count)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">scientificName =</span> <span class="fu">fct_reorder</span>(scientificName, total_n, <span class="at">.desc =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 5) Filter for Pleuragramma antarcticum ---</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>comp_pa <span class="ot">&lt;-</span> comp <span class="sc">%&gt;%</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(scientificName <span class="sc">==</span> <span class="st">"Pleuragramma antarcticum"</span>)</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 6) Plot proportional diet composition by trawl type (less misleading) ---</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(comp_pa, <span class="fu">aes</span>(<span class="at">x =</span> trawl_type, <span class="at">y =</span> prop, <span class="at">fill =</span> prey_group)) <span class="sc">+</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">width =</span> <span class="fl">0.7</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"viridis"</span>) <span class="sc">+</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Trawl type"</span>,</span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Diet composition (%)"</span>,</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Prey group"</span>,</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Diet composition of Pleuragramma antarcticum"</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore-dwc-dp_files/figure-html/stomach content-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 7) (Optional) Check stomach sample sizes per trawl type ---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>stom <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(scientificName <span class="sc">==</span> <span class="st">"Pleuragramma antarcticum"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(trawl_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["scientificName"],"name":[1],"type":["chr"],"align":["left"]},{"label":["trawl_type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Pleuragramma antarcticum","2":"Routine","3":"8"},{"1":"Pleuragramma antarcticum","2":"Target","3":"106"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
 </div>
 </div>

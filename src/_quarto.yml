@@ -24,10 +24,6 @@ website:
   sidebar: 
     style: "docked"
     contents: 
-      - section: Background
-        contents: 
-          - href: dataset-background.qmd
-            text: Dataset background
       - section: Darwin Core Data Package
         contents:
           - href: generate-dwc-dp.qmd

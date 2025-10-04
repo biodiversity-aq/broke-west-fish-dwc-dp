@@ -9,12 +9,22 @@ author:
 
 ## Introduction
 
-This is an attempt to map BROKE-West Fish dataset as a marine [survey](https://docs.google.com/document/d/10YgbavCieUIpN_kNoHGHEkvILpFWCx8k-ZNXFVD4gSA/edit?usp=sharing) and [community measurements](https://docs.google.com/document/d/1rpxveUfN9MCdo38mJR0LaWerMo5Je0oL6p1Yym5gxH4/edit?usp=sharing) use case of the [new data model](https://www.gbif.org/composition/HjlTr705BctcnaZkcjRJq/gbif-new-data-model) to DwC-DP and explore what information can be retrieve from DwC-DP.
+This is an attempt to map BROKE-West Fish dataset as a marine survey dataset to DwC-DP and explore what information can be retrieve from DwC-DP.
+
+## Background
+
+Paper that describes the dataset:
+
+> Van de Putte, Anton P., George D. Jackson, Evgeny Pakhomov, Hauke Flores, and Filip AM Volckaert. "Distribution of squid and fish in the pelagic zone of the Cosmonaut Sea and Prydz Bay region during the BROKE-West campaign." Deep Sea Research Part II: Topical Studies in Oceanography 57, no. 9-10 (2010): 956-967. https://doi.org/10.1016/j.dsr2.2008.02.015
+
+The dataset is originally published as a single Occurrence table at [GBIF](https://doi.org/10.15468/nooqmj).
+
+The DwC-DP version of this dataset, which is also the output of this mapping exercise, is available at https://dwcdp-ipt.gbif-test.org/resource?r=broke-west-fish
+
 
 ## Acknowledgement
 
 This mapping exercise is part of ADVANCE project that is funded by BELSPO (BELSPO project RT/23/ADVANCE).
-
 Documenting this mapping exercise in Quarto is inspired by the approach of OBIS USA (Steve Formel and Kylie Hollis)
 
 We are grateful and appreciate the various contributions received from the following contributors during this exercise:
